@@ -283,8 +283,18 @@ function renderChapterHeaderNav(chapterId, totalChapters) {
         navHTML += `<span class="prev-chapter" style="visibility: hidden">Chương trước</span>`;
     }
     
-    // Tiêu đề chương hiện tại
-    navHTML += `<span class="chapter-title">Chương ${chapterId}</span>`;
+    // Thêm dropdown cho phép chọn bất kỳ chương nào
+    navHTML += `
+        <div class="chapter-dropdown">
+            <button class="dropdown-button" onclick="toggleChapterDropdown('header-dropdown')">
+                <span class="chapter-title">Chương ${chapterId}</span>
+                <span class="dropdown-icon" id="header-dropdown-icon"></span>
+            </button>
+            <div id="header-dropdown" class="dropdown-content">
+                ${generateChapterLinks(totalChapters, chapterId)}
+            </div>
+        </div>
+    `;
     
     // Link chương sau
     if (chapterId < totalChapters) {
@@ -310,8 +320,18 @@ function renderFooterNavigation(chapterId, totalChapters) {
         navHTML += `<span class="prev-chapter" style="visibility: hidden">Chương trước</span>`;
     }
     
-    // Tiêu đề chương hiện tại
-    navHTML += `<span class="chapter-title">Chương ${chapterId}</span>`;
+    // Thêm dropdown cho phép chọn bất kỳ chương nào
+    navHTML += `
+        <div class="chapter-dropdown">
+            <button class="dropdown-button" onclick="toggleChapterDropdown('footer-dropdown')">
+                <span class="chapter-title">Chương ${chapterId}</span>
+                <span class="dropdown-icon" id="footer-dropdown-icon"></span>
+            </button>
+            <div id="footer-dropdown" class="dropdown-content">
+                ${generateChapterLinks(totalChapters, chapterId)}
+            </div>
+        </div>
+    `;
     
     // Link chương sau
     if (chapterId < totalChapters) {
@@ -342,3 +362,63 @@ function parseMarkdown(text) {
     
     return text;
 }
+
+// Hàm tạo danh sách các liên kết chương cho dropdown
+function generateChapterLinks(totalChapters, currentChapterId) {
+    let links = '';
+    for (let i = 1; i <= totalChapters; i++) {
+        const isCurrentChapter = i === currentChapterId;
+        links += `
+            <a href="chapter.html?id=${i}" ${isCurrentChapter ? 'style="font-weight: bold; background-color: rgba(52, 152, 219, 0.1);"' : ''}>
+                Chương ${i}
+            </a>
+        `;
+    }
+    return links;
+}
+
+// Hàm để hiển thị/ẩn dropdown
+function toggleChapterDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    const iconId = dropdownId === 'header-dropdown' ? 'header-dropdown-icon' : 'footer-dropdown-icon';
+    const icon = document.getElementById(iconId);
+    
+    // Đóng tất cả các dropdown khác trước khi mở dropdown mới
+    const allDropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < allDropdowns.length; i++) {
+        if (allDropdowns[i].id !== dropdownId && allDropdowns[i].classList.contains('show')) {
+            allDropdowns[i].classList.remove('show');
+            
+            // Reset icon của dropdown khác
+            const otherId = allDropdowns[i].id === 'header-dropdown' ? 'header-dropdown-icon' : 'footer-dropdown-icon';
+            document.getElementById(otherId).classList.remove('rotate-icon');
+        }
+    }
+    
+    // Bật/tắt dropdown hiện tại
+    dropdown.classList.toggle('show');
+    icon.classList.toggle('rotate-icon');
+}
+
+// Đóng dropdown khi người dùng click bất kỳ đâu trên trang
+document.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropdown-button') && 
+        !event.target.parentElement.matches('.dropdown-button') && 
+        !event.target.matches('.dropdown-icon')) {
+        
+        const dropdowns = document.getElementsByClassName('dropdown-content');
+        const icons = document.getElementsByClassName('dropdown-icon');
+        
+        for (let i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+            }
+        }
+        
+        for (let i = 0; i < icons.length; i++) {
+            if (icons[i].classList.contains('rotate-icon')) {
+                icons[i].classList.remove('rotate-icon');
+            }
+        }
+    }
+});
