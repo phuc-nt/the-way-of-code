@@ -5,6 +5,7 @@
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
     --accent-color: #3498db;
+    --accent-color-rgb: 52, 152, 219; /* RGB values for accent color */
     --text-color: #333;
     --light-text: #ecf0f1;
     --background-color: #f9f9f9;
@@ -21,6 +22,7 @@
     --primary-color: #ecf0f1;
     --secondary-color: #bdc3c7;
     --accent-color: #3498db;
+    --accent-color-rgb: 52, 152, 219; /* RGB values for accent color */
     --text-color: #ecf0f1;
     --light-text: #ecf0f1;
     --background-color: #1a1a1a;
@@ -36,6 +38,7 @@
     --primary-color: #5D4037;
     --secondary-color: #795548;
     --accent-color: #8D6E63;
+    --accent-color-rgb: 141, 110, 99; /* RGB values for accent color */
     --text-color: #3E2723;
     --light-text: #EFEBE9;
     --background-color: #EFEBE9;

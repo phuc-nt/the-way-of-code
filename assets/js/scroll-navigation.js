@@ -5,8 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
         initInfiniteScroll();
         // Thêm class cho animation khi trang mới load
         document.querySelector('.container').classList.add('fade-in-content');
+        
+        // Thêm các phần tử glow edge
+        addGlowElements();
     }
 });
+
+// Thêm các phần tử edge glow
+function addGlowElements() {
+    const glowTop = document.createElement('div');
+    glowTop.className = 'edge-glow-top';
+    
+    const glowBottom = document.createElement('div');
+    glowBottom.className = 'edge-glow-bottom';
+    
+    document.body.appendChild(glowTop);
+    document.body.appendChild(glowBottom);
+}
 
 // Khởi tạo tính năng scroll vô hạn
 function initInfiniteScroll() {
@@ -18,6 +33,8 @@ function initInfiniteScroll() {
     let scrollDelayActive = false; // Biến để kiểm soát độ trễ khi kích hoạt scroll
     let topScrolled = false; // Đánh dấu người dùng đã scroll đến đầu trang một lần
     let bottomScrolled = false; // Đánh dấu người dùng đã scroll đến cuối trang một lần
+    let recentlyLoaded = true; // Đánh dấu trang mới được tải
+    let pageLoadTimestamp = new Date().getTime(); // Thời điểm trang được tải
     
     // Lấy thông tin chương hiện tại và tổng số chương
     const urlParams = new URLSearchParams(window.location.search);
@@ -29,14 +46,10 @@ function initInfiniteScroll() {
         .then(response => response.json())
         .then(data => {
             totalChapters = data.totalChapters;
-            updateScrollIndicators(); // Cập nhật chỉ báo sau khi có tổng số chương
         })
         .catch(error => {
             console.error('Error loading intro data:', error);
         });
-    
-    // Thêm các phần tử chỉ báo scroll
-    addScrollIndicators();
     
     // Thêm hỗ trợ điều hướng bằng bàn phím
     addKeyboardNavigation();
@@ -56,9 +69,6 @@ function initInfiniteScroll() {
     window.addEventListener('wheel', (event) => {
         if (isScrolling || scrollCooldown) return;
         
-        // Ngăn chặn sự kiện mặc định trong một số trường hợp
-        // event.preventDefault();
-        
         // Ghi nhớ hướng cuộn (dương là cuộn xuống, âm là cuộn lên)
         // Tương thích với cả Chrome, Firefox và Safari
         const scrollDirection = event.deltaY || event.detail * -40 || event.wheelDelta * -1;
@@ -67,27 +77,28 @@ function initInfiniteScroll() {
         if (Math.abs(scrollDirection) > 50) {
             clearTimeout(scrollTimeout);
             
-            // Thêm sự kiện để kiểm tra vị trí cuộn
-            const scrollPosition = window.scrollY || window.pageYOffset;
-            const documentHeight = Math.max(
-                document.body.scrollHeight,
-                document.documentElement.scrollHeight,
-                document.body.offsetHeight,
-                document.documentElement.offsetHeight
-            );
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            // Thêm một trễ nhỏ để tránh việc phát hiện scroll nhiều lần
+            const delayTime = 50;
             
-            // Kiểm tra ngay nếu ở gần đầu trang hoặc cuối trang
-            if ((scrollDirection > 0 && scrollPosition + windowHeight > documentHeight - windowHeight / 2) ||
-                (scrollDirection < 0 && scrollPosition < windowHeight / 2)) {
-                // Kích hoạt ngay lập tức nếu đã ở gần đầu/cuối trang
-                handleScrollNavigation(scrollDirection);
-            } else {
-                // Nếu không, đặt thời gian chờ bình thường
-                scrollTimeout = setTimeout(() => {
+            // Đặt timeout để tránh kích hoạt nhiều lần khi scroll nhanh
+            scrollTimeout = setTimeout(() => {
+                // Thêm sự kiện để kiểm tra vị trí cuộn
+                const scrollPosition = window.scrollY || window.pageYOffset;
+                const documentHeight = Math.max(
+                    document.body.scrollHeight,
+                    document.documentElement.scrollHeight,
+                    document.body.offsetHeight,
+                    document.documentElement.offsetHeight
+                );
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                // Kiểm tra ngay nếu ở gần đầu trang hoặc cuối trang
+                if ((scrollDirection > 0 && scrollPosition + windowHeight > documentHeight - windowHeight / 2) ||
+                    (scrollDirection < 0 && scrollPosition < windowHeight / 2)) {
+                    // Kích hoạt ngay lập tức nếu đã ở gần đầu/cuối trang
                     handleScrollNavigation(scrollDirection);
-                }, 150);
-            }
+                }
+            }, delayTime);
         }
     }, { passive: false });
     
@@ -119,93 +130,46 @@ function initInfiniteScroll() {
         }
     }, { passive: true });
     
-    // Thêm phần tử chỉ báo scroll
-    function addScrollIndicators() {
-        const scrollIndicatorTop = document.createElement('div');
-        scrollIndicatorTop.className = 'scroll-indicator scroll-indicator-top';
-        scrollIndicatorTop.innerHTML = '<div class="scroll-arrow">↑</div><div class="scroll-text">Chương trước</div>';
+    // Cập nhật trạng thái hiển thị của dải sáng (edge glow)
+    function updateEdgeGlowState() {
+        const glowTop = document.querySelector('.edge-glow-top');
+        const glowBottom = document.querySelector('.edge-glow-bottom');
         
-        const scrollIndicatorBottom = document.createElement('div');
-        scrollIndicatorBottom.className = 'scroll-indicator scroll-indicator-bottom';
-        scrollIndicatorBottom.innerHTML = '<div class="scroll-arrow">↓</div><div class="scroll-text">Chương tiếp</div>';
+        if (!glowTop || !glowBottom) return;
         
-        document.body.appendChild(scrollIndicatorTop);
-        document.body.appendChild(scrollIndicatorBottom);
-        
-        // Thêm sự kiện click để điều hướng khi nhấp vào - không có độ trễ vì đây là hành động chủ ý
-        scrollIndicatorTop.addEventListener('click', () => {
-            if (currentChapterId > 1 && !isScrolling && !scrollCooldown && !scrollDelayActive) {
-                // Thêm hiệu ứng khi click
-                scrollIndicatorTop.style.transform = 'translateX(-50%) scale(0.95)';
-                setTimeout(() => {
-                    scrollIndicatorTop.style.transform = '';
-                    isScrolling = true;
-                    activateCooldown();
-                    navigateToChapter(currentChapterId - 1);
-                }, 100);
-            }
+        // Debug info - ghi log để kiểm tra trạng thái
+        console.log('Edge Glow State:', {
+            topScrolled,
+            bottomScrolled,
+            recentlyLoaded,
+            timeSinceLoad: new Date().getTime() - pageLoadTimestamp,
+            currentChapter: currentChapterId
         });
         
-        scrollIndicatorBottom.addEventListener('click', () => {
-            if (currentChapterId < totalChapters && !isScrolling && !scrollCooldown && !scrollDelayActive) {
-                // Thêm hiệu ứng khi click
-                scrollIndicatorBottom.style.transform = 'translateX(-50%) scale(0.95)';
-                setTimeout(() => {
-                    scrollIndicatorBottom.style.transform = '';
-                    isScrolling = true;
-                    activateCooldown();
-                    navigateToChapter(currentChapterId + 1);
-                }, 100);
-            }
-        });
+        // Force reflow để đảm bảo animation chạy ngay
+        void glowTop.offsetWidth;
+        void glowBottom.offsetWidth;
         
-        // Cập nhật trạng thái hiển thị chỉ báo
-        updateScrollIndicators();
-    }
-    
-    // Cập nhật trạng thái hiển thị của các chỉ báo
-    function updateScrollIndicators() {
-        const scrollIndicatorTop = document.querySelector('.scroll-indicator-top');
-        const scrollIndicatorBottom = document.querySelector('.scroll-indicator-bottom');
-        
-        if (!scrollIndicatorTop || !scrollIndicatorBottom) return;
-        
-        if (currentChapterId <= 1) {
-            scrollIndicatorTop.classList.add('disabled');
-        } else {
-            scrollIndicatorTop.classList.remove('disabled');
-            scrollIndicatorTop.querySelector('.scroll-text').textContent = `Chương ${currentChapterId - 1}`;
-        }
-        
-        if (currentChapterId >= totalChapters) {
-            scrollIndicatorBottom.classList.add('disabled');
-        } else {
-            scrollIndicatorBottom.classList.remove('disabled');
-            scrollIndicatorBottom.querySelector('.scroll-text').textContent = `Chương ${currentChapterId + 1}`;
-        }
-    }
-    
-    // Cập nhật trạng thái hiển thị của chỉ báo dựa trên trạng thái scroll
-    function updateScrollIndicatorsState() {
-        const scrollIndicatorTop = document.querySelector('.scroll-indicator-top');
-        const scrollIndicatorBottom = document.querySelector('.scroll-indicator-bottom');
-        
-        if (!scrollIndicatorTop || !scrollIndicatorBottom) return;
-        
-        // Thêm/xóa class 'ready' mà không thay đổi nội dung text
+        // Áp dụng hiệu ứng cho dải sáng trên
         if (topScrolled && currentChapterId > 1) {
-            scrollIndicatorTop.classList.add('ready');
-            // Không hiện text "Scroll lại để chuyển chương" nữa
+            glowTop.classList.add('active');
+            // Tự động xóa class 'active' sau khi animation kết thúc
+            setTimeout(() => {
+                glowTop.classList.remove('active');
+            }, 1500); // Thời gian bằng với thời lượng của animation
         } else {
-            scrollIndicatorTop.classList.remove('ready');
+            glowTop.classList.remove('active');
         }
         
-        // Tương tự ở cuối trang
+        // Áp dụng hiệu ứng cho dải sáng dưới
         if (bottomScrolled && currentChapterId < totalChapters) {
-            scrollIndicatorBottom.classList.add('ready');
-            // Không hiện text "Scroll lại để chuyển chương" nữa
+            glowBottom.classList.add('active');
+            // Tự động xóa class 'active' sau khi animation kết thúc
+            setTimeout(() => {
+                glowBottom.classList.remove('active');
+            }, 1500); // Thời lượng của animation
         } else {
-            scrollIndicatorBottom.classList.remove('ready');
+            glowBottom.classList.remove('active');
         }
     }
     
@@ -221,16 +185,21 @@ function initInfiniteScroll() {
         );
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         
-        // Nếu đang trong thời gian chờ, không xử lý
-        if (scrollDelayActive) return;
+        // Nếu đang trong thời gian chờ hoặc đang chuyển chương, không xử lý
+        if (scrollDelayActive || isScrolling || scrollCooldown) return;
+        
+        // Cập nhật lại giá trị recentlyLoaded mỗi lần scroll
+        const currentTime = new Date().getTime();
+        const timeSinceLoad = currentTime - pageLoadTimestamp;
+        recentlyLoaded = timeSinceLoad < 1500;
         
         // Thiết lập thời gian hết hạn cho các trạng thái scroll - 2 giây
         const resetScrollState = () => {
             setTimeout(() => {
                 topScrolled = false;
                 bottomScrolled = false;
-                // Cập nhật trạng thái visual nếu cần
-                updateScrollIndicatorsState();
+                // Cập nhật trạng thái dải sáng
+                updateEdgeGlowState();
             }, 2000);
         };
         
@@ -241,44 +210,61 @@ function initInfiniteScroll() {
                     scrollPosition + windowHeight > documentHeight - windowHeight / 2) {
                     // Scroll xuống và đã gần đến cuối trang
                     if (currentChapterId < totalChapters) {
+                        // Chỉ ghi log cho debug
+                        console.log("Đã đụng bottom, bottomScrolled =", bottomScrolled, ", recentlyLoaded =", recentlyLoaded);
+                        
                         if (!bottomScrolled) {
-                            // Lần đầu tiên scroll đến cuối - chỉ đánh dấu và hiển thị chỉ báo
+                            // Lần đầu tiên scroll đến cuối - chỉ đánh dấu và hiển thị dải sáng
                             bottomScrolled = true;
-                            updateScrollIndicatorsState();
+                            console.log("LẦN ĐẦU TIÊN đụng bottom, đang hiện dải sáng");
+                            // Hiển thị ngay lập tức dải sáng khi đụng đến cuối
+                            updateEdgeGlowState();
+                            // Đặt lại trạng thái sau 2 giây nếu không có tương tác tiếp
                             resetScrollState();
-                        } else {
+                        } else if (!recentlyLoaded) { // Kiểm tra nếu không phải mới load trang
                             // Lần thứ hai scroll đến cuối - chuyển chương
+                            console.log("LẦN THỨ HAI đụng bottom, chuẩn bị chuyển chương");
                             bottomScrolled = false; // Reset trạng thái
-                            updateScrollIndicatorsState();
+                            updateEdgeGlowState();
                             
-                            // Kích hoạt độ trễ và hiển thị indicator mạnh hơn
+                            // Kích hoạt hiệu ứng trượt xuống đến chương tiếp theo
                             activateScrollDelay(() => {
                                 isScrolling = true;
                                 activateCooldown();
-                                navigateToChapter(currentChapterId + 1);
+                                navigateToChapter(currentChapterId + 1, 'bottom');
                             });
+                        } else {
+                            console.log("Trang mới tải, không chuyển chương");
                         }
                         return;
                     }
                 } else if (wheelDirection < 0 && scrollPosition < windowHeight / 2) {
                     // Scroll lên và đã gần đến đầu trang
                     if (currentChapterId > 1) {
+                        // Chỉ ghi log cho debug
+                        console.log("Đã đụng top, topScrolled =", topScrolled, ", recentlyLoaded =", recentlyLoaded);
+                        
                         if (!topScrolled) {
-                            // Lần đầu tiên scroll đến đầu - chỉ đánh dấu và hiển thị chỉ báo
+                            // Lần đầu tiên scroll đến đầu - chỉ đánh dấu và hiển thị dải sáng
                             topScrolled = true;
-                            updateScrollIndicatorsState();
+                            console.log("LẦN ĐẦU TIÊN đụng top, đang hiện dải sáng");
+                            // Hiển thị ngay lập tức dải sáng khi đụng đến đầu trang
+                            updateEdgeGlowState();
                             resetScrollState();
-                        } else {
+                        } else if (!recentlyLoaded) { // Kiểm tra nếu không phải mới load trang
                             // Lần thứ hai scroll đến đầu - chuyển chương
+                            console.log("LẦN THỨ HAI đụng top, chuẩn bị chuyển chương");
                             topScrolled = false; // Reset trạng thái
-                            updateScrollIndicatorsState();
+                            updateEdgeGlowState();
                             
-                            // Kích hoạt độ trễ và hiển thị indicator mạnh hơn
+                            // Kích hoạt hiệu ứng trượt lên đến chương trước
                             activateScrollDelay(() => {
                                 isScrolling = true;
                                 activateCooldown();
-                                navigateToChapter(currentChapterId - 1);
+                                navigateToChapter(currentChapterId - 1, 'top');
                             });
+                        } else {
+                            console.log("Trang mới tải, không chuyển chương");
                         }
                         return;
                     }
@@ -287,7 +273,7 @@ function initInfiniteScroll() {
                     if (scrollPosition > windowHeight / 2 && scrollPosition + windowHeight < documentHeight - windowHeight / 2) {
                         topScrolled = false;
                         bottomScrolled = false;
-                        updateScrollIndicatorsState();
+                        updateEdgeGlowState();
                     }
                 }
             } else {
@@ -297,21 +283,29 @@ function initInfiniteScroll() {
                 if (scrollPosition + windowHeight >= documentHeight - scrollThreshold) {
                     // Scroll xuống để đi đến chương tiếp theo
                     if (currentChapterId < totalChapters) {
+                        // Ghi log để debug
+                        console.log("Đã đụng bottom (scroll thường), bottomScrolled =", bottomScrolled, ", recentlyLoaded =", recentlyLoaded);
+                        
                         if (!bottomScrolled) {
-                            // Lần đầu tiên scroll đến cuối - chỉ đánh dấu và hiển thị chỉ báo
+                            // Lần đầu tiên scroll đến cuối - chỉ đánh dấu và hiển thị dải sáng
                             bottomScrolled = true;
-                            updateScrollIndicatorsState();
+                            console.log("LẦN ĐẦU TIÊN đụng bottom (scroll thường), đang hiện dải sáng");
+                            // Hiển thị ngay lập tức dải sáng
+                            updateEdgeGlowState();
                             resetScrollState();
-                        } else {
+                        } else if (!recentlyLoaded) { // Kiểm tra nếu không phải mới load trang
                             // Lần thứ hai scroll đến cuối - chuyển chương
+                            console.log("LẦN THỨ HAI đụng bottom (scroll thường), chuẩn bị chuyển chương");
                             bottomScrolled = false; // Reset trạng thái
-                            updateScrollIndicatorsState();
+                            updateEdgeGlowState();
                             
                             activateScrollDelay(() => {
                                 isScrolling = true;
                                 activateCooldown();
-                                navigateToChapter(currentChapterId + 1);
+                                navigateToChapter(currentChapterId + 1, 'bottom');
                             });
+                        } else {
+                            console.log("Trang mới tải, không chuyển chương");
                         }
                         return;
                     }
@@ -321,21 +315,29 @@ function initInfiniteScroll() {
                 if (scrollPosition <= scrollThreshold) {
                     // Scroll lên để đi đến chương trước
                     if (currentChapterId > 1) {
+                        // Ghi log để debug
+                        console.log("Đã đụng top (scroll thường), topScrolled =", topScrolled, ", recentlyLoaded =", recentlyLoaded);
+                        
                         if (!topScrolled) {
-                            // Lần đầu tiên scroll đến đầu - chỉ đánh dấu và hiển thị chỉ báo
+                            // Lần đầu tiên scroll đến đầu - chỉ đánh dấu và hiển thị dải sáng
                             topScrolled = true;
-                            updateScrollIndicatorsState();
+                            console.log("LẦN ĐẦU TIÊN đụng top (scroll thường), đang hiện dải sáng");
+                            // Hiển thị ngay lập tức dải sáng
+                            updateEdgeGlowState();
                             resetScrollState();
-                        } else {
+                        } else if (!recentlyLoaded) { // Kiểm tra nếu không phải mới load trang
                             // Lần thứ hai scroll đến đầu - chuyển chương
+                            console.log("LẦN THỨ HAI đụng top (scroll thường), chuẩn bị chuyển chương");
                             topScrolled = false; // Reset trạng thái
-                            updateScrollIndicatorsState();
+                            updateEdgeGlowState();
                             
                             activateScrollDelay(() => {
                                 isScrolling = true;
                                 activateCooldown();
-                                navigateToChapter(currentChapterId - 1);
+                                navigateToChapter(currentChapterId - 1, 'top');
                             });
+                        } else {
+                            console.log("Trang mới tải, không chuyển chương");
                         }
                         return;
                     }
@@ -345,7 +347,7 @@ function initInfiniteScroll() {
                 if (scrollPosition > scrollThreshold && scrollPosition + windowHeight < documentHeight - scrollThreshold) {
                     topScrolled = false;
                     bottomScrolled = false;
-                    updateScrollIndicatorsState();
+                    updateEdgeGlowState();
                 }
             }
         } catch (error) {
@@ -367,52 +369,36 @@ function initInfiniteScroll() {
     // Kích hoạt độ trễ nhẹ trước khi chuyển chương để người dùng có thời gian hủy
     function activateScrollDelay(callback) {
         scrollDelayActive = true;
-        
-        // Tăng độ hiển thị của chỉ báo scroll để báo hiệu sắp chuyển chương
-        // Sử dụng phương pháp an toàn hơn để xác định hướng
-        let direction = 'bottom';
-        try {
-            const callbackStr = callback.toString();
-            direction = callbackStr.indexOf('currentChapterId + 1') !== -1 ? 'bottom' : 'top';
-        } catch (e) {
-            console.log('Could not determine direction from callback, using default', e);
-        }
-        
-        const indicator = document.querySelector(`.scroll-indicator-${direction}`);
-        
-        if (indicator) {
-            indicator.style.opacity = '1';
-            indicator.style.transform = 'translateX(-50%) scale(1.1)';
-        }
-        
-        // Đặt 300ms độ trễ để người dùng có thể hủy bằng cách cuộn ngược lại
         setTimeout(() => {
-            // Đặt lại style của indicator
-            if (indicator) {
-                indicator.style.opacity = '';
-                indicator.style.transform = '';
-            }
-            
             scrollDelayActive = false;
             callback();
         }, 300);
     }
     
-    // Điều hướng đến chương mới
-    function navigateToChapter(chapterId) {
-        // Hiển thị hiệu ứng chuyển trang
+    // Điều hướng đến chương mới với hiệu ứng trượt trang
+    function navigateToChapter(chapterId, direction) {
+        // Lưu thẻ container hiện tại để áp dụng animation
+        const currentContainer = document.querySelector('.container');
+        
+        // Xác định animation dựa vào hướng
+        if (direction === 'top') {
+            currentContainer.classList.add('slide-out-top');
+        } else {
+            currentContainer.classList.add('slide-out-bottom');
+        }
+        
+        // Thêm class cho body để không thể scroll trong quá trình chuyển chương
         document.body.classList.add('page-transition');
         
-        // Thêm phần tử loading để cải thiện UX
-        const loadingIndicator = document.createElement('div');
-        loadingIndicator.className = 'chapter-loading';
-        loadingIndicator.innerHTML = '<div class="loading-spinner"></div>';
-        document.body.appendChild(loadingIndicator);
+        // Tạo URL mới để chuyển đến
+        const nextChapterURL = `chapter.html?id=${chapterId}`;
         
-        // Chuyển đến chương mới với thời gian transition dài hơn
+        // Chuyển đến chương mới với thời gian transition
         setTimeout(() => {
-            window.location.href = `chapter.html?id=${chapterId}`;
-        }, 500); // Tăng thời gian để transition mượt mà hơn
+            // Thêm tham số cho hiệu ứng vào URL để trang mới biết cần animation nào
+            const transitionParam = direction === 'top' ? '&transition=top' : '&transition=bottom';
+            window.location.href = nextChapterURL + transitionParam;
+        }, 500);
     }
     
     // Thêm hỗ trợ điều hướng bằng bàn phím (mũi tên)
@@ -431,18 +417,7 @@ function initInfiniteScroll() {
                     if (currentChapterId < totalChapters) {
                         isScrolling = true;
                         activateCooldown();
-                        
-                        // Hiệu ứng cho nút chỉ báo
-                        const indicatorBottom = document.querySelector('.scroll-indicator-bottom');
-                        if (indicatorBottom) {
-                            indicatorBottom.style.opacity = '1';
-                            indicatorBottom.style.transform = 'translateX(-50%) scale(1.1)';
-                            setTimeout(() => {
-                                navigateToChapter(currentChapterId + 1);
-                            }, 200);
-                        } else {
-                            navigateToChapter(currentChapterId + 1);
-                        }
+                        navigateToChapter(currentChapterId + 1, 'bottom');
                     }
                     break;
                     
@@ -452,18 +427,7 @@ function initInfiniteScroll() {
                     if (currentChapterId > 1) {
                         isScrolling = true;
                         activateCooldown();
-                        
-                        // Hiệu ứng cho nút chỉ báo
-                        const indicatorTop = document.querySelector('.scroll-indicator-top');
-                        if (indicatorTop) {
-                            indicatorTop.style.opacity = '1';
-                            indicatorTop.style.transform = 'translateX(-50%) scale(1.1)';
-                            setTimeout(() => {
-                                navigateToChapter(currentChapterId - 1);
-                            }, 200);
-                        } else {
-                            navigateToChapter(currentChapterId - 1);
-                        }
+                        navigateToChapter(currentChapterId - 1, 'top');
                     }
                     break;
                     
@@ -472,4 +436,32 @@ function initInfiniteScroll() {
             }
         });
     }
+    
+    // Kiểm tra nếu trang được load với hiệu ứng chuyển tiếp
+    function checkTransitionEffect() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const transition = urlParams.get('transition');
+        
+        if (transition) {
+            const container = document.querySelector('.container');
+            
+            if (transition === 'top') {
+                container.classList.add('slide-in-bottom');
+            } else if (transition === 'bottom') {
+                container.classList.add('slide-in-top');
+            }
+            
+            // Xóa tham số transition để tránh nó xuất hiện trong URL và gây nhầm lẫn
+            const newUrl = window.location.pathname + '?id=' + urlParams.get('id');
+            history.replaceState({}, document.title, newUrl);
+        }
+    }
+    
+    // Chạy kiểm tra hiệu ứng khi trang load xong
+    checkTransitionEffect();
+    
+    // Xóa trạng thái mới tải sau khoảng thời gian - không cần thiết vì chúng ta đã cập nhật recentlyLoaded mỗi lần scroll
+    // setTimeout(() => {
+    //     recentlyLoaded = false;
+    // }, 1500);
 }
