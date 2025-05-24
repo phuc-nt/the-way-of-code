@@ -5,11 +5,11 @@
     {
       "text": [
         "Nếu bạn ca ngợi lập trình viên,",
-        "người khác trở nên oán giận.",
-        "Nếu bạn bám víu vào tài sản,",
+        "người khác sinh oán giận.",
+        "Nếu bạn bám víu sở hữu,",
         "người khác bị cám dỗ ăn cắp.",
-        "Nếu bạn đánh thức lòng ghen tị,",
-        "người khác chịu đau khổ trong tâm."
+        "Nếu bạn khơi dậy lòng ghen tị,",
+        "người khác chịu xáo động trong tim."
       ]
     },
     {
@@ -17,21 +17,21 @@
         "Người lập trình thể đạo dẫn dắt:",
         "Bằng cách làm trống tâm trí khỏi kỳ vọng",
         "và lấp đầy tâm hồn.",
-        "Bằng cách buông bỏ tham vọng và",
-        "ôm lấy điều chưa biết."
+        "Bằng cách buông bỏ tham vọng",
+        "và ôm lấy điều chưa biết."
       ]
     },
     {
       "text": [
         "Thoát khỏi trí tuệ, thoát khỏi trừu tượng,",
-        "Người lập trình thể đạo dẫn mọi vật trở về",
+        "Người lập trình thể đạo dẫn vạn vật về",
         "sự tự túc tự nhiên."
       ]
     },
     {
       "text": [
         "Làm bằng cách không làm, và chẳng có gì",
-        "mà không thể làm được."
+        "không thể hoàn thành."
       ]
     },
     {
@@ -41,7 +41,17 @@
     },
     {
       "text": [
-        "Chương này cảnh báo về văn hóa \"hero worship\" trong tech - việc tôn vinh cá nhân có thể tạo ra độc hại và cạnh tranh không lành mạnh. \"Người lập trình thể đạo\" dẫn dắt bằng cách tạo môi trường học hỏi thay vì so sánh. \"Làm trống tâm trí khỏi kỳ vọng\" nghĩa là tiếp cận mỗi vấn đề với tâm thế mở, không áp đặt solution có sẵn. \"Thoát khỏi trí tuệ, thoát khỏi trừu tượng\" chỉ việc đừng over-engineer - đôi khi giải pháp đơn giản, trực quan lại hiệu quả nhất. \"Làm bằng cách không làm\" là wu wei trong coding: để code tự nhiên phát triển theo logic của vấn đề, thay vì ép buộc theo ý tưởng có sẵn."
+        "Chương này phê phán **văn hóa ca ngợi cá nhân** trong giới công nghệ. Việc tôn vinh quá mức một lập trình viên có thể tạo ra sự phân hóa nhóm và cạnh tranh không lành mạnh. \"Bám víu sở hữu\" ám chỉ thói quen độc quyền code ownership, khiến đồng đội không dám sửa chữa hay cải tiến."
+      ]
+    },
+    {
+      "text": [
+        "\"Làm trống tâm trí khỏi kỳ vọng\" là nguyên tắc **YAGNI** (You Ain't Gonna Need It) - chỉ tập trung vào yêu cầu hiện tại, tránh over-engineering. \"Ôm lấy điều chưa biết\" phản ánh tinh thần **agile**: chấp nhận thay đổi requirements như cơ hội học hỏi."
+      ]
+    },
+    {
+      "text": [
+        "\"Làm bằng cách không làm\" (vô vi) thể hiện qua **automation** và **clean code**: hệ thống tự vận hành trơn tru, lập trình viên can thiệp tối thiểu. Đây cũng là triết lý của **DevOps** - xây dựng pipeline để công việc lặp lại được giải phóng bởi máy móc."
       ]
     }
   ]

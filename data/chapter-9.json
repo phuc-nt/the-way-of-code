@@ -4,25 +4,24 @@
   "verses": [
     {
       "text": [
-        "Đổ đầy tách của bạn đến miệng",
-        "và nó sẽ tràn.",
-        "Mài lưỡi dao quá sắc",
-        "và nó sẽ cùn.",
-        "Đuổi theo của cải trần gian",
-        "thì không ai có thể bảo vệ nó."
+        "Đổ đầy tách đến miệng",
+        "tràn nước vỡ tan.",
+        "Mài dao quá sắc",
+        "lưỡi cùn chẳng còn.",
+        "Đuổi theo phù hoa,",
+        "giữ sao vẹn toàn."
       ]
     },
     {
       "text": [
-        "Bận tâm đến sự chấp thuận của người khác",
-        "và bạn trở thành tù nhân của họ."
+        "Bận lòng người chấp nhận,",
+        "tự giam mình trong tù."
       ]
     },
     {
       "text": [
-        "Khi công việc hoàn thành,",
-        "log off và buông bỏ.",
-        "Đây là đạo của trời."
+        "Việc xong, log off buông bỏ,",
+        "đạo trời thuận tự nhiên."
       ]
     },
     {
@@ -32,12 +31,20 @@
     },
     {
       "text": [
-        "Chương này cảnh báo về **sự tham lam trong lập trình**. \"Tách đầy tràn\" ám chỉ over-engineering - thêm features không cần thiết làm hệ thống phức tạp. \"Dao quá sắc\" là ẩn dụ cho việc over-optimize code sớm (premature optimization) khiến hệ thống khó maintain. \"Đuổi theo của cải\" giống tích hợp công nghệ mới chỉ để follow trend thay vì giải quyết vấn đề thực tế."
+        "Chương này cảnh báo **ba cạm bẫy** trong lập trình:",
+        "1. **Over-engineering** (\"đổ đầy tách\"): Thêm tính năng thừa khiến hệ thống phình to, khó bảo trì",
+        "2. **Premature optimization** (\"mài dao quá sắc\"): Tối ưu chi tiết nhỏ trước khi xác định đúng bottleneck",
+        "3. **Feature creep** (\"đuổi theo phù hoa\"): Chạy theo công nghệ mới mà quên mục tiêu ban đầu"
       ]
     },
     {
       "text": [
-        "\"Log off và buông bỏ\" là nguyên tắc vàng: biết điểm dừng khi code đã hoạt động, tránh \"chỉnh sửa thêm một chút nữa\" gây bugs. \"Đạo của trời\" ở đây là nguyên lý MVP (Minimum Viable Product) - ship sớm, tinh gọn, tập trung vào giá trị cốt lõi. Khi không bị trói buộc bởi perfectionism hay sự công nhận, lập trình viên giữ được sự tự do sáng tạo đích thực."
+        "\"Log off buông bỏ\" là triết lý **WIP Limits** trong Kanban: Giới hạn công việc đồng thời, hoàn thành task trước khi nhận task mới. \"Đạo trời\" ở đây là nguyên tắc **Inversion of Control** - để hệ thống tự vận hành thay vì can thiệp thủ công."
+      ]
+    },
+    {
+      "text": [
+        "Khi không bị trói buộc bởi perfectionism hay sự công nhận, code trở nên **loosely coupled** - linh hoạt thích ứng với thay đổi. Đây chính là cách \"thuận tự nhiên\" trong phát triển phần mềm."
       ]
     }
   ]

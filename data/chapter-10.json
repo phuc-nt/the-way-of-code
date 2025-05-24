@@ -5,9 +5,9 @@
     {
       "text": [
         "Bạn có thể giữ hiện diện và tập trung",
-        "mà vẫn mở rộng tâm trí tiếp nhận.",
+        "mà vẫn mở rộng tâm trí tiếp nhận?",
         "Bạn có thể giữ vững trung tâm và tĩnh lặng",
-        "cho đến khi sự minh mẫn tự sinh, không cần can thiệp."
+        "đến khi minh mẫn tự sinh, không cần can thiệp?"
       ]
     },
     {
@@ -15,7 +15,7 @@
         "Yêu dự án của bạn",
         "và dẫn dắt mà không kiểm soát.",
         "Không làm gì",
-        "và để mọi việc tự hoàn thành."
+        "để mọi việc tự hoàn thành."
       ]
     },
     {
@@ -36,17 +36,17 @@
     },
     {
       "text": [
-        "Chương này khám phá **nghệ thuật buông bỏ** trong lập trình. \"Hiện diện và tập trung\" nhưng vẫn \"mở rộng tâm trí\" chỉ trạng thái flow khi coding - tỉnh táo nhưng không cứng nhắc. \"Sự minh mẫn tự sinh\" là quá trình để solution xuất hiện tự nhiên thông qua reflection thay vì ép buộc logic."
+        "Chương này khám phá **nghệ thuật buông bỏ** trong lập trình:",
+        "- **Hiện diện và tập trung**: Trạng thái **flow** khi coding - tỉnh táo nhưng không cứng nhắc, sẵn sàng tiếp nhận ý tưởng mới.",
+        "- **Minh mẫn tự sinh**: Giải pháp xuất hiện tự nhiên qua quá trình **refactoring** và **emergent design**, thay vì ép buộc logic.",
+        "- **Dẫn dắt không kiểm soát**: **Servant leadership** trong quản lý dự án - trao quyền cho team tự chủ, tập trung vào **clean architecture** thay vì micromanage.",
+        "- **Không làm gì** (vô vi): Triết lý **Agile** - hành động đúng thời điểm, tối ưu hóa hệ thống qua từng iteration thay vì over-planning.",
+        "- **Sáng tạo không sở hữu**: Tinh thần **open-source** - code tồn tại để phục vụ cộng đồng, không phải để khẳng định ego cá nhân."
       ]
     },
     {
       "text": [
-        "\"Yêu dự án mà không kiểm soát\" nhắc nhở lập trình viên tránh attachment vào code - như cha mẹ nuôi dưỡng con cái rồi để chúng tự phát triển. \"Không làm gì\" (wu wei) không phải lười biếng, mà là tin tưởng vào quy trình iterative development."
-      ]
-    },
-    {
-      "text": [
-        "\"Sáng tạo không sở hữu\" đề cao open-source spirit - code tồn tại để phục vụ cộng đồng. \"Làm việc không mong đợi\" là đỉnh cao của craftsmanship: tập trung vào chất lượng công việc thay vì recognition. Đây chính là **Zen of Programming** - hòa hợp giữa đam mê và buông xả."
+        "Khi không bám víu vào kết quả, lập trình viên đạt đến trạng thái **\"thực chứng\"** - hòa hợp giữa kỹ thuật và triết lý, nơi code trở thành phương tiện biểu đạt sự thuần khiết của tư duy."
       ]
     }
   ]

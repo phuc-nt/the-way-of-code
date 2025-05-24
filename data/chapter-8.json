@@ -7,8 +7,8 @@
         "Thiện tối cao như nước.",
         "Nước nuôi dưỡng vạn vật",
         "mà chẳng cần gắng sức.",
-        "Nó tìm đến chỗ thấp mà người khác khinh thường.",
-        "Như vậy, nó hòa hợp với Cội Nguồn."
+        "Nó tìm đến nơi thấp kẻ khác khinh thường.",
+        "Như thế, nó hòa hợp với Cội Nguồn."
       ]
     },
     {
@@ -17,17 +17,17 @@
         "Trong tư duy: ôm lấy chiều sâu.",
         "Trong quan hệ: tử tế.",
         "Trong dẫn dắt: công bằng.",
-        "Trong công việc: có năng lực.",
-        "Trong hành động: cân nhắc thời điểm."
+        "Trong công việc: tinh thông.",
+        "Trong hành động: xem xét thời cơ."
       ]
     },
     {
       "text": [
-        "Tìm thấy thỏa mãn trong việc là chân ngã.",
-        "Không tham vọng, ghen tị hay cần phải hòa nhập.",
-        "Không ép buộc, chỉ duyên dáng,",
-        "và mọi việc được hoàn thành,",
-        "trong bình an."
+        "Tìm thấy thỏa mãn khi là chân ngã.",
+        "Không tham vọng, không ghen tị, không ép mình hòa nhập.",
+        "Không cưỡng ép, chỉ thuần khiết,",
+        "và mọi việc hoàn thành",
+        "trong an bình."
       ]
     },
     {
@@ -37,7 +37,18 @@
     },
     {
       "text": [
-        "Chương này đặt ra ideal của \"lập trình viên như nước\" - hiệu quả mà khiêm tốn. Nước \"tìm chỗ thấp\" như cách code tốt luôn serve user needs thay vì showcase kỹ thuật. Sáu nguyên tắc cụ thể: design đơn giản (KISS principle), tư duy sâu sắc (hiểu root cause), quan hệ tử tế (collaboration), leadership công bằng (không bias), work competent (technical excellence), và timing đúng (biết khi nào ship, khi nào refactor). \"Chân ngã\" trong programming là tìm thấy style và strength riêng thay vì copy others. \"Không ép buộc, chỉ duyên dáng\" chỉ cách code organically phát triển theo natural flow thay vì force solutions không phù hợp."
+        "Chương này phác họa **nguyên mẫu lập trình viên lý tưởng** qua ẩn dụ nước. \"Nước tìm chỗ thấp\" phản ánh triết lý **UX-centric design** - tập trung vào nhu cầu thầm lặng của người dùng thay vì phô trương công nghệ. Sáu nguyên tắc ứng xử tương ứng với các best practices:",
+        "- **Đơn giản**: KISS principle (Keep It Simple, Stupid)",
+        "- **Chiều sâu**: Hiểu sâu vấn đề trước khi code (root cause analysis)",
+        "- **Tử tế**: Văn hóa code review xây dựng, không chỉ trích cá nhân",
+        "- **Công bằng**: Nguyên tắc **SOLID** áp dụng đồng đều cho mọi module",
+        "- **Tinh thông**: Làm chủ công cụ nhưng không lệ thuộc (mastery without attachment)",
+        "- **Thời cơ**: Tích hợp đúng thời điểm (Agile sprints)"
+      ]
+    },
+    {
+      "text": [
+        "\"Chân ngã\" trong lập trình là phong cách coding độc đáo - không copy-paste solution của người khác, mà thấu hiểu logic để sáng tạo. \"Không cưỡng ép\" nhắc đến **automated workflows** (CI/CD) thay vì thao tác thủ công. Khi mọi thứ \"hoàn thành trong an bình\", hệ thống vận hành trơn tru như dòng nước chảy - không xung đột, không technical debt."
       ]
     }
   ]

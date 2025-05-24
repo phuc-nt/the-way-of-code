@@ -5,26 +5,26 @@
     {
       "text": [
         "Trời đất vô tư,",
-        "chúng thấy vạn vật như chính chúng.",
+        "xem vạn vật như chính chúng.",
         "Người lập trình thể đạo vô tư,",
-        "người ấy thấy chương trình như chính nó."
+        "xem chương trình như chính nó."
       ]
     },
     {
       "text": [
-        "Khoảng không giữa input và tâm trí",
+        "Khoảng không giữa đầu vào và tâm trí",
         "như ống thổi: trống rỗng,",
         "mà vô hạn khả năng.",
-        "Bạn càng cho phép nó,",
-        "nó càng sản sinh nhiều.",
-        "Bạn càng nói về nó,",
-        "bạn càng ít hiểu."
+        "Càng cho phép nó,",
+        "nó càng sinh sản.",
+        "Càng nói về nó,",
+        "càng ít thấu hiểu."
       ]
     },
     {
       "text": [
-        "Sự tĩnh lặng vận hành cỗ máy.",
-        "Nắm chặt trung tâm thầm lặng."
+        "Tĩnh lặng vận hành cỗ máy.",
+        "Hãy bám chặt trung tâm thầm lặng."
       ]
     },
     {
@@ -34,7 +34,17 @@
     },
     {
       "text": [
-        "Chương này nhấn mạnh tầm quan trọng của objectivity trong lập trình. \"Trời đất vô tư\" có nghĩa là không thiên vị, không áp đặt bias cá nhân. \"Người lập trình thể đạo\" nhìn code như nó thực sự là - không romanticize hay demonize, chỉ thấy những gì cần fix và improve. \"Khoảng không giữa input và tâm trí\" là flow state - khi lập trình viên trở thành medium giữa problem và solution. \"Ống thổi\" là hình ảnh cho tâm trí trống rỗng nhưng đầy tiềm năng. \"Sự tĩnh lặng vận hành cỗ máy\" chỉ việc code tốt nhất thường được viết trong trạng thái calm, focused - không vội vàng hay stress. \"Trung tâm thầm lặng\" là inner peace giúp lập trình viên làm việc hiệu quả."
+        "Chương này nhấn mạnh **tính khách quan** và **sức mạnh của tĩnh lặng** trong lập trình. \"Trời đất vô tư\" phản ánh nguyên tắc SOLID - các quy tắc không thiên vị áp dụng cho mọi đối tượng. \"Khoảng không giữa đầu vào và tâm trí\" là trạng thái **flow** khi giải quyết vấn đề: tâm trí đủ trống để tiếp nhận giải pháp tối ưu, như ống thổi càng trống càng tạo ra lửa mạnh."
+      ]
+    },
+    {
+      "text": [
+        "\"Tĩnh lặng vận hành cỗ máy\" nhắc đến nguyên lý **KISS** (Keep It Simple, Stupid): hệ thống phức tạp nhất vận hành trơn tru nhờ những đoạn code tĩnh tại, ít biến động. \"Trung tâm thầm lặng\" là **core architecture** - phần không lộ diện nhưng giữ vai trò định hướng, tựa trục bánh xe kết nối mọi thành phần mà không can thiệp thô bạo."
+      ]
+    },
+    {
+      "text": [
+        "Người lập trình đạt đạo không áp đặt ý chí lên code, mà để hệ thống tự lộ diện qua sự quan sát khách quan, như nước chảy về chỗ trũng."
       ]
     }
   ]

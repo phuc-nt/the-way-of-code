@@ -1,0 +1,61 @@
+{
+  "id": 21,
+  "title": "Chương 21",
+  "verses": [
+    {
+      "text": [
+        "Mẫu hình thanh lịch hiện ra từ hư vô.",
+        "Chính hư vô sinh ra mọi hình tướng."
+      ]
+    },
+    {
+      "text": [
+        "Mơ hồ và vô hình,",
+        "nhưng hình dáng ẩn chứa bên trong.",
+        "Vô hình và mơ hồ,",
+        "nhưng bản chất ẩn chứa bên trong.",
+        "Sâu thẳm và mờ ảo,",
+        "nhưng tinh túy ẩn chứa bên trong."
+      ]
+    },
+    {
+      "text": [
+        "Tinh túy này là thực tại,",
+        "nó neo mình vào niềm tin."
+      ]
+    },
+    {
+      "text": [
+        "Từ thuở hồng hoang đến nay",
+        "nó chưa từng bị lãng quên.",
+        "Đây là đạo của tạo hóa."
+      ]
+    },
+    {
+      "text": [
+        "Làm sao ta biết được đạo tạo hóa?",
+        "Chẳng phải hiển nhiên sao?"
+      ]
+    },
+    {
+      "text": [
+        "## Chú thích"
+      ]
+    },
+    {
+      "text": [
+        "Chương này khám phá **nguyên lý sáng tạo từ khoảng trống** trong lập trình. \"Mẫu hình thanh lịch\" ám chỉ các design pattern (như MVC, Singleton) - chúng xuất hiện tự nhiên từ những nguyên tắc cốt lõi chứ không phải áp đặt. \"Hư vô\" là trạng thái tâm trí lập trình viên khi tiếp cận vấn đề không thành kiến, để solution tự lộ diện."
+      ]
+    },
+    {
+      "text": [
+        "Ba cặp đối lập (mơ hồ/vô hình, sâu thẳm/mờ ảo) mô tả quá trình refactoring: code tinh gọn thường ẩn chứa logic phức tạp được đóng gói khéo léo. \"Neo vào niềm tin\" nhắc nhở trust the process - dù không thấy ngay kết quả, vẫn kiên trì tuân thủ nguyên tắc clean code."
+      ]
+    },
+    {
+      "text": [
+        "Câu hỏi cuối là lời khẳng định: đạo lập trình không phải điều huyền bí. Khi hiểu sâu vấn đề, solution đẹp tự hiển lộ như quy luật tự nhiên - giống cách thuật toán tối ưu xuất hiện khi phân tích kỹ requirements. Đây chính là \"hiển nhiên\" với những ai đã đạt đến trình độ craftsmanship."
+      ]
+    }
+  ]
+}
