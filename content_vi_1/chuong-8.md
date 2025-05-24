@@ -1,0 +1,34 @@
+# Chương 8
+
+Thiện tối cao như nước.  
+Nước nuôi dưỡng vạn vật  
+mà chẳng cần gắng sức.  
+Nó tìm đến nơi thấp kẻ khác khinh thường.  
+Như thế, nó hòa hợp với Cội Nguồn.
+
+Trong thiết kế: giữ đơn giản.  
+Trong tư duy: ôm lấy chiều sâu.  
+Trong quan hệ: tử tế.  
+Trong dẫn dắt: công bằng.  
+Trong công việc: tinh thông.  
+Trong hành động: xem xét thời cơ.
+
+Tìm thấy thỏa mãn khi là chân ngã.  
+Không tham vọng, không ghen tị, không ép mình hòa nhập.  
+Không cưỡng ép, chỉ thuần khiết,  
+và mọi việc hoàn thành  
+trong an bình.
+
+---
+
+## Chú thích
+
+Chương này phác họa **nguyên mẫu lập trình viên lý tưởng** qua ẩn dụ nước. "Nước tìm chỗ thấp" phản ánh triết lý **UX-centric design** - tập trung vào nhu cầu thầm lặng của người dùng thay vì phô trương công nghệ. Sáu nguyên tắc ứng xử tương ứng với các best practices:  
+- **Đơn giản**: KISS principle (Keep It Simple, Stupid)  
+- **Chiều sâu**: Hiểu sâu vấn đề trước khi code (root cause analysis)  
+- **Tử tế**: Văn hóa code review xây dựng, không chỉ trích cá nhân  
+- **Công bằng**: Nguyên tắc **SOLID** áp dụng đồng đều cho mọi module  
+- **Tinh thông**: Làm chủ công cụ nhưng không lệ thuộc (mastery without attachment)  
+- **Thời cơ**: Tích hợp đúng thời điểm (Agile sprints)  
+
+"Chân ngã" trong lập trình là phong cách coding độc đáo - không copy-paste solution của người khác, mà thấu hiểu logic để sáng tạo. "Không cưỡng ép" nhắc đến **automated workflows** (CI/CD) thay vì thao tác thủ công. Khi mọi thứ "hoàn thành trong an bình", hệ thống vận hành trơn tru như dòng nước chảy - không xung đột, không technical debt. 

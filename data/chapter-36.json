@@ -1,0 +1,55 @@
+{
+  "id": 36,
+  "title": "Chương 36",
+  "verses": [
+    {
+      "text": [
+        "Muốn thu nhỏ điều gì,",
+        "hãy để nó mở rộng trước.",
+        "Muốn làm yếu điều gì,",
+        "hãy để nó mạnh lên trước.",
+        "Muốn giảm bớt điều gì,",
+        "hãy để nó tích tụ trước.",
+        "Muốn lấy điều gì,",
+        "hãy để nó được trao trước."
+      ]
+    },
+    {
+      "text": [
+        "Đây gọi là nhận thức tinh tế",
+        "về lẽ vận hành của vạn vật.",
+        "Mềm mại thắng cứng rắn.",
+        "Chậm rãi thắng hấp tấp."
+      ]
+    },
+    {
+      "text": [
+        "Hãy giữ phương pháp như bí ẩn.",
+        "Chỉ cho thấy kết quả."
+      ]
+    },
+    {
+      "text": [
+        "## Chú thích"
+      ]
+    },
+    {
+      "text": [
+        "Chương này áp dụng **nguyên lý đối lập** vào quy trình phát triển phần mềm:",
+        "- **\"Mở rộng trước khi thu nhỏ\"**: Cho phép codebase phát triển tự nhiên trong giai đoạn prototype trước khi refactor tinh gọn (giống quy trình **Sprint** trong Agile).",
+        "- **\"Mạnh lên trước khi yếu đi\"**: Chấp nhận **technical debt** tạm thời để hoàn thành MVP, sau đó tối ưu dần (**paying off technical debt**).",
+        "- **\"Chậm thắng nhanh\"**: Triết lý **Slow Programming** - đầu tư thời gian thiết kế kiến trúc kỹ lưỡng giúp tiết kiệm thời gian sửa lỗi sau này."
+      ]
+    },
+    {
+      "text": [
+        "\"Giữ phương pháp bí ẩn\" ám chỉ **encapsulation** trong OOP - ẩn implementation details, chỉ expose interface. \"Chỉ cho thấy kết quả\" phản ánh nguyên tắc **black box testing** - tập trung vào đầu vào/ra thay vì logic bên trong."
+      ]
+    },
+    {
+      "text": [
+        "Lập trình viên đạt đạo hiểu: **Kháng cự sự thay đổi (hard code) tạo ra fragility, trong khi linh hoạt (soft code) mang lại resilience.** Như nước mềm mại khoan thủng đá cứng, code mềm dẻo vượt qua mọi requirement thay đổi."
+      ]
+    }
+  ]
+}
