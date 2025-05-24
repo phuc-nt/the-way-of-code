@@ -191,8 +191,8 @@ function loadChapter() {
         .catch(error => {
             console.error('Error loading chapter data:', error);
             document.getElementById('chapter-content').innerHTML = `
-                <h1 class="chapter-heading">Chương không tồn tại</h1>
-                <p style="text-align: center">Không tìm thấy chương bạn yêu cầu. <a href="index.html">Quay lại trang chủ</a></p>
+                <h1 class="chapter-heading">Chương này đang dịch</h1>
+                <p style="text-align: center">Hãy quay lại vào lúc khác. <a href="index.html">Quay lại trang chủ</a></p>
             `;
         });
 }

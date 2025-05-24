@@ -1,0 +1,69 @@
+/* CSS cho gợi ý điều hướng */
+.navigation-hint {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.navigation-hint.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.hint-content {
+    background-color: var(--paper-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.hint-content h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.hint-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.hint-content li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.hint-key {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: var(--code-bg);
+    border-radius: 4px;
+    font-family: monospace;
+    margin-right: 5px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+}
+
+.hint-close-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: inherit;
+}
+
+.hint-close-button:hover {
+    background-color: #2980b9;
+}

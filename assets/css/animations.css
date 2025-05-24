@@ -2,8 +2,13 @@
 
 /* Fade in từ từ */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(15px); }
 }
 
 @keyframes fadeInUp {
@@ -59,7 +64,17 @@
 
 /* Animation cho page transitions */
 .page-transition {
-    animation: fadeInFromRight 0.5s ease-out forwards;
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+/* Prevent scroll during transitions */
+body.page-transition {
+    overflow: hidden;
+}
+
+/* Handle page arrival transition */
+.container {
+    animation: fadeIn 0.5s ease-out;
 }
 
 /* Hover animation cho các link */
@@ -98,7 +113,7 @@
     font-family: Georgia, serif;
 }
 
-/* Smooth scroll behavior */
+/* Control scroll behavior via JavaScript instead for better compatibility */
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
