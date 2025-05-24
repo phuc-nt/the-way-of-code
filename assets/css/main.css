@@ -232,6 +232,76 @@ footer {
     border-top: 1px solid #eee;
 }
 
+/* Định dạng Markdown */
+.verse strong, .comment-quote strong {
+    font-weight: 700;
+}
+
+.verse em, .comment-quote em {
+    font-style: italic;
+}
+
+.verse code, .comment-quote code {
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.verse a, .comment-quote a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-time);
+}
+
+.verse a:hover, .comment-quote a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng blockquote cho phần chú thích */
+.comment-quote p {
+    margin-bottom: 1rem;
+}
+
+.comment-quote strong {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.comment-quote em {
+    font-style: italic;
+}
+
+.comment-quote code {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.comment-quote a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.comment-quote a:hover {
+    border-bottom: 1px solid;
+}
+
+/* Định dạng cho danh sách trong comment */
+.comment-quote ol, .comment-quote ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.comment-quote li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     .navigation {
