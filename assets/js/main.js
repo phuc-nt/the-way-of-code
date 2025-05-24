@@ -260,65 +260,45 @@ function renderChapterContent(data) {
 function renderCommentContent(commentVerses) {
     let commentHTML = '';
     let inList = false;
-    let inOrderedList = false;
     
     commentVerses.forEach(verse => {
-        // Duyệt qua từng dòng văn bản trong verse để xử lý đúng format
-        for (let i = 0; i < verse.text.length; i++) {
-            const line = verse.text[i];
-            
-            // Xử lý danh sách có đánh số
-            if (line.match(/^\d+\.\s/)) {
-                if (!inOrderedList) {
-                    // Bắt đầu danh sách có đánh số mới
-                    if (commentHTML.endsWith('</p>')) {
-                        commentHTML = commentHTML.slice(0, -4);
-                    }
-                    commentHTML += '<ol>';
-                    inOrderedList = true;
-                    inList = true;
+        // Xử lý các dòng văn bản trong verse
+        const fullText = verse.text.join(' ');
+        
+        // Kiểm tra xem verse này có chứa danh sách không
+        if (fullText.includes('1.') && (fullText.includes('2.') || fullText.includes('3.'))) {
+            // Verse này chứa danh sách
+            if (!inList) {
+                // Nếu đang ở trong đoạn văn, kết thúc đoạn đó
+                if (commentHTML.endsWith('</p>')) {
+                    commentHTML = commentHTML.slice(0, -4);
                 }
-                // Thêm mục danh sách có đánh số
-                const content = line.replace(/^\d+\.\s+/, '');
-                commentHTML += `<li>${parseMarkdown(content)}</li>`;
-            } 
-            // Xử lý danh sách gạch đầu dòng
-            else if (line.match(/^-\s/) || line.match(/^\*\s/)) {
-                if (!inList || inOrderedList) {
-                    // Kết thúc danh sách có đánh số nếu đang trong đó
-                    if (inOrderedList) {
-                        commentHTML += '</ol>';
-                        inOrderedList = false;
-                    }
-                    
-                    // Bắt đầu danh sách gạch đầu dòng mới
-                    if (commentHTML.endsWith('</p>')) {
-                        commentHTML = commentHTML.slice(0, -4);
-                    }
-                    if (!inList) {
-                        commentHTML += '<ul>';
-                        inList = true;
-                    }
-                }
-                // Thêm mục danh sách gạch đầu dòng
-                const content = line.replace(/^-\s+/, '').replace(/^\*\s+/, '');
-                commentHTML += `<li>${parseMarkdown(content)}</li>`;
-            } 
-            else {
-                // Đóng danh sách nếu đang mở
-                if (inList) {
-                    commentHTML += inOrderedList ? '</ol>' : '</ul>';
-                    inList = false;
-                    inOrderedList = false;
-                }
-                
-                // Xử lý đoạn văn thông thường
-                if (line.trim() !== '') {
-                    commentHTML += `<p>${parseMarkdown(line)}</p>`;
-                }
+                // Bắt đầu danh sách
+                commentHTML += '<ol>';
+                inList = true;
             }
+            
+            // Xử lý danh sách
+            const lines = fullText.split(/\d+\.\s/);
+            lines.shift(); // Bỏ phần đầu tiên trước danh sách
+            
+            // Thêm từng mục danh sách
+            lines.forEach(line => {
+                if (line.trim()) {
+                    commentHTML += `<li>${parseMarkdown(line.trim())}</li>`;
+                }
+            });
+        } else {
+            // Verse này là đoạn văn bình thường
+            if (inList) {
+                // Nếu đang trong danh sách, kết thúc danh sách
+                commentHTML += '</ol>';
+                inList = false;
+            }
+            
+            // Thêm đoạn văn mới
+            commentHTML += `<p>${parseMarkdown(fullText)}</p>`;
         }
-    });
     });
     
     // Đảm bảo kết thúc tất cả các thẻ mở
