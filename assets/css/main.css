@@ -1,6 +1,7 @@
 /* main.css - Stylesheet chính cho trang web */
 
 :root {
+    /* Light theme (default) */
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
     --accent-color: #3498db;
@@ -8,7 +9,41 @@
     --light-text: #ecf0f1;
     --background-color: #f9f9f9;
     --paper-color: #fff;
+    --border-color: #eee;
+    --code-bg: #f5f5f5;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --hover-bg: rgba(52, 152, 219, 0.1);
     --transition-time: 0.4s;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --primary-color: #ecf0f1;
+    --secondary-color: #bdc3c7;
+    --accent-color: #3498db;
+    --text-color: #ecf0f1;
+    --light-text: #ecf0f1;
+    --background-color: #1a1a1a;
+    --paper-color: #2c2c2c;
+    --border-color: #404040;
+    --code-bg: #363636;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --hover-bg: rgba(52, 152, 219, 0.2);
+}
+
+/* Brown theme */
+[data-theme="brown"] {
+    --primary-color: #5D4037;
+    --secondary-color: #795548;
+    --accent-color: #8D6E63;
+    --text-color: #3E2723;
+    --light-text: #EFEBE9;
+    --background-color: #EFEBE9;
+    --paper-color: #FFF3E0;
+    --border-color: #D7CCC8;
+    --code-bg: #FAFAFA;
+    --shadow-color: rgba(93, 64, 55, 0.05);
+    --hover-bg: rgba(141, 110, 99, 0.1);
 }
 
 * {
@@ -32,7 +67,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     background: var(--paper-color);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px var(--shadow-color);
     border-radius: 5px;
     min-height: 100vh;
 }
@@ -40,7 +75,7 @@ body {
 /* Header và navigation */
 header {
     margin-bottom: 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 1rem;
 }
 
@@ -267,7 +302,7 @@ footer {
 }
 
 .dropdown-button:hover {
-    background-color: rgba(52, 152, 219, 0.1);
+    background-color: var(--hover-bg);
     color: var(--accent-color);
 }
 
@@ -299,7 +334,7 @@ footer {
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(52, 152, 219, 0.1);
+    background-color: var(--hover-bg);
     color: var(--accent-color);
 }
 
@@ -331,7 +366,7 @@ footer {
 }
 
 .verse code, .comment-quote code {
-    background-color: #f5f5f5;
+    background-color: var(--code-bg);
     padding: 0.2em 0.4em;
     border-radius: 3px;
     font-family: monospace;
@@ -421,5 +456,68 @@ footer {
     .home-link {
         margin-bottom: 0.5rem;
         font-size: 1.3rem;
+    }
+}
+
+/* Theme switcher */
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--paper-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    z-index: 1000;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.theme-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform var(--transition-time);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-button:hover {
+    transform: scale(1.1);
+}
+
+.theme-button.light {
+    background: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.theme-button.dark {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.theme-button.brown {
+    background: #5D4037;
+    color: #FFF3E0;
+}
+
+.theme-button.active {
+    outline: 2px solid var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .theme-switcher {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .theme-button {
+        width: 28px;
+        height: 28px;
     }
 }

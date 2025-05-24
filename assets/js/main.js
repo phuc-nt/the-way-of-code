@@ -1,6 +1,46 @@
 // main.js - File JavaScript chính
 
+// Khởi tạo theme manager
+const themeManager = {
+    // Lấy theme từ localStorage hoặc dùng light mode mặc định
+    getCurrentTheme() {
+        return localStorage.getItem('theme') || 'light';
+    },
+
+    // Lưu theme vào localStorage
+    setTheme(theme) {
+        localStorage.setItem('theme', theme);
+        document.documentElement.setAttribute('data-theme', theme);
+        this.updateActiveButton(theme);
+    },
+
+    // Cập nhật trạng thái active của các nút
+    updateActiveButton(theme) {
+        document.querySelectorAll('.theme-button').forEach(button => {
+            button.classList.toggle('active', button.dataset.theme === theme);
+        });
+    },
+
+    // Khởi tạo theme switcher
+    init() {
+        // Áp dụng theme đã lưu
+        const currentTheme = this.getCurrentTheme();
+        this.setTheme(currentTheme);
+
+        // Thêm event listeners cho các nút
+        document.querySelectorAll('.theme-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const theme = button.dataset.theme;
+                this.setTheme(theme);
+            });
+        });
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Khởi tạo theme manager
+    themeManager.init();
+    
     // Khởi tạo ứng dụng
     initApp();
 });
