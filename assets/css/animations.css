@@ -1,0 +1,104 @@
+/* animations.css - File CSS chứa các animation */
+
+/* Fade in từ từ */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Áp dụng animation cho các phần tử */
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animation cho verse */
+.verse {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Để các verse xuất hiện lần lượt */
+.verse:nth-child(2) { animation-delay: 0.2s; }
+.verse:nth-child(3) { animation-delay: 0.4s; }
+.verse:nth-child(4) { animation-delay: 0.6s; }
+.verse:nth-child(5) { animation-delay: 0.8s; }
+.verse:nth-child(6) { animation-delay: 1s; }
+
+/* Animation cho page transitions */
+.page-transition {
+    animation: fadeInFromRight 0.5s ease-out forwards;
+}
+
+/* Hover animation cho các link */
+.chapter-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.chapter-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.chapter-link:hover::after {
+    width: 100%;
+}
+
+/* Subtle animation for quote */
+.quote, .comment-quote {
+    position: relative;
+}
+
+.quote::before, .comment-quote::before {
+    content: '"';
+    position: absolute;
+    left: -0.7em;
+    top: -0.3em;
+    font-size: 2em;
+    color: rgba(52, 152, 219, 0.2);
+    font-family: Georgia, serif;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,249 @@
+/* main.css - Stylesheet chính cho trang web */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --light-text: #ecf0f1;
+    --background-color: #f9f9f9;
+    --paper-color: #fff;
+    --transition-time: 0.4s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Serif", Georgia, serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--paper-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    min-height: 100vh;
+}
+
+/* Header và navigation */
+header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.home-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-time);
+}
+
+.home-link:hover {
+    color: var(--accent-color);
+}
+
+.chapter-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.chapter-footer-nav .chapter-nav {
+    justify-content: center;
+}
+
+.prev-chapter, .next-chapter {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition-time);
+    white-space: nowrap;
+}
+
+.prev-chapter:hover, .next-chapter:hover {
+    color: var(--accent-color);
+}
+
+.chapter-title {
+    font-weight: bold;
+}
+
+/* Nội dung chương */
+.chapter-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.verse-container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.verse {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Trang chủ */
+.home-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.author {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+}
+
+.introduction {
+    margin-bottom: 3rem;
+}
+
+.quote, .comment-quote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.intro-text {
+    margin-top: 2rem;
+}
+
+.intro-text h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.intro-text p {
+    margin-bottom: 1rem;
+}
+
+/* Danh sách chương */
+.chapter-list {
+    margin-bottom: 3rem;
+}
+
+.chapter-list h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.chapters {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.chapter-link {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: center;
+    transition: all var(--transition-time);
+}
+
+.chapter-link:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+/* Comment section */
+.comment-section {
+    margin: 3rem auto 1rem;
+    max-width: 700px;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.comment-section h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.comment-quote {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Chapter Footer Navigation */
+.chapter-footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin: 2rem 0 1rem;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chapters {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+}

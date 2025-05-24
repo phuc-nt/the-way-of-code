@@ -1,0 +1,27 @@
+# Chương 11  
+
+Ba mươi nan hoa kết nối trục,  
+nhưng tính hữu dụng của bánh xe  
+phụ thuộc vào khoảng trống ở trung tâm.  
+
+Đất sét tạo hình bình gốm,  
+nhưng khả năng chứa đựng  
+phụ thuộc vào khoảng trống bên trong.  
+
+Ta xây tường với cửa sổ và cửa ra vào,  
+nhưng công năng của căn phòng  
+phụ thuộc vào khoảng trống bên trong.  
+
+Vì thế,  
+Ta tận hưởng sự viên mãn của hiện hữu  
+nhưng tìm thấy giá trị ở những khoảng trống.  
+
+---
+
+## Chú thích  
+
+Chương này khám phá **triết lý không gian âm** trong lập trình. "Khoảng trống ở trung tâm" ví von API hoặc interface - phần không nhìn thấy nhưng kết nối mọi thành phần hệ thống. "Bình gốm trống rỗng" tượng trưng cho modular architecture - containers (như Docker) chỉ hữu dụng khi có không gian để integrate các services.  
+
+"Khoảng trống trong phòng" ám chỉ UX design: giá trị thực nằm ở trải nghiệm người dùng (không gian trống) chứ không phải ở UI elements (tường/cửa). Trong coding, comments và whitespace là những "khoảng trống" giúp code dễ đọc và maintain.  
+
+Câu kết nhắc nhở lập trình viên: đừng chỉ tập trung vào "đặc" (code dày đặc, features) mà hãy tôn trọng "rỗng" (kiến trúc linh hoạt, documentation) - nơi thực sự tạo ra giá trị bền vững. 

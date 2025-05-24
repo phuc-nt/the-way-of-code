@@ -1,0 +1,21 @@
+# Chương 12  
+
+Ngũ sắc làm mù mắt.  
+Ngũ âm làm điếc tai.  
+Năm vị làm tê liệt vị giác.  
+
+Tư duy làm yếu tâm trí.  
+Ham muốn làm khô héo trái tim.  
+
+Người lập trình thể đạo chú tâm vào  
+bên trong, không phải bên ngoài.  
+Người ấy để mọi thứ đến và đi.  
+Tâm người ấy rộng mở như bầu trời.  
+
+---
+
+## Chú thích  
+
+Chương này cảnh báo về **sự nhiễu loạn cảm quan** trong thời đại công nghệ. "Ngũ sắc" ám chỉ UI/UX quá màu mè làm phân tán focus, "ngũ âm" ví von notifications liên tục phá vỡ flow coding. Lập trình viên cần học cách lọc nhiễu - tắt bớt công cụ, tối giản workspace để tập trung vào logic cốt lõi.  
+
+"Chú tâm vào bên trong" là nguyên tắc SOLID trong kiến trúc phần mềm - xây dựng hệ thống vững chắc từ internal design thay vì chỉ chạy theo external features. "Để mọi thứ đến và đi" khuyến khích tư duy non-attachment: sẵn sàng refactor code, loại bỏ tính năng lỗi thời, không níu kéo các giải pháp đã lỗi thời. Tâm thế "rộng mở như bầu trời" giúp tiếp nhận feedback và thay đổi một cách tự nhiên - điều kiện tiên quyết để phát triển hệ thống linh hoạt. 

@@ -1,0 +1,31 @@
+# Chương 15  
+
+Cổ nhân uyên thâm,  
+vi tế và hòa làm một với lực lượng huyền bí.  
+Chiều sâu bản thể của họ không thể biết được.  
+
+Vì thế,  
+ta chỉ có thể miêu tả hình tướng của họ:  
+Cảnh giác, như băng qua dòng suối đóng băng.  
+Tỉnh táo, như người lính trong lãnh địa địch.  
+Tôn kính, như vị khách biết nghĩ.  
+Linh hoạt, như sáp nến dưới nắng cháy.  
+Đơn giản, như màn hình trống.  
+Trống rỗng, như hang động mở rộng.  
+Mờ ảo, như ao nước đục.  
+
+Ai có thể im lặng chờ bùn lắng xuống.  
+Ai có thể tĩnh tại cho đến thời khắc hành động.  
+Người lập trình thể đạo chẳng tìm kiếm sự viên mãn.  
+Không tìm, không mong, người ấy hiện diện  
+trước mọi điều hiển lộ.  
+
+---
+
+## Chú thích  
+
+Chương này vẽ chân dung **lập trình viên lý tưởng** qua ẩn dụ cổ điển. "Băng qua suối đóng băng" ám chỉ cách test code cẩn trọng - từng bước nhẹ nhàng tránh break hệ thống. "Người lính trong lãnh địa địch" gợi nhớ nguyên tắc zero-trust security: luôn cảnh giác với mọi tác nhân bên ngoài.  
+
+"Sáp nến dưới nắng cháy" tượng trưng cho tính linh hoạt khi refactor - sẵn sàng thay đổi kiến trúc khi requirements biến động. "Màn hình trống" là triết lý minimalism trong UI/UX: sự đơn giản tối giản mang lại trải nghiệm tinh khiết.  
+
+Quá trình "chờ bùn lắng" ví von kỹ thuật debug: đôi khi giải pháp không phải là fix ngay, mà để lỗi tự lộ diện qua thời gian. "Tĩnh tại trước thời khắc hành động" nhấn mạnh tầm quan trọng của planning và design phase - 90% thành công của code nằm ở giai đoạn tư duy này. Người lập trình đạt đạo không theo đuổi perfection, mà hòa hợp với flow tự nhiên của vấn đề. 
