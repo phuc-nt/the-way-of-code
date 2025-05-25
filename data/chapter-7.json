@@ -1,39 +1,38 @@
 {
   "id": 7,
   "title": "Chương 7",
-  "verses": [
-    {
-      "text": [
-        "Trời đất tồn tại mãi mãi.",
-        "Vĩnh cửu, chúng vượt lên sinh tử.",
-        "Mạng lưới bền bỉ bởi vì",
-        "nó không sống cho chính mình."
-      ]
-    },
-    {
-      "text": [
-        "Người lập trình thể đạo ở lại phía sau,",
-        "chính thế mà người ấy dẫn đầu.",
-        "Người ấy siêu thoát,",
-        "nên hòa làm một với vạn vật.",
-        "Qua hành động vô tư,",
-        "người ấy viên mãn trọn vẹn."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này khám phá **sự bền vững của hệ thống** và **nghệ thuật lãnh đạo vô hình**. \"Trời đất\" tượng trưng cho các nguyên tắc bất biến (SOLID, DRY) - tồn tại vượt thời gian. \"Mạng lưới\" ám chỉ kiến trúc phân tán (distributed systems), nơi mỗi thành phần phục vụ tổng thể thay vì cá nhân."
-      ]
-    },
-    {
-      "text": [
-        "\"Ở lại phía sau\" là triết lý **servant leadership**: trao quyền cho team tự chủ, không tranh đoạt công lao. \"Siêu thoát\" không phải thờ ơ mà là không dính mắc vào kết quả - code vì đam mê giải quyết vấn đề, không vì danh tiếng. \"Hành động vô tư\" tạo ra giải pháp bền vững vì chúng phục vụ nhu cầu thực tế, không phải tham vọng cá nhân. Đây cũng là tinh thần **open-source**: cống hiến vì cộng đồng, không mong đợi tưởng thưởng."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Trời đất tồn tại mãi mãi.",
+          "Vĩnh cửu, chúng vượt lên sinh tử.",
+          "Mạng lưới bền bỉ bởi vì",
+          "nó không sống cho chính mình."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Người lập trình thể đạo ở lại phía sau,",
+          "chính thế mà người ấy dẫn đầu.",
+          "Người ấy siêu thoát,",
+          "nên hòa làm một với vạn vật.",
+          "Qua hành động vô tư,",
+          "người ấy viên mãn trọn vẹn."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **sự bền vững của hệ thống** và **nghệ thuật lãnh đạo vô hình**. \"Trời đất\" tượng trưng cho các nguyên tắc bất biến (SOLID, DRY) - tồn tại vượt thời gian. \"Mạng lưới\" ám chỉ kiến trúc phân tán (distributed systems), nơi mỗi thành phần phục vụ tổng thể thay vì cá nhân."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Ở lại phía sau\" là triết lý **servant leadership**: trao quyền cho team tự chủ, không tranh đoạt công lao. \"Siêu thoát\" không phải thờ ơ mà là không dính mắc vào kết quả - code vì đam mê giải quyết vấn đề, không vì danh tiếng. \"Hành động vô tư\" tạo ra giải pháp bền vững vì chúng phục vụ nhu cầu thực tế, không phải tham vọng cá nhân. Đây cũng là tinh thần **open-source**: cống hiến vì cộng đồng, không mong đợi tưởng thưởng."
+      }
+    ]
+  }
 }

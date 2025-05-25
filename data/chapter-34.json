@@ -1,51 +1,47 @@
 {
   "id": 34,
   "title": "Chương 34",
-  "verses": [
-    {
-      "text": [
-        "Cội Nguồn chảy khắp nơi,",
-        "trái phải đều thấm nhuần.",
-        "Nhờ nó, vạn vật sinh thành,",
-        "không giữ lại gì."
-      ]
-    },
-    {
-      "text": [
-        "Hoàn thành mục đích trong im lặng,",
-        "không đòi hỏi công nhận.",
-        "Nuôi dưỡng vô số thế giới,",
-        "mà chẳng bám víu."
-      ]
-    },
-    {
-      "text": [
-        "Hòa cùng mọi điều ẩn sâu trong tim,",
-        "nên tự gọi mình là khiêm nhường.",
-        "Vạn vật tan vào nó, chỉ nó trường tồn.",
-        "Vì thế, ta gọi nó là Vĩ Đại.",
-        "Nó không hay biết sự vĩ đại của mình.",
-        "Nên nó thực sự Vĩ Đại."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này khắc họa **nguyên lý nền tảng** trong kiến trúc phần mềm:",
-        "- **\"Chảy khắp nơi\"**: Nguyên tắc **DRY** (Don't Repeat Yourself) - logic cốt lõi thẩm thấu mọi module mà không lặp thừa.",
-        "- **\"Không đòi công nhận\"**: Code chất lượng vận hành âm thầm như **background services**, không cần fanfare.",
-        "- **\"Nuôi dưỡng không bám víu\"**: **Dependency Injection** - cung cấp resources cho components mà không tạo ràng buộc cứng.",
-        "- **\"Khiêm nhường\"**: **KISS Principle** - giải pháp đơn giản hóa vấn đề phức tạp, không phô trương kỹ thuật."
-      ]
-    },
-    {
-      "text": [
-        "\"Sự Vĩ Đại vô thức\" phản ánh **clean architecture** - hệ thống mạnh mẽ đến mức người dùng không nhận ra sự tồn tại của nó, như điện lưới vô hình. Khi lập trình viên \"hòa vào Cội Nguồn\", code trở thành phương tiện biểu đạt nguyên lý vĩnh hằng - tồn tại qua mọi công nghệ nhất thời, như nước chảy mãi về đại dương."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Cội Nguồn chảy khắp nơi,",
+          "trái phải đều thấm nhuần.",
+          "Nhờ nó, vạn vật sinh thành,",
+          "không giữ lại gì."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Hoàn thành mục đích trong im lặng,",
+          "không đòi hỏi công nhận.",
+          "Nuôi dưỡng vô số thế giới,",
+          "mà chẳng bám víu."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Hòa cùng mọi điều ẩn sâu trong tim,",
+          "nên tự gọi mình là khiêm nhường.",
+          "Vạn vật tan vào nó, chỉ nó trường tồn.",
+          "Vì thế, ta gọi nó là Vĩ Đại.",
+          "Nó không hay biết sự vĩ đại của mình.",
+          "Nên nó thực sự Vĩ Đại."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khắc họa **nguyên lý nền tảng** trong kiến trúc phần mềm:\n- **\"Chảy khắp nơi\"**: Nguyên tắc **DRY** (Don't Repeat Yourself) - logic cốt lõi thẩm thấu mọi module mà không lặp thừa.\n- **\"Không đòi công nhận\"**: Code chất lượng vận hành âm thầm như **background services**, không cần fanfare.\n- **\"Nuôi dưỡng không bám víu\"**: **Dependency Injection** - cung cấp resources cho components mà không tạo ràng buộc cứng.\n- **\"Khiêm nhường\"**: **KISS Principle** - giải pháp đơn giản hóa vấn đề phức tạp, không phô trương kỹ thuật."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Sự Vĩ Đại vô thức\" phản ánh **clean architecture** - hệ thống mạnh mẽ đến mức người dùng không nhận ra sự tồn tại của nó, như điện lưới vô hình. Khi lập trình viên \"hòa vào Cội Nguồn\", code trở thành phương tiện biểu đạt nguyên lý vĩnh hằng - tồn tại qua mọi công nghệ nhất thời, như nước chảy mãi về đại dương."
+      }
+    ]
+  }
 }

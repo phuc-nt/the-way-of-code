@@ -1,76 +1,74 @@
 {
   "id": 39,
   "title": "Chương 39",
-  "verses": [
-    {
-      "text": [
-        "Từ thuở xa xưa,",
-        "những điều này đạt được Nhất Thể:"
-      ]
-    },
-    {
-      "text": [
-        "Trời đạt Nhất Thể,",
-        "trở nên toàn vẹn và trong sáng.",
-        "Đất đạt Nhất Thể,",
-        "trở nên toàn vẹn và vững chãi.",
-        "Tinh thần đạt Nhất Thể,",
-        "trở nên toàn vẹn và mạnh mẽ.",
-        "Thung lũng đạt Nhất Thể,",
-        "trở nên toàn vẹn và thịnh vượng.",
-        "Vạn vật đạt Nhất Thể,",
-        "sống còn và phát triển."
-      ]
-    },
-    {
-      "text": [
-        "Sẽ ra sao nếu thiếu Nhất Thể?",
-        "Không trong sáng, trời sẽ nứt vỡ.",
-        "Không vững chãi, đất sẽ rung chuyển.",
-        "Không mạnh mẽ, tinh thần sẽ tàn lụi.",
-        "Không thịnh vượng, thung lũng sẽ khô cằn.",
-        "Không sự sống, vạn vật sẽ tiêu vong."
-      ]
-    },
-    {
-      "text": [
-        "Vì thế, sự toàn vẹn bắt nguồn từ khiêm nhường.",
-        "Cao cả được xây trên nền thấp hèn.",
-        "Đây là lý do Người lập trình thể đạo tự gọi mình",
-        "là \"Kẻ Mồ Côi,\" \"Kẻ Khiêm Nhường,\" \"Kẻ Bất Tài.\"",
-        "Khiêm nhường là nguồn gốc sức mạnh của người."
-      ]
-    },
-    {
-      "text": [
-        "Phá vỡ từng phần, toàn thể",
-        "sẽ không còn được thấu hiểu.",
-        "Được Cội Nguồn tạo hình, Người lập trình thể đạo",
-        "gồ ghề và tầm thường như hòn đá."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này khẳng định **tính thống nhất** (Nhất Thể) là nền tảng của mọi hệ thống bền vững:",
-        "- **\"Nhất Thể\"**: Nguyên lý **cohesion** trong lập trình - mỗi module chỉ tập trung vào một nhiệm vụ, tạo thành tổng thể hài hòa.",
-        "- **\"Khiêm nhường\"**: Tinh thần **pair programming** và **code review** - sẵn sàng tiếp nhận feedback, không bảo thủ.",
-        "- **\"Gồ ghề như hòn đá\"**: Code không cần hoàn hảo về mặt thẩm mỹ, miễn đáp ứng **functional requirements** và **scalability**."
-      ]
-    },
-    {
-      "text": [
-        "Hình ảnh \"trời đất rung chuyển\" cảnh báo hậu quả của **spaghetti code** - hệ thống mất tính gắn kết sẽ sụp đổ dưới áp lực thay đổi. \"Kẻ Mồ Côi\" ám chỉ lập trình viên đơn độc trên hành trình refactoring, nhưng chính sự cô độc ấy giúp họ thấu hiểu sâu sắc kiến trúc."
-      ]
-    },
-    {
-      "text": [
-        "Người lập trình đạt đạo không theo đuổi sự hoàn hảo hào nhoáng, mà tập trung vào **tính nhất quán nội tại** - như hòn đá thô mộc làm nền móng cho lâu đài vĩnh cửu."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Từ thuở xa xưa,",
+          "những điều này đạt được Nhất Thể:"
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Trời đạt Nhất Thể,",
+          "trở nên toàn vẹn và trong sáng.",
+          "Đất đạt Nhất Thể,",
+          "trở nên toàn vẹn và vững chãi.",
+          "Tinh thần đạt Nhất Thể,",
+          "trở nên toàn vẹn và mạnh mẽ.",
+          "Thung lũng đạt Nhất Thể,",
+          "trở nên toàn vẹn và thịnh vượng.",
+          "Vạn vật đạt Nhất Thể,",
+          "sống còn và phát triển."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Sẽ ra sao nếu thiếu Nhất Thể?",
+          "Không trong sáng, trời sẽ nứt vỡ.",
+          "Không vững chãi, đất sẽ rung chuyển.",
+          "Không mạnh mẽ, tinh thần sẽ tàn lụi.",
+          "Không thịnh vượng, thung lũng sẽ khô cằn.",
+          "Không sự sống, vạn vật sẽ tiêu vong."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Vì thế, sự toàn vẹn bắt nguồn từ khiêm nhường.",
+          "Cao cả được xây trên nền thấp hèn.",
+          "Đây là lý do Người lập trình thể đạo tự gọi mình",
+          "là \"Kẻ Mồ Côi,\" \"Kẻ Khiêm Nhường,\" \"Kẻ Bất Tài.\"",
+          "Khiêm nhường là nguồn gốc sức mạnh của người."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Phá vỡ từng phần, toàn thể",
+          "sẽ không còn được thấu hiểu.",
+          "Được Cội Nguồn tạo hình, Người lập trình thể đạo",
+          "gồ ghề và tầm thường như hòn đá."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khẳng định **tính thống nhất** (Nhất Thể) là nền tảng của mọi hệ thống bền vững:\n- **\"Nhất Thể\"**: Nguyên lý **cohesion** trong lập trình - mỗi module chỉ tập trung vào một nhiệm vụ, tạo thành tổng thể hài hòa.\n- **\"Khiêm nhường\"**: Tinh thần **pair programming** và **code review** - sẵn sàng tiếp nhận feedback, không bảo thủ.\n- **\"Gồ ghề như hòn đá\"**: Code không cần hoàn hảo về mặt thẩm mỹ, miễn đáp ứng **functional requirements** và **scalability**."
+      },
+      {
+        "id": "comment-2",
+        "content": "Hình ảnh \"trời đất rung chuyển\" cảnh báo hậu quả của **spaghetti code** - hệ thống mất tính gắn kết sẽ sụp đổ dưới áp lực thay đổi. \"Kẻ Mồ Côi\" ám chỉ lập trình viên đơn độc trên hành trình refactoring, nhưng chính sự cô độc ấy giúp họ thấu hiểu sâu sắc kiến trúc."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo không theo đuổi sự hoàn hảo hào nhoáng, mà tập trung vào **tính nhất quán nội tại** - như hòn đá thô mộc làm nền móng cho lâu đài vĩnh cửu."
+      }
+    ]
+  }
 }

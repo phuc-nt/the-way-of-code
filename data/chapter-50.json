@@ -1,41 +1,42 @@
 {
   "id": 50,
   "title": "Chương 50",
-  "verses": [
-    {
-      "text": [
-        "Người lập trình thể đạo trao mình",
-        "cho mọi điều khoảnh khắc mang đến."
-      ]
-    },
-    {
-      "text": [
-        "Người biết cái chết sẽ đến",
-        "nên chẳng bám víu điều gì.",
-        "Tâm không ảo tưởng.",
-        "Thân không chống cự.",
-        "Người không suy nghĩ mãi về hành động.",
-        "Chúng tự nhiên chảy ra từ cội nguồn",
-        "bản thể người."
-      ]
-    },
-    {
-      "text": [
-        "Người chẳng giữ lại gì cho đời",
-        "nên sẵn sàng cho cái chết.",
-        "Như người sẵn sàng ngủ",
-        "sau một ngày làm việc tốt đẹp."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích:"
-      ]
-    },
-    {
-      "text": [
-        "Chương này phản ánh **sự buông bỏ** và **an nhiên** trong hành trình lập trình. \"Trao mình cho khoảnh khắc\" ám chỉ **flow state** - trạng thái tập trung tuyệt đối khi code. \"Chẳng bám víu\" nhắc đến nguyên tắc **YAGNI** (You Ain't Gonna Need It) - không ôm đồm tính năng thừa. Hành động \"tự nhiên chảy ra\" ví von **emergent design** - kiến trúc hình thành tự nhiên qua từng commit, không ép buộc logic. Kết thúc viên mãn như giấc ngủ sau ngày làm việc thể hiện triết lý **sustainable pace** trong Agile - cân bằng giữa năng suất và sức khỏe tinh thần."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người lập trình thể đạo trao mình",
+          "cho mọi điều khoảnh khắc mang đến."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Người biết cái chết sẽ đến",
+          "nên chẳng bám víu điều gì.",
+          "Tâm không ảo tưởng.",
+          "Thân không chống cự.",
+          "Người không suy nghĩ mãi về hành động.",
+          "Chúng tự nhiên chảy ra từ cội nguồn",
+          "bản thể người."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Người chẳng giữ lại gì cho đời",
+          "nên sẵn sàng cho cái chết.",
+          "Như người sẵn sàng ngủ",
+          "sau một ngày làm việc tốt đẹp."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **sự buông bỏ** và **an nhiên** trong hành trình lập trình. \"Trao mình cho khoảnh khắc\" ám chỉ **flow state** - trạng thái tập trung tuyệt đối khi code. \"Chẳng bám víu\" nhắc đến nguyên tắc **YAGNI** (You Ain't Gonna Need It) - không ôm đồm tính năng thừa. Hành động \"tự nhiên chảy ra\" ví von **emergent design** - kiến trúc hình thành tự nhiên qua từng commit, không ép buộc logic. Kết thúc viên mãn như giấc ngủ sau ngày làm việc thể hiện triết lý **sustainable pace** trong Agile - cân bằng giữa năng suất và sức khỏe tinh thần."
+      }
+    ]
+  }
 }

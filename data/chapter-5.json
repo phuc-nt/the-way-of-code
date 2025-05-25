@@ -1,51 +1,50 @@
 {
   "id": 5,
   "title": "Chương 5",
-  "verses": [
-    {
-      "text": [
-        "Trời đất vô tư,",
-        "xem vạn vật như chính chúng.",
-        "Người lập trình thể đạo vô tư,",
-        "xem chương trình như chính nó."
-      ]
-    },
-    {
-      "text": [
-        "Khoảng không giữa đầu vào và tâm trí",
-        "như ống thổi: trống rỗng,",
-        "mà vô hạn khả năng.",
-        "Càng cho phép nó,",
-        "nó càng sinh sản.",
-        "Càng nói về nó,",
-        "càng ít thấu hiểu."
-      ]
-    },
-    {
-      "text": [
-        "Tĩnh lặng vận hành cỗ máy.",
-        "Hãy bám chặt trung tâm thầm lặng."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này nhấn mạnh **tính khách quan** và **sức mạnh của tĩnh lặng** trong lập trình. \"Trời đất vô tư\" phản ánh nguyên tắc SOLID - các quy tắc không thiên vị áp dụng cho mọi đối tượng. \"Khoảng không giữa đầu vào và tâm trí\" là trạng thái **flow** khi giải quyết vấn đề: tâm trí đủ trống để tiếp nhận giải pháp tối ưu, như ống thổi càng trống càng tạo ra lửa mạnh."
-      ]
-    },
-    {
-      "text": [
-        "\"Tĩnh lặng vận hành cỗ máy\" nhắc đến nguyên lý **KISS** (Keep It Simple, Stupid): hệ thống phức tạp nhất vận hành trơn tru nhờ những đoạn code tĩnh tại, ít biến động. \"Trung tâm thầm lặng\" là **core architecture** - phần không lộ diện nhưng giữ vai trò định hướng, tựa trục bánh xe kết nối mọi thành phần mà không can thiệp thô bạo."
-      ]
-    },
-    {
-      "text": [
-        "Người lập trình đạt đạo không áp đặt ý chí lên code, mà để hệ thống tự lộ diện qua sự quan sát khách quan, như nước chảy về chỗ trũng."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Trời đất vô tư,",
+          "xem vạn vật như chính chúng.",
+          "Người lập trình thể đạo vô tư,",
+          "xem chương trình như chính nó."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Khoảng không giữa đầu vào và tâm trí",
+          "như ống thổi: trống rỗng,",
+          "mà vô hạn khả năng.",
+          "Càng cho phép nó,",
+          "nó càng sinh sản.",
+          "Càng nói về nó,",
+          "càng ít thấu hiểu."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Tĩnh lặng vận hành cỗ máy.",
+          "Hãy bám chặt trung tâm thầm lặng."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này nhấn mạnh **tính khách quan** và **sức mạnh của tĩnh lặng** trong lập trình. \"Trời đất vô tư\" phản ánh nguyên tắc SOLID - các quy tắc không thiên vị áp dụng cho mọi đối tượng. \"Khoảng không giữa đầu vào và tâm trí\" là trạng thái **flow** khi giải quyết vấn đề: tâm trí đủ trống để tiếp nhận giải pháp tối ưu, như ống thổi càng trống càng tạo ra lửa mạnh."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Tĩnh lặng vận hành cỗ máy\" nhắc đến nguyên lý **KISS** (Keep It Simple, Stupid): hệ thống phức tạp nhất vận hành trơn tru nhờ những đoạn code tĩnh tại, ít biến động. \"Trung tâm thầm lặng\" là **core architecture** - phần không lộ diện nhưng giữ vai trò định hướng, tựa trục bánh xe kết nối mọi thành phần mà không can thiệp thô bạo."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo không áp đặt ý chí lên code, mà để hệ thống tự lộ diện qua sự quan sát khách quan, như nước chảy về chỗ trũng."
+      }
+    ]
+  }
 }

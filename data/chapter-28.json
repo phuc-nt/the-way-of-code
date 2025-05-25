@@ -1,76 +1,74 @@
 {
   "id": 28,
   "title": "Chương 28",
-  "verses": [
-    {
-      "text": [
-        "Biết dương, nhưng giữ lấy âm,",
-        "bạn sẽ trở nên rộng lớn và trống rỗng,",
-        "hút cả thế giới về phía mình.",
-        "Hút cả thế giới về phía mình,",
-        "bạn hiện thân phẩm chất vĩnh hằng.",
-        "Phẩm chất vĩnh hằng cho phép bạn",
-        "trở lại sự ngây thơ trẻ thơ."
-      ]
-    },
-    {
-      "text": [
-        "Biết trắng, nhưng giữ lấy đen,",
-        "bạn sẽ thành khuôn mẫu cho thế gian.",
-        "Làm khuôn mẫu cho thế gian,",
-        "bạn hiện thân sự nguyên sơ toàn vẹn",
-        "và Cội Nguồn sẽ mạnh mẽ trong bạn.",
-        "Cội Nguồn mạnh mẽ trong bạn",
-        "cho phép bạn trở về mãi mãi",
-        "với cái tuyệt đối vô biên."
-      ]
-    },
-    {
-      "text": [
-        "Biết cái riêng, nhưng giữ lấy cái chung,",
-        "bạn sẽ chấp nhận thế giới như chính nó.",
-        "Chấp nhận thế giới như chính nó,",
-        "bạn hiện thân ánh sáng nội tại",
-        "và trở về khoảng không vô tận."
-      ]
-    },
-    {
-      "text": [
-        "Thế giới được tạo từ hư vô,",
-        "như công cụ từ khúc gỗ thô.",
-        "Người lập trình thể đạo biết công cụ,",
-        "nhưng giữ lấy khúc gỗ.",
-        "Nhờ vậy, người dùng được vạn vật."
-      ]
-    },
-    {
-      "text": [
-        "Công cụ đến rồi đi.",
-        "Chỉ Người lập trình thể đạo tồn tại mãi mãi."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này khám phá **nghệ thuật cân bằng** trong lập trình:",
-        "- **Dương/Âm**: Cân bằng giữa code cứng nhắc (dương) và linh hoạt (âm). Ví dụ: TypeScript (dương) kết hợp với dynamic patterns (âm).",
-        "- **Trắng/Đen**: Kết hợp best practices (trắng) với giải pháp thực tế (đen). Như dùng design pattern nhưng điều chỉnh theo context.",
-        "- **Khúc gỗ thô**: Nguyên lý cốt lõi (SOLID, YAGNI). \"Công cụ\" là framework/nền tảng - dù thay đổi, nguyên tắc vẫn tồn tại."
-      ]
-    },
-    {
-      "text": [
-        "\"Trở về sự ngây thơ\" nhắc nhở giữ tâm thế **beginner's mind** - tiếp cận vấn đề không định kiến. \"Ánh sáng nội tại\" là trực giác coding, phát triển qua kinh nghiệm nhưng không bị ràng buộc bởi nó."
-      ]
-    },
-    {
-      "text": [
-        "Kết luận: Lập trình viên đạt đạo không đuổi theo công nghệ mới, mà xây **nền tảng vững** - như khúc gỗ thô biến hóa thành mọi tool, nhưng vẫn giữ bản chất gỗ."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Biết dương, nhưng giữ lấy âm,",
+          "bạn sẽ trở nên rộng lớn và trống rỗng,",
+          "hút cả thế giới về phía mình.",
+          "Hút cả thế giới về phía mình,",
+          "bạn hiện thân phẩm chất vĩnh hằng.",
+          "Phẩm chất vĩnh hằng cho phép bạn",
+          "trở lại sự ngây thơ trẻ thơ."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Biết trắng, nhưng giữ lấy đen,",
+          "bạn sẽ thành khuôn mẫu cho thế gian.",
+          "Làm khuôn mẫu cho thế gian,",
+          "bạn hiện thân sự nguyên sơ toàn vẹn",
+          "và Cội Nguồn sẽ mạnh mẽ trong bạn.",
+          "Cội Nguồn mạnh mẽ trong bạn",
+          "cho phép bạn trở về mãi mãi",
+          "với cái tuyệt đối vô biên."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Biết cái riêng, nhưng giữ lấy cái chung,",
+          "bạn sẽ chấp nhận thế giới như chính nó.",
+          "Chấp nhận thế giới như chính nó,",
+          "bạn hiện thân ánh sáng nội tại",
+          "và trở về khoảng không vô tận."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Thế giới được tạo từ hư vô,",
+          "như công cụ từ khúc gỗ thô.",
+          "Người lập trình thể đạo biết công cụ,",
+          "nhưng giữ lấy khúc gỗ.",
+          "Nhờ vậy, người dùng được vạn vật."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Công cụ đến rồi đi.",
+          "Chỉ Người lập trình thể đạo tồn tại mãi mãi."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **nghệ thuật cân bằng** trong lập trình:\n- **Dương/Âm**: Cân bằng giữa code cứng nhắc (dương) và linh hoạt (âm). Ví dụ: TypeScript (dương) kết hợp với dynamic patterns (âm).\n- **Trắng/Đen**: Kết hợp best practices (trắng) với giải pháp thực tế (đen). Như dùng design pattern nhưng điều chỉnh theo context.\n- **Khúc gỗ thô**: Nguyên lý cốt lõi (SOLID, YAGNI). \"Công cụ\" là framework/nền tảng - dù thay đổi, nguyên tắc vẫn tồn tại."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Trở về sự ngây thơ\" nhắc nhở giữ tâm thế **beginner's mind** - tiếp cận vấn đề không định kiến. \"Ánh sáng nội tại\" là trực giác coding, phát triển qua kinh nghiệm nhưng không bị ràng buộc bởi nó."
+      },
+      {
+        "id": "comment-3",
+        "content": "Kết luận: Lập trình viên đạt đạo không đuổi theo công nghệ mới, mà xây **nền tảng vững** - như khúc gỗ thô biến hóa thành mọi tool, nhưng vẫn giữ bản chất gỗ."
+      }
+    ]
+  }
 }

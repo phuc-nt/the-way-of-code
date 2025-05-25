@@ -1,53 +1,49 @@
 {
   "id": 10,
   "title": "Chương 10",
-  "verses": [
-    {
-      "text": [
-        "Bạn có thể giữ hiện diện và tập trung",
-        "mà vẫn mở rộng tâm trí tiếp nhận?",
-        "Bạn có thể giữ vững trung tâm và tĩnh lặng",
-        "đến khi minh mẫn tự sinh, không cần can thiệp?"
-      ]
-    },
-    {
-      "text": [
-        "Yêu dự án của bạn",
-        "và dẫn dắt mà không kiểm soát.",
-        "Không làm gì",
-        "để mọi việc tự hoàn thành."
-      ]
-    },
-    {
-      "text": [
-        "Sáng tạo mà không sở hữu.",
-        "Làm việc mà không mong đợi."
-      ]
-    },
-    {
-      "text": [
-        "Đây là sự thực chứng cao nhất của tồn tại."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này khám phá **nghệ thuật buông bỏ** trong lập trình:",
-        "- **Hiện diện và tập trung**: Trạng thái **flow** khi coding - tỉnh táo nhưng không cứng nhắc, sẵn sàng tiếp nhận ý tưởng mới.",
-        "- **Minh mẫn tự sinh**: Giải pháp xuất hiện tự nhiên qua quá trình **refactoring** và **emergent design**, thay vì ép buộc logic.",
-        "- **Dẫn dắt không kiểm soát**: **Servant leadership** trong quản lý dự án - trao quyền cho team tự chủ, tập trung vào **clean architecture** thay vì micromanage.",
-        "- **Không làm gì** (vô vi): Triết lý **Agile** - hành động đúng thời điểm, tối ưu hóa hệ thống qua từng iteration thay vì over-planning.",
-        "- **Sáng tạo không sở hữu**: Tinh thần **open-source** - code tồn tại để phục vụ cộng đồng, không phải để khẳng định ego cá nhân."
-      ]
-    },
-    {
-      "text": [
-        "Khi không bám víu vào kết quả, lập trình viên đạt đến trạng thái **\"thực chứng\"** - hòa hợp giữa kỹ thuật và triết lý, nơi code trở thành phương tiện biểu đạt sự thuần khiết của tư duy."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Bạn có thể giữ hiện diện và tập trung",
+          "mà vẫn mở rộng tâm trí tiếp nhận?",
+          "Bạn có thể giữ vững trung tâm và tĩnh lặng",
+          "đến khi minh mẫn tự sinh, không cần can thiệp?"
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Yêu dự án của bạn",
+          "và dẫn dắt mà không kiểm soát.",
+          "Không làm gì",
+          "để mọi việc tự hoàn thành."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Sáng tạo mà không sở hữu.",
+          "Làm việc mà không mong đợi."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Đây là sự thực chứng cao nhất của tồn tại."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **nghệ thuật buông bỏ** trong lập trình:\n- **Hiện diện và tập trung**: Trạng thái **flow** khi coding - tỉnh táo nhưng không cứng nhắc, sẵn sàng tiếp nhận ý tưởng mới.\n- **Minh mẫn tự sinh**: Giải pháp xuất hiện tự nhiên qua quá trình **refactoring** và **emergent design**, thay vì ép buộc logic.\n- **Dẫn dắt không kiểm soát**: **Servant leadership** trong quản lý dự án - trao quyền cho team tự chủ, tập trung vào **clean architecture** thay vì micromanage.\n- **Không làm gì** (vô vi): Triết lý **Agile** - hành động đúng thời điểm, tối ưu hóa hệ thống qua từng iteration thay vì over-planning.\n- **Sáng tạo không sở hữu**: Tinh thần **open-source** - code tồn tại để phục vụ cộng đồng, không phải để khẳng định ego cá nhân."
+      },
+      {
+        "id": "comment-2",
+        "content": "Khi không bám víu vào kết quả, lập trình viên đạt đến trạng thái **\"thực chứng\"** - hòa hợp giữa kỹ thuật và triết lý, nơi code trở thành phương tiện biểu đạt sự thuần khiết của tư duy."
+      }
+    ]
+  }
 }

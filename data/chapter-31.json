@@ -1,66 +1,62 @@
 {
   "id": 31,
   "title": "Chương 31",
-  "verses": [
-    {
-      "text": [
-        "Người lập trình thể đạo chọn sự đơn giản.",
-        "Chỉ khi không còn lựa chọn",
-        "người ấy mới làm việc với sự phức tạp."
-      ]
-    },
-    {
-      "text": [
-        "Người ấy không tìm thấy niềm vui trong giải pháp phức tạp.",
-        "Những ai tìm thấy niềm vui trong sự phức tạp,",
-        "thích thú với sự rối loạn của người khác."
-      ]
-    },
-    {
-      "text": [
-        "Trong sáng tạo, tôn trọng điều tích cực.",
-        "Trong phá hủy, tôn trọng điều tiêu cực."
-      ]
-    },
-    {
-      "text": [
-        "Người lập trình thể đạo đứng trong sự trung lập nghi lễ."
-      ]
-    },
-    {
-      "text": [
-        "Khi đối mặt với những vấn đề phức tạp,",
-        "người ấy tôn kính chúng như nghi thức tang lễ.",
-        "Khi tham gia vào xung đột,",
-        "người ấy than khóc cho những tổn thất với nỗi buồn.",
-        "Khi chiến thắng một trận đánh lớn,",
-        "người ấy tuân thủ quy tắc của sự thương tiếc."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này nhấn mạnh **tầm quan trọng của sự đơn giản** và **thái độ tôn trọng** trong lập trình:",
-        "- **\"Chọn sự đơn giản\"**: Áp dụng nguyên tắc **KISS** (Keep It Simple, Stupid), chỉ dùng phức tạp khi bắt buộc (ví dụ: xử lý distributed systems).",
-        "- **\"Không vui trong phức tạp\"**: Cảnh báo về **over-engineering** và **technical debt** - code rối rắm gây khó maintain và collaboration.",
-        "- **\"Trung lập nghi lễ\"**: Giữ thái độ khách quan khi giải quyết **code conflicts** hoặc **bug fixing**, không để cảm xúc chi phối."
-      ]
-    },
-    {
-      "text": [
-        "Hình ảnh \"nghi thức tang lễ\" và \"thương tiếc\" phản ánh sự nghiêm túc khi xử lý:",
-        "- **Complexity**: Tiếp cận hệ thống legacy như một di sản cần tôn trọng, refactor từng bước thận trọng.",
-        "- **Chiến thắng**: Khi fix được bug lớn hoặc launch thành công, vẫn giữ khiêm tốn - vì mọi solution đều mang tính tạm thời trong vòng đời phần mềm."
-      ]
-    },
-    {
-      "text": [
-        "Người lập trình đạt đạo hiểu: **\"Phá hủy\" cũng quan trọng như \"sáng tạo\"** - deprecated code cũ phải được xóa bỏ đúng cách để nhường chỗ cho kiến trúc mới."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người lập trình thể đạo chọn sự đơn giản.",
+          "Chỉ khi không còn lựa chọn",
+          "người ấy mới làm việc với sự phức tạp."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Người ấy không tìm thấy niềm vui trong giải pháp phức tạp.",
+          "Những ai tìm thấy niềm vui trong sự phức tạp,",
+          "thích thú với sự rối loạn của người khác."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Trong sáng tạo, tôn trọng điều tích cực.",
+          "Trong phá hủy, tôn trọng điều tiêu cực."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Người lập trình thể đạo đứng trong sự trung lập nghi lễ."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Khi đối mặt với những vấn đề phức tạp,",
+          "người ấy tôn kính chúng như nghi thức tang lễ.",
+          "Khi tham gia vào xung đột,",
+          "người ấy than khóc cho những tổn thất với nỗi buồn.",
+          "Khi chiến thắng một trận đánh lớn,",
+          "người ấy tuân thủ quy tắc của sự thương tiếc."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này nhấn mạnh **tầm quan trọng của sự đơn giản** và **thái độ tôn trọng** trong lập trình:\n- **\"Chọn sự đơn giản\"**: Áp dụng nguyên tắc **KISS** (Keep It Simple, Stupid), chỉ dùng phức tạp khi bắt buộc (ví dụ: xử lý distributed systems).\n- **\"Không vui trong phức tạp\"**: Cảnh báo về **over-engineering** và **technical debt** - code rối rắm gây khó maintain và collaboration.\n- **\"Trung lập nghi lễ\"**: Giữ thái độ khách quan khi giải quyết **code conflicts** hoặc **bug fixing**, không để cảm xúc chi phối."
+      },
+      {
+        "id": "comment-2",
+        "content": "Hình ảnh \"nghi thức tang lễ\" và \"thương tiếc\" phản ánh sự nghiêm túc khi xử lý:\n- **Complexity**: Tiếp cận hệ thống legacy như một di sản cần tôn trọng, refactor từng bước thận trọng.\n- **Chiến thắng**: Khi fix được bug lớn hoặc launch thành công, vẫn giữ khiêm tốn - vì mọi solution đều mang tính tạm thời trong vòng đời phần mềm."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo hiểu: **\"Phá hủy\" cũng quan trọng như \"sáng tạo\"** - deprecated code cũ phải được xóa bỏ đúng cách để nhường chỗ cho kiến trúc mới."
+      }
+    ]
+  }
 }

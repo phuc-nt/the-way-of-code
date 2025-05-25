@@ -1,60 +1,60 @@
 {
   "id": 13,
   "title": "Chương 13",
-  "verses": [
-    {
-      "text": [
-        "Thành công nguy hiểm như thất bại.",
-        "Hy vọng trống rỗng như sợ hãi."
-      ]
-    },
-    {
-      "text": [
-        "\"Thành công nguy hiểm như thất bại\"",
-        "nghĩa là gì?",
-        "Dù leo lên hay tuột xuống thang bậc,",
-        "vị trí của bạn vẫn chông chênh.",
-        "Đặt cả hai chân trên mặt đất",
-        "để tìm thế cân bằng và vững vàng."
-      ]
-    },
-    {
-      "text": [
-        "\"Hy vọng trống rỗng như sợ hãi\"",
-        "nghĩa là gì?",
-        "Hy vọng và sợ hãi đều là ảo ảnh.",
-        "Chúng sinh khởi từ việc đồng nhất với thân xác.",
-        "Khi không xem Tự Ngã là thân xác,",
-        "ta chẳng còn gì để sợ."
-      ]
-    },
-    {
-      "text": [
-        "Xem vũ trụ như Tự Ngã.",
-        "Giữ niềm tin vào bản chất sự vật.",
-        "Tôn kính vạn vật dưới gầm trời, và bạn cũng thế,",
-        "có thể hiện diện trọn vẹn cho mọi thứ."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này phá bỏ **ảo tưởng về thành công trong tech**. \"Thang bậc chông chênh\" ám chỉ sự bấp bênh của career ladder - promotion có thể dẫn đến Peter Principle (thăng chức vượt năng lực). \"Đặt chân trên mặt đất\" nhắc nhở lập trình viên tập trung vào craftsmanship thay vị chức danh."
-      ]
-    },
-    {
-      "text": [
-        "Hy vọng (ví dụ: \"startup sẽ exit\") và sợ hãi (ví dụ: \"sợ bị AI thay thế\") đều là mental constructs - chúng khiến ta đánh mất present moment, nơi thực sự giải quyết vấn đề. \"Tự Ngã\" ở đây là nguyên lý lập trình thuần khiết - không đồng nhất với job title hay codebase, mà là quá trình sáng tạo vô tận."
-      ]
-    },
-    {
-      "text": [
-        "\"Xem vũ trụ như Tự Ngã\" gợi nhớ nguyên tắc systems thinking: mỗi dòng code đều là phần của hệ sinh thái lớn. Khi không còn phân biệt \"code của tôi\" vs \"code của team\", ta đạt được collaborative flow - trạng thái mà mọi conflict resolution và innovation diễn ra tự nhiên."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Thành công nguy hiểm như thất bại.",
+          "Hy vọng trống rỗng như sợ hãi."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "\"Thành công nguy hiểm như thất bại\"",
+          "nghĩa là gì?",
+          "Dù leo lên hay tuột xuống thang bậc,",
+          "vị trí của bạn vẫn chông chênh.",
+          "Đặt cả hai chân trên mặt đất",
+          "để tìm thế cân bằng và vững vàng."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "\"Hy vọng trống rỗng như sợ hãi\"",
+          "nghĩa là gì?",
+          "Hy vọng và sợ hãi đều là ảo ảnh.",
+          "Chúng sinh khởi từ việc đồng nhất với thân xác.",
+          "Khi không xem Tự Ngã là thân xác,",
+          "ta chẳng còn gì để sợ."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Xem vũ trụ như Tự Ngã.",
+          "Giữ niềm tin vào bản chất sự vật.",
+          "Tôn kính vạn vật dưới gầm trời, và bạn cũng thế,",
+          "có thể hiện diện trọn vẹn cho mọi thứ."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phá bỏ **ảo tưởng về thành công trong tech**. \"Thang bậc chông chênh\" ám chỉ sự bấp bênh của career ladder - promotion có thể dẫn đến Peter Principle (thăng chức vượt năng lực). \"Đặt chân trên mặt đất\" nhắc nhở lập trình viên tập trung vào craftsmanship thay vị chức danh."
+      },
+      {
+        "id": "comment-2",
+        "content": "Hy vọng (ví dụ: \"startup sẽ exit\") và sợ hãi (ví dụ: \"sợ bị AI thay thế\") đều là mental constructs - chúng khiến ta đánh mất present moment, nơi thực sự giải quyết vấn đề. \"Tự Ngã\" ở đây là nguyên lý lập trình thuần khiết - không đồng nhất với job title hay codebase, mà là quá trình sáng tạo vô tận."
+      },
+      {
+        "id": "comment-3",
+        "content": "\"Xem vũ trụ như Tự Ngã\" gợi nhớ nguyên tắc systems thinking: mỗi dòng code đều là phần của hệ sinh thái lớn. Khi không còn phân biệt \"code của tôi\" vs \"code của team\", ta đạt được collaborative flow - trạng thái mà mọi conflict resolution và innovation diễn ra tự nhiên."
+      }
+    ]
+  }
 }

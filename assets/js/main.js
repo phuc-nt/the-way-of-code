@@ -204,50 +204,42 @@ function renderChapterContent(data) {
     
     let contentHTML = `<h1 class="chapter-heading fade-in">${data.title}</h1>`;
     
+    // Kiểm tra cấu trúc dữ liệu
+    if (!data.content) {
+        console.error('Invalid chapter data structure:', data);
+        contentElement.innerHTML = `<p class="error">Lỗi cấu trúc dữ liệu chương.</p>`;
+        return;
+    }
+    
+    // Render các đoạn thơ (verses)
     contentHTML += `<div class="verse-container">`;
     
-    let hasComment = false;
-    let commentVerses = [];
-    
-    // Render từng verse
-    data.verses.forEach(verse => {
-        // Kiểm tra xem verse này có phải là tiêu đề chú thích hay không
-        if (verse.text[0] && verse.text[0].startsWith('## Chú thích')) {
-            hasComment = true;
-            return; // Bỏ qua verse này
-        }
-        
-        // Nếu verse tiếp theo là nội dung chú thích
-        if (hasComment) {
-            // Lưu các verse của phần chú thích để xử lý riêng
-            commentVerses.push(verse);
-            return; // Bỏ qua verse này
-        }
-        
-        // Verse bình thường
-        contentHTML += `<p class="verse">`;
-        
-        verse.text.forEach((line, index) => {
-            // Xử lý định dạng Markdown cho từng dòng
-            const parsedLine = parseMarkdown(line);
-            contentHTML += parsedLine;
-            if (index < verse.text.length - 1) {
-                contentHTML += `<br>`;
-            }
+    if (data.content.verses && data.content.verses.length > 0) {
+        data.content.verses.forEach(verse => {
+            contentHTML += `<p class="verse" id="${verse.id}">`;
+            
+            verse.lines.forEach((line, index) => {
+                // Xử lý định dạng Markdown cho từng dòng
+                const parsedLine = parseMarkdown(line);
+                contentHTML += parsedLine;
+                if (index < verse.lines.length - 1) {
+                    contentHTML += `<br>`;
+                }
+            });
+            
+            contentHTML += `</p>`;
         });
-        
-        contentHTML += `</p>`;
-    });
+    }
     
     contentHTML += `</div>`;
     
-    // Thêm phần chú thích dưới dạng blockquote nếu có
-    if (hasComment && commentVerses.length > 0) {
+    // Thêm phần chú thích (commentary) nếu có
+    if (data.content.commentary && data.content.commentary.length > 0) {
         contentHTML += `
             <div class="comment-section">
-                <h3>Chú thích</h3>
+                <h3>Chú giải</h3>
                 <blockquote class="comment-quote fade-in">
-                    ${renderCommentContent(commentVerses)}
+                    ${renderCommentaryContent(data.content.commentary)}
                 </blockquote>
             </div>
         `;
@@ -256,57 +248,34 @@ function renderChapterContent(data) {
     contentElement.innerHTML = contentHTML;
 }
 
-// Hàm riêng để xử lý nội dung phần chú thích
-function renderCommentContent(commentVerses) {
-    let commentHTML = '';
-    let inList = false;
+// Hàm riêng để xử lý nội dung phần chú giải (commentary)
+function renderCommentaryContent(commentaryItems) {
+    let commentaryHTML = '';
     
-    commentVerses.forEach(verse => {
-        // Xử lý các dòng văn bản trong verse
-        const fullText = verse.text.join(' ');
+    commentaryItems.forEach(item => {
+        // Kiểm tra nếu nội dung comment có tồn tại
+        if (!item.content) return;
         
-        // Kiểm tra xem verse này có chứa danh sách không
-        if (fullText.includes('1.') && (fullText.includes('2.') || fullText.includes('3.'))) {
-            // Verse này chứa danh sách
-            if (!inList) {
-                // Nếu đang ở trong đoạn văn, kết thúc đoạn đó
-                if (commentHTML.endsWith('</p>')) {
-                    commentHTML = commentHTML.slice(0, -4);
-                }
-                // Bắt đầu danh sách
-                commentHTML += '<ol>';
-                inList = true;
+        // Xử lý từng dòng riêng biệt để giữ định dạng xuống dòng
+        const contentLines = item.content.split('\n');
+        let processedContent = '';
+        
+        // Xử lý từng dòng riêng biệt
+        contentLines.forEach(line => {
+            if (line.trim()) {
+                // Xử lý Markdown cho từng dòng
+                processedContent += `<p>${parseMarkdown(line)}</p>`;
+            } else {
+                // Thêm khoảng trống cho dòng trống
+                processedContent += `<br>`;
             }
-            
-            // Xử lý danh sách
-            const lines = fullText.split(/\d+\.\s/);
-            lines.shift(); // Bỏ phần đầu tiên trước danh sách
-            
-            // Thêm từng mục danh sách
-            lines.forEach(line => {
-                if (line.trim()) {
-                    commentHTML += `<li>${parseMarkdown(line.trim())}</li>`;
-                }
-            });
-        } else {
-            // Verse này là đoạn văn bình thường
-            if (inList) {
-                // Nếu đang trong danh sách, kết thúc danh sách
-                commentHTML += '</ol>';
-                inList = false;
-            }
-            
-            // Thêm đoạn văn mới
-            commentHTML += `<p>${parseMarkdown(fullText)}</p>`;
-        }
+        });
+        
+        // Đưa vào một thẻ div với id để dễ styling
+        commentaryHTML += `<div id="${item.id}" class="commentary-item">${processedContent}</div>`;
     });
     
-    // Đảm bảo kết thúc tất cả các thẻ mở
-    if (inList) {
-        commentHTML += '</ol>';
-    }
-    
-    return commentHTML;
+    return commentaryHTML;
 }
 
 // Render navigation cho header chương
@@ -388,6 +357,12 @@ function renderFooterNavigation(chapterId, totalChapters) {
 function parseMarkdown(text) {
     if (!text) return '';
     
+    // Escape các ký tự HTML đặc biệt trước tiên (trừ những ký tự cần thiết cho markdown)
+    text = text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    
     // Xử lý in đậm: **text** -> <strong>text</strong>
     text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     
@@ -399,6 +374,9 @@ function parseMarkdown(text) {
     
     // Xử lý liên kết: [text](url) -> <a href="url">text</a>
     text = text.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
+    
+    // Xử lý đường gạch ngang cho các dòng thụt vào (definition lists)
+    text = text.replace(/^(\s*)-\s+(.*)$/gm, '$1• $2');
     
     return text;
 }

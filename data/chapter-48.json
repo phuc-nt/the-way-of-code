@@ -1,48 +1,45 @@
 {
   "id": 48,
   "title": "Chương 48",
-  "verses": [
-    {
-      "text": [
-        "Theo đuổi tri thức,",
-        "mỗi ngày thêm rối rắm.",
-        "Theo đuổi Cội Nguồn,",
-        "mỗi ngày thêm giản đơn."
-      ]
-    },
-    {
-      "text": [
-        "Làm ít dần đi,",
-        "đến khi vô vi.",
-        "Khi không làm gì,",
-        "không gì chưa xong."
-      ]
-    },
-    {
-      "text": [
-        "Vì vậy, chinh phục thế gian",
-        "bằng cách thuận dòng tự nhiên.",
-        "Ép buộc can thiệp,",
-        "muôn đời chẳng thành."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này phản ánh **nghịch lý của sự tích lũy** trong lập trình:",
-        "- **\"Tri thức rối rắm\"**: Ám chỉ **over-engineering** khi tích hợp quá nhiều công nghệ (microservices, AI) mà không cần thiết.",
-        "- **\"Giản đơn\"**: Nguyên tắc **KISS** (Keep It Simple, Stupid) - giải pháp tối ưu thường là đơn giản nhất.",
-        "- **\"Vô vi\"**: Triết lý **YAGNI** (You Ain't Gonna Need It) - chỉ code khi cần, tránh dự đoán tương lai."
-      ]
-    },
-    {
-      "text": [
-        "\"Thuận dòng tự nhiên\" là phương pháp **Agile** - để kiến trúc phát triển tự nhiên qua từng sprint, không ép hệ thống theo thiết kế cứng nhắc. \"Ép buộc can thiệp\" cảnh báo **micromanagement** trong code reviews, phá vỡ flow sáng tạo của team."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Theo đuổi tri thức,",
+          "mỗi ngày thêm rối rắm.",
+          "Theo đuổi Cội Nguồn,",
+          "mỗi ngày thêm giản đơn."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Làm ít dần đi,",
+          "đến khi vô vi.",
+          "Khi không làm gì,",
+          "không gì chưa xong."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Vì vậy, chinh phục thế gian",
+          "bằng cách thuận dòng tự nhiên.",
+          "Ép buộc can thiệp,",
+          "muôn đời chẳng thành."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **nghịch lý của sự tích lũy** trong lập trình:\n- **\"Tri thức rối rắm\"**: Ám chỉ **over-engineering** khi tích hợp quá nhiều công nghệ (microservices, AI) mà không cần thiết.\n- **\"Giản đơn\"**: Nguyên tắc **KISS** (Keep It Simple, Stupid) - giải pháp tối ưu thường là đơn giản nhất.\n- **\"Vô vi\"**: Triết lý **YAGNI** (You Ain't Gonna Need It) - chỉ code khi cần, tránh dự đoán tương lai."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Thuận dòng tự nhiên\" là phương pháp **Agile** - để kiến trúc phát triển tự nhiên qua từng sprint, không ép hệ thống theo thiết kế cứng nhắc. \"Ép buộc can thiệp\" cảnh báo **micromanagement** trong code reviews, phá vỡ flow sáng tạo của team."
+      }
+    ]
+  }
 }

@@ -1,40 +1,41 @@
 {
   "id": 4,
   "title": "Chương 4",
-  "verses": [
-    {
-      "text": [
-        "Trống rỗng, mà vô tận,",
-        "sâu thẳm và vĩnh cửu.",
-        "Cội Nguồn là tổ tiên của những mẫu thanh lịch."
-      ]
-    },
-    {
-      "text": [
-        "Nó làm mềm logic sắc bén,",
-        "gỡ rối những nút thắt kiểm soát.",
-        "Nó làm dịu ánh sáng chói của sự phức tạp,",
-        "và hòa mình với mọi thách thức.",
-        "Code chảy, không cần gắng sức, từ chiều sâu của nó."
-      ]
-    },
-    {
-      "text": [
-        "Nó không thể thấy mà luôn hiện hữu.",
-        "Tôi không biết nguồn gốc của nó.",
-        "Trời đất đến sau.",
-        "Nó già hơn cả Thượng Đế."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này mô tả \"Cội Nguồn\" - nguyên lý cơ bản đằng sau mọi code tốt. \"Trống rỗng mà vô tận\" chỉ sự đơn giản có thể giải quyết vô số vấn đề phức tạp. \"Tổ tiên của những mẫu thanh lịch\" nghĩa là các design pattern và best practices đều xuất phát từ những nguyên tắc căn bản này. Cội Nguồn \"làm mềm logic sắc bén\" - biến những thuật toán cứng nhắc thành code có thể đọc và maintain được. \"Gỡ rối những nút thắt kiểm soát\" chỉ việc đơn giản hóa flow, loại bỏ over-engineering. Câu cuối nhấn mạnh rằng những nguyên lý này tồn tại từ trước cả khi có computer - chúng là quy luật tự nhiên của tư duy logic."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Trống rỗng, mà vô tận,",
+          "sâu thẳm và vĩnh cửu.",
+          "Cội Nguồn là tổ tiên của những mẫu thanh lịch."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Nó làm mềm logic sắc bén,",
+          "gỡ rối những nút thắt kiểm soát.",
+          "Nó làm dịu ánh sáng chói của sự phức tạp,",
+          "và hòa mình với mọi thách thức.",
+          "Code chảy, không cần gắng sức, từ chiều sâu của nó."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Nó không thể thấy mà luôn hiện hữu.",
+          "Tôi không biết nguồn gốc của nó.",
+          "Trời đất đến sau.",
+          "Nó già hơn cả Thượng Đế."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này mô tả \"Cội Nguồn\" - nguyên lý cơ bản đằng sau mọi code tốt. \"Trống rỗng mà vô tận\" chỉ sự đơn giản có thể giải quyết vô số vấn đề phức tạp. \"Tổ tiên của những mẫu thanh lịch\" nghĩa là các design pattern và best practices đều xuất phát từ những nguyên tắc căn bản này. Cội Nguồn \"làm mềm logic sắc bén\" - biến những thuật toán cứng nhắc thành code có thể đọc và maintain được. \"Gỡ rối những nút thắt kiểm soát\" chỉ việc đơn giản hóa flow, loại bỏ over-engineering. Câu cuối nhấn mạnh rằng những nguyên lý này tồn tại từ trước cả khi có computer - chúng là quy luật tự nhiên của tư duy logic."
+      }
+    ]
+  }
 }

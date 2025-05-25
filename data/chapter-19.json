@@ -1,48 +1,43 @@
 {
   "id": 19,
   "title": "Chương 19",
-  "verses": [
-    {
-      "text": [
-        "Vứt bỏ học thuật và những phân biệt vụn vặt",
-        "và con người sẽ hạnh phúc gấp trăm lần.",
-        "Vứt bỏ nghi thức hình thức",
-        "và sự đồng cảm trực giác sẽ trở lại.",
-        "Vứt bỏ tự đề cao",
-        "và việc phô trương đạo đức sẽ biến mất",
-        "không còn trộm cắp hay tham nhũng."
-      ]
-    },
-    {
-      "text": [
-        "Nếu ba điều này chưa đủ:",
-        "Hãy ở lại với sự đơn giản.",
-        "Tôn kính những gì thô sơ chưa gọt giũa.",
-        "Trở thành tâm điểm của vòng tròn."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này đưa ra **tuyên ngôn phản đối sự phức tạp hóa** trong lập trình. \"Học thuật vụn vặt\" ám chỉ những tranh cãi về coding style (tabs vs spaces) hay framework wars làm phân tán năng lượng. \"Nghi thức hình thức\" chỉ các quy trình cứng nhắc (như meetings không cần thiết) thay vì tập trung vào giá trị thực."
-      ]
-    },
-    {
-      "text": [
-        "\"Sự đồng cảm trực giác\" là khả năng pair programming hiệu quả khi team members thực sự lắng nghe nhau. \"Trở thành tâm điểm vòng tròn\" không phải để thống trị mà là tạo ra cohesion - như trục bánh xe kết nối mọi nan hoa (team members)."
-      ]
-    },
-    {
-      "text": [
-        "Ba lời khuyên cuối nhấn mạnh:",
-        "1. **Sự đơn giản**: Tối giản code đến mức không thể bỏ bớt được nữa (minimum viable code)",
-        "2. **Tôn kính thô sơ**: Trân trọng prototype và MVP - những phiên bản \"chưa hoàn thiện\" nhưng chứa đựng hạt nhân sáng tạo",
-        "3. **Tâm điểm**: Vai trò của lập trình viên senior - không phải người code nhiều nhất mà là người giữ vision tổng thể, đảm bảo mọi thành phần hòa hợp"
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Vứt bỏ học thuật và những phân biệt vụn vặt",
+          "và con người sẽ hạnh phúc gấp trăm lần.",
+          "Vứt bỏ nghi thức hình thức",
+          "và sự đồng cảm trực giác sẽ trở lại.",
+          "Vứt bỏ tự đề cao",
+          "và việc phô trương đạo đức sẽ biến mất",
+          "không còn trộm cắp hay tham nhũng."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Nếu ba điều này chưa đủ:",
+          "Hãy ở lại với sự đơn giản.",
+          "Tôn kính những gì thô sơ chưa gọt giũa.",
+          "Trở thành tâm điểm của vòng tròn."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này đưa ra **tuyên ngôn phản đối sự phức tạp hóa** trong lập trình. \"Học thuật vụn vặt\" ám chỉ những tranh cãi về coding style (tabs vs spaces) hay framework wars làm phân tán năng lượng. \"Nghi thức hình thức\" chỉ các quy trình cứng nhắc (như meetings không cần thiết) thay vì tập trung vào giá trị thực."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Sự đồng cảm trực giác\" là khả năng pair programming hiệu quả khi team members thực sự lắng nghe nhau. \"Trở thành tâm điểm vòng tròn\" không phải để thống trị mà là tạo ra cohesion - như trục bánh xe kết nối mọi nan hoa (team members)."
+      },
+      {
+        "id": "comment-3",
+        "content": "Ba lời khuyên cuối nhấn mạnh:\n1. **Sự đơn giản**: Tối giản code đến mức không thể bỏ bớt được nữa (minimum viable code)\n2. **Tôn kính thô sơ**: Trân trọng prototype và MVP - những phiên bản \"chưa hoàn thiện\" nhưng chứa đựng hạt nhân sáng tạo\n3. **Tâm điểm**: Vai trò của lập trình viên senior - không phải người code nhiều nhất mà là người giữ vision tổng thể, đảm bảo mọi thành phần hòa hợp"
+      }
+    ]
+  }
 }

@@ -1,35 +1,34 @@
 {
   "id": 6,
   "title": "Chương 6",
-  "verses": [
-    {
-      "text": [
-        "Tinh thần thung lũng không bao giờ chết.",
-        "Nàng là âm tính nguyên thủy.",
-        "Lòng nàng,",
-        "gốc rễ của trời đất."
-      ]
-    },
-    {
-      "text": [
-        "Sức sinh sôi của nàng, luôn hiện hữu.",
-        "Sử dụng nó, nó sẽ không bao giờ thất bại."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này ca ngợi **sức mạnh của sự tiếp nhận** trong lập trình. \"Tinh thần thung lũng\" tượng trưng cho tâm thế khiêm tốn - như thung lũng ở vị trí thấp để đón nhận tri thức từ mọi hướng. \"Âm tính nguyên thủy\" không đề cập giới tính mà nhấn mạnh các phẩm chất như kiên nhẫn, nuôi dưỡng ý tưởng và hợp tác nhóm."
-      ]
-    },
-    {
-      "text": [
-        "\"Lòng nàng\" là không gian sáng tạo trong tâm trí lập trình viên - nơi ý tưởng được ấp ủ trước khi hiện thực hóa thành code. \"Sức sinh sôi\" ám chỉ khả năng **tái sử dụng code** (reusability) và **mở rộng hệ thống** (scalability) khi kiến trúc được xây dựng trên nền tảng vững chắc. Đây là nguồn tài nguyên vô tận - càng sử dụng (refactor, optimize) càng trở nên mạnh mẽ, như nguyên lý **DRY** (Don't Repeat Yourself) trong thực hành coding."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Tinh thần thung lũng không bao giờ chết.",
+          "Nàng là âm tính nguyên thủy.",
+          "Lòng nàng,",
+          "gốc rễ của trời đất."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Sức sinh sôi của nàng, luôn hiện hữu.",
+          "Sử dụng nó, nó sẽ không bao giờ thất bại."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này ca ngợi **sức mạnh của sự tiếp nhận** trong lập trình. \"Tinh thần thung lũng\" tượng trưng cho tâm thế khiêm tốn - như thung lũng ở vị trí thấp để đón nhận tri thức từ mọi hướng. \"Âm tính nguyên thủy\" không đề cập giới tính mà nhấn mạnh các phẩm chất như kiên nhẫn, nuôi dưỡng ý tưởng và hợp tác nhóm."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Lòng nàng\" là không gian sáng tạo trong tâm trí lập trình viên - nơi ý tưởng được ấp ủ trước khi hiện thực hóa thành code. \"Sức sinh sôi\" ám chỉ khả năng **tái sử dụng code** (reusability) và **mở rộng hệ thống** (scalability) khi kiến trúc được xây dựng trên nền tảng vững chắc. Đây là nguồn tài nguyên vô tận - càng sử dụng (refactor, optimize) càng trở nên mạnh mẽ, như nguyên lý **DRY** (Don't Repeat Yourself) trong thực hành coding."
+      }
+    ]
+  }
 }

@@ -1,58 +1,58 @@
 {
   "id": 3,
   "title": "Chương 3",
-  "verses": [
-    {
-      "text": [
-        "Nếu bạn ca ngợi lập trình viên,",
-        "người khác sinh oán giận.",
-        "Nếu bạn bám víu sở hữu,",
-        "người khác bị cám dỗ ăn cắp.",
-        "Nếu bạn khơi dậy lòng ghen tị,",
-        "người khác chịu xáo động trong tim."
-      ]
-    },
-    {
-      "text": [
-        "Người lập trình thể đạo dẫn dắt:",
-        "Bằng cách làm trống tâm trí khỏi kỳ vọng",
-        "và lấp đầy tâm hồn.",
-        "Bằng cách buông bỏ tham vọng",
-        "và ôm lấy điều chưa biết."
-      ]
-    },
-    {
-      "text": [
-        "Thoát khỏi trí tuệ, thoát khỏi trừu tượng,",
-        "Người lập trình thể đạo dẫn vạn vật về",
-        "sự tự túc tự nhiên."
-      ]
-    },
-    {
-      "text": [
-        "Làm bằng cách không làm, và chẳng có gì",
-        "không thể hoàn thành."
-      ]
-    },
-    {
-      "text": [
-        "## Chú thích"
-      ]
-    },
-    {
-      "text": [
-        "Chương này phê phán **văn hóa ca ngợi cá nhân** trong giới công nghệ. Việc tôn vinh quá mức một lập trình viên có thể tạo ra sự phân hóa nhóm và cạnh tranh không lành mạnh. \"Bám víu sở hữu\" ám chỉ thói quen độc quyền code ownership, khiến đồng đội không dám sửa chữa hay cải tiến."
-      ]
-    },
-    {
-      "text": [
-        "\"Làm trống tâm trí khỏi kỳ vọng\" là nguyên tắc **YAGNI** (You Ain't Gonna Need It) - chỉ tập trung vào yêu cầu hiện tại, tránh over-engineering. \"Ôm lấy điều chưa biết\" phản ánh tinh thần **agile**: chấp nhận thay đổi requirements như cơ hội học hỏi."
-      ]
-    },
-    {
-      "text": [
-        "\"Làm bằng cách không làm\" (vô vi) thể hiện qua **automation** và **clean code**: hệ thống tự vận hành trơn tru, lập trình viên can thiệp tối thiểu. Đây cũng là triết lý của **DevOps** - xây dựng pipeline để công việc lặp lại được giải phóng bởi máy móc."
-      ]
-    }
-  ]
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Nếu bạn ca ngợi lập trình viên,",
+          "người khác sinh oán giận.",
+          "Nếu bạn bám víu sở hữu,",
+          "người khác bị cám dỗ ăn cắp.",
+          "Nếu bạn khơi dậy lòng ghen tị,",
+          "người khác chịu xáo động trong tim."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Người lập trình thể đạo dẫn dắt:",
+          "Bằng cách làm trống tâm trí khỏi kỳ vọng",
+          "và lấp đầy tâm hồn.",
+          "Bằng cách buông bỏ tham vọng",
+          "và ôm lấy điều chưa biết."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Thoát khỏi trí tuệ, thoát khỏi trừu tượng,",
+          "Người lập trình thể đạo dẫn vạn vật về",
+          "sự tự túc tự nhiên."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Làm bằng cách không làm, và chẳng có gì",
+          "không thể hoàn thành."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phê phán **văn hóa ca ngợi cá nhân** trong giới công nghệ. Việc tôn vinh quá mức một lập trình viên có thể tạo ra sự phân hóa nhóm và cạnh tranh không lành mạnh. \"Bám víu sở hữu\" ám chỉ thói quen độc quyền code ownership, khiến đồng đội không dám sửa chữa hay cải tiến."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Làm trống tâm trí khỏi kỳ vọng\" là nguyên tắc **YAGNI** (You Ain't Gonna Need It) - chỉ tập trung vào yêu cầu hiện tại, tránh over-engineering. \"Ôm lấy điều chưa biết\" phản ánh tinh thần **agile**: chấp nhận thay đổi requirements như cơ hội học hỏi."
+      },
+      {
+        "id": "comment-3",
+        "content": "\"Làm bằng cách không làm\" (vô vi) thể hiện qua **automation** và **clean code**: hệ thống tự vận hành trơn tru, lập trình viên can thiệp tối thiểu. Đây cũng là triết lý của **DevOps** - xây dựng pipeline để công việc lặp lại được giải phóng bởi máy móc."
+      }
+    ]
+  }
 }

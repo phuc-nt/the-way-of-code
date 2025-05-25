@@ -153,15 +153,14 @@ function processChapterFile(filename) {
     const content = fs.readFileSync(chapterPath, 'utf8');
     const lines = content.split('\n');
     
-    // Cấu trúc dữ liệu chương
+    // Cấu trúc dữ liệu chương mới
     const chapterData = {
         id: chapterId,
         title: '',
-        verses: []
-    };
-    
-    let currentVerse = {
-        text: []
+        content: {
+            verses: [],
+            commentary: []
+        }
     };
     
     // Bỏ qua dòng đầu tiên nếu nó là comment
@@ -176,6 +175,17 @@ function processChapterFile(filename) {
         startIndex++;
     }
     
+    let currentVerse = {
+        id: '',
+        lines: []
+    };
+    
+    let verseCounter = 0;
+    let commentCounter = 0;
+    let isCommentary = false;
+    let currentComment = null;
+    let commentBuffer = [];
+    
     // Parse nội dung
     for (let i = startIndex; i < lines.length; i++) {
         const line = lines[i].trim();
@@ -185,25 +195,56 @@ function processChapterFile(filename) {
             continue;
         }
         
-        // Nếu gặp dòng trống và đang có nội dung trong verse hiện tại
-        if (!line && currentVerse.text.length > 0) {
-            // Lưu verse hiện tại và tạo verse mới
-            chapterData.verses.push({...currentVerse});
-            currentVerse = {
-                text: []
-            };
+        // Kiểm tra nếu đến phần chú thích
+        if (line.startsWith('## Chú thích')) {
+            isCommentary = true;
             continue;
         }
         
-        // Thêm dòng vào verse hiện tại nếu không phải dòng trống
-        if (line) {
-            currentVerse.text.push(line);
+        if (isCommentary) {
+            // Nếu gặp dòng trống và đang có nội dung trong commentBuffer
+            if (!line && commentBuffer.length > 0) {
+                // Lưu comment hiện tại và tạo comment mới
+                commentCounter++;
+                chapterData.content.commentary.push({
+                    id: `comment-${commentCounter}`,
+                    content: commentBuffer.join('\n')
+                });
+                commentBuffer = [];
+            } else if (line) {
+                // Thêm dòng vào commentBuffer
+                commentBuffer.push(line);
+            }
+        } else {
+            // Xử lý các verse
+            // Nếu gặp dòng trống và đang có nội dung trong verse hiện tại
+            if (!line && currentVerse.lines.length > 0) {
+                // Lưu verse hiện tại và tạo verse mới
+                verseCounter++;
+                currentVerse.id = `verse-${verseCounter}`;
+                chapterData.content.verses.push({...currentVerse});
+                currentVerse = {
+                    id: '',
+                    lines: []
+                };
+            } else if (line) {
+                // Thêm dòng vào verse hiện tại
+                currentVerse.lines.push(line);
+            }
         }
     }
     
-    // Thêm verse cuối cùng nếu còn
-    if (currentVerse.text.length > 0) {
-        chapterData.verses.push({...currentVerse});
+    // Thêm verse/comment cuối cùng nếu còn
+    if (isCommentary && commentBuffer.length > 0) {
+        commentCounter++;
+        chapterData.content.commentary.push({
+            id: `comment-${commentCounter}`,
+            content: commentBuffer.join('\n')
+        });
+    } else if (!isCommentary && currentVerse.lines.length > 0) {
+        verseCounter++;
+        currentVerse.id = `verse-${verseCounter}`;
+        chapterData.content.verses.push({...currentVerse});
     }
     
     // Ghi file JSON
