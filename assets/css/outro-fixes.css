@@ -1,0 +1,67 @@
+/* outro-fixes.css - Các sửa đổi để đảm bảo đồng bộ giữa outro.html và chapter.html */
+
+/* Đảm bảo kích thước font thống nhất cho tất cả các navigation */
+.chapter-header-nav, .chapter-footer-nav {
+    font-size: 0.9rem !important;
+}
+
+/* Áp dụng style giống hệt .prev-chapter và .next-chapter trong main.css */
+.nav-previous, .nav-next, .nav-home {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition-time);
+    white-space: nowrap;
+    font-size: 0.9rem;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+
+/* Copy styles từ .prev-chapter:hover và .next-chapter:hover */
+.nav-previous:hover, .nav-next:hover, .nav-home:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+/* Đảm bảo cách đều và căn chỉnh giống với .chapter-nav trong main.css */
+#chapter-navigation.chapter-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Đảm bảo chapter-footer-nav giống với trang chapter */
+.chapter-footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin: 2rem 0 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Đảm bảo footer-navigation có cùng style với chapter-footer-nav trong chapter.html */
+#footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin: 2rem 0 1rem;
+    border-top: 1px solid var(--border-color);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Thêm class fade-in cho animation phù hợp với chapter.html */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}

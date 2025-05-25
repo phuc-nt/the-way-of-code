@@ -41,15 +41,47 @@ function initInfiniteScroll() {
     let currentChapterId = parseInt(urlParams.get('id') || '1');
     let totalChapters = 81; // Giá trị mặc định
     
-    // Lấy tổng số chương thực tế từ intro.json
-    fetch('data/intro.json')
-        .then(response => response.json())
-        .then(data => {
-            totalChapters = data.totalChapters;
+    // Đếm số lượng file chapter trong thư mục data
+    countChapterFiles()
+        .then(count => {
+            totalChapters = count;
         })
         .catch(error => {
-            console.error('Error loading intro data:', error);
+            console.error('Error counting chapter files:', error);
         });
+        
+    // Hàm đếm số lượng file chapter
+    async function countChapterFiles() {
+        try {
+            // Tạo một mảng từ 1 đến 200 (một số đủ lớn)
+            const potentialChapters = Array.from({ length: 200 }, (_, i) => i + 1);
+            
+            // Kiểm tra file nào tồn tại
+            const checkFileExists = async (chapterNum) => {
+                try {
+                    const response = await fetch(`data/chapter-${chapterNum}.json`, { method: 'HEAD' });
+                    return response.ok;
+                } catch (error) {
+                    return false;
+                }
+            };
+            
+            // Kiểm tra từng file
+            const checkResults = await Promise.all(
+                potentialChapters.map(async num => {
+                    const exists = await checkFileExists(num);
+                    return exists ? num : null;
+                })
+            );
+            
+            // Lọc ra các file tồn tại và lấy số lượng
+            const existingChapters = checkResults.filter(num => num !== null);
+            return existingChapters.length;
+        } catch (error) {
+            console.error('Error counting chapter files:', error);
+            return 81; // Giá trị mặc định nếu có lỗi
+        }
+    }
     
     // Thêm hỗ trợ điều hướng bằng bàn phím
     addKeyboardNavigation();

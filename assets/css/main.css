@@ -241,6 +241,18 @@ header {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
 }
 
+.chapter-link.special-link {
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 10px;
+}
+
+.chapter-link.special-link:hover {
+    background-color: rgba(var(--accent-color-rgb), 0.15);
+    color: var(--accent-color);
+}
+
 /* Comment section */
 .comment-section {
     margin: 3rem auto 1rem;

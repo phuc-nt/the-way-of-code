@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đạo Của Code - Lời Kết</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/scroll-navigation.css">
+    <link rel="stylesheet" href="assets/css/edge-glow.css">
+    <link rel="stylesheet" href="assets/css/outro-fixes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container chapter-container">
+        <header>
+            <div class="home-header">
+                <a href="index.html" class="home-link">ĐẠO CỦA CODE</a>
+            </div>
+            <nav class="navigation">
+                <div class="chapter-nav chapter-header-nav" id="chapter-navigation">
+                    <a href="chapter.html?id=81" class="prev-chapter">Chương trước</a>
+                    <a href="index.html" class="next-chapter">Trang chủ</a>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="chapter-content" id="outro-content">
+            <!-- Outro content will be dynamically inserted here -->
+        </main>
+        
+        <footer>
+            <div class="chapter-footer-nav" id="footer-navigation">
+                <a href="chapter.html?id=81" class="prev-chapter">Chương trước</a>
+                <a href="index.html" class="next-chapter">Trang chủ</a>
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2025 Đạo Của Code</p>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="theme-switcher">
+        <button class="theme-button light" data-theme="light" title="Light theme">☀️</button>
+        <button class="theme-button dark" data-theme="dark" title="Dark theme">🌙</button>
+        <button class="theme-button brown" data-theme="brown" title="Brown theme">📜</button>
+    </div>
+    
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scroll-navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Khởi tạo theme manager từ main.js
+            if (typeof themeManager !== 'undefined') {
+                themeManager.init();
+            }
+            
+            // Tải nội dung của outro.json
+            fetch('data/outro.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    renderOutroContent(data);
+                })
+                .catch(error => {
+                    console.error('Error loading outro data:', error);
+                    document.getElementById('outro-content').innerHTML = '<p>Đã xảy ra lỗi khi tải dữ liệu. Vui lòng thử lại sau.</p>';
+                });
+        });
+
+        // Render nội dung outro
+        function renderOutroContent(data) {
+            const contentElement = document.getElementById('outro-content');
+            if (!contentElement) return;
+            
+            let contentHTML = '';
+            
+            // Thêm tiêu đề nếu có
+            if (data.title) {
+                contentHTML += `<h1 class="chapter-heading fade-in">${data.title}</h1>`;
+            } else {
+                contentHTML += `<h1 class="chapter-heading fade-in">Lời Kết</h1>`;
+            }
+            
+            // Render các đoạn thơ (verses)
+            contentHTML += `<div class="verse-container">`;
+            
+            if (data.content && data.content.verses && data.content.verses.length > 0) {
+                data.content.verses.forEach(verse => {
+                    contentHTML += `<p class="verse" id="${verse.id}">`;
+                    
+                    verse.lines.forEach((line, index) => {
+                        // Xử lý định dạng Markdown cho từng dòng
+                        let parsedLine = line;
+                        
+                        // Xử lý in đậm
+                        parsedLine = parsedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        
+                        // Xử lý in nghiêng
+                        parsedLine = parsedLine.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                        
+                        contentHTML += parsedLine;
+                        if (index < verse.lines.length - 1) {
+                            contentHTML += `<br>`;
+                        }
+                    });
+                    
+                    contentHTML += `</p>`;
+                });
+            }
+            
+            contentHTML += '</div>';
+            
+            // Hiển thị quote nếu có
+            if (data.content && data.content.quote && data.content.quote.text) {
+                contentHTML += `
+                    <blockquote class="outro-quote fade-in-delayed">
+                        <p>${data.content.quote.text}</p>
+                        ${data.content.quote.author ? `<footer>— <em>${data.content.quote.author}</em></footer>` : ''}
+                    </blockquote>
+                `;
+            }
+            
+            contentElement.innerHTML = contentHTML;
+            
+            // Áp dụng class fade-in cho container
+            document.querySelector('.container').classList.add('fade-in-content');
+            
+            // Thêm các phần tử glow edge
+            if (typeof addGlowElements === 'function') {
+                addGlowElements();
+            }
+            
+            // Cập nhật styles cho navigation để đồng bộ với trang chapter
+            styleNavigation();
+        }
+        
+        // Hàm này áp dụng cùng kiểu dáng cho navigation như trong main.js
+        function styleNavigation() {
+            // Áp dụng style giống chapter.html cho các phần tử navigation
+            const headerNav = document.getElementById('chapter-navigation');
+            const footerNav = document.getElementById('footer-navigation');
+            
+            if (headerNav) {
+                headerNav.classList.add('fade-in');
+                // Đảm bảo cấu trúc và spacing giống với chapter.html
+                headerNav.style.display = 'flex';
+                headerNav.style.justifyContent = 'space-between';
+                headerNav.style.width = '100%';
+                headerNav.style.maxWidth = '400px';
+            }
+            
+            if (footerNav) {
+                footerNav.classList.add('fade-in');
+                // Đảm bảo cấu trúc và spacing giống với chapter.html
+                footerNav.style.display = 'flex';
+                footerNav.style.justifyContent = 'space-between';
+                footerNav.style.width = '100%';
+                footerNav.style.maxWidth = '400px';
+                footerNav.style.margin = '2rem auto 1rem';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -76,8 +76,11 @@ function loadHomePage() {
             // Render phần giới thiệu
             renderIntroduction(data);
             
-            // Render danh sách chương
-            renderChapterList(data.totalChapters);
+            // Đếm tổng số file chapter*.json trong thư mục data
+            countChapterFiles().then(totalChapters => {
+                // Render danh sách chương
+                renderChapterList(totalChapters);
+            });
         })
         .catch(error => {
             console.error('Error loading home page data:', error);
@@ -92,9 +95,9 @@ function renderHomeHeader(data) {
     if (!headerElement) return;
     
     headerElement.innerHTML = `
-        <h1 class="main-title fade-in">${data.title}</h1>
-        <p class="subtitle fade-in-delayed">${data.subtitle}</p>
-        <p class="author fade-in-delayed">Dựa trên ${data.author.original} - Chuyển thể bởi ${data.author.adaptation}</p>
+        <h1 class="main-title fade-in">${data.banner.title}</h1>
+        <p class="subtitle fade-in-delayed">${data.banner.subtitle}</p>
+        <p class="author fade-in-delayed">${data.banner.attribution}</p>
     `;
 }
 
@@ -106,25 +109,29 @@ function renderIntroduction(data) {
     let introHTML = '';
     
     // Render quote
-    if (data.quote) {
+    if (data.content.quote) {
         introHTML += `
             <blockquote class="quote fade-in">
-                <p>${data.quote.text}</p>
-                <footer>— <em>${data.quote.author}</em></footer>
+                <p>${data.content.quote.text}</p>
+                <footer>— <em>${data.content.quote.author}</em></footer>
             </blockquote>
         `;
     }
     
     // Render các phần giới thiệu
-    data.introduction.forEach(section => {
+    data.content.sections.forEach(section => {
         introHTML += `<div class="intro-text fade-in-up">`;
         
         if (section.title) {
             introHTML += `<h2>${section.title}</h2>`;
         }
         
-        section.paragraphs.forEach(paragraph => {
-            introHTML += `<p>${paragraph}</p>`;
+        // Chuyển đổi xuống dòng thành phần tử <p>
+        const paragraphs = section.content.split('\n\n');
+        paragraphs.forEach(paragraph => {
+            if (paragraph.trim()) {
+                introHTML += `<p>${paragraph}</p>`;
+            }
         });
         
         introHTML += `</div>`;
@@ -143,6 +150,9 @@ function renderChapterList(totalChapters) {
     for (let i = 1; i <= totalChapters; i++) {
         listHTML += `<li><a href="chapter.html?id=${i}" class="chapter-link">Chương ${i}</a></li>`;
     }
+    
+    // Thêm liên kết đến trang outro
+    listHTML += `<li><a href="outro.html" class="chapter-link special-link">Lời kết</a></li>`;
     
     listElement.innerHTML = listHTML;
 }
@@ -170,13 +180,11 @@ function loadChapter() {
             // Render nội dung chương
             renderChapterContent(data);
             
-            // Tải dữ liệu tổng số chương từ intro.json
-            return fetch('data/intro.json')
-                .then(response => response.json())
-                .then(introData => {
+            // Đếm tổng số chương từ các file
+            return countChapterFiles()
+                .then(totalChapters => {
                     // Render navigation ở header và footer
                     const parsedChapterId = parseInt(chapterId);
-                    const totalChapters = introData.totalChapters;
                     
                     // Render navigation cho header
                     renderChapterHeaderNav(parsedChapterId, totalChapters);
@@ -308,6 +316,9 @@ function renderChapterHeaderNav(chapterId, totalChapters) {
     // Link chương sau
     if (chapterId < totalChapters) {
         navHTML += `<a href="chapter.html?id=${chapterId + 1}" class="next-chapter">Chương tiếp</a>`;
+    } else if (chapterId == totalChapters) {
+        // Nếu là chương cuối, hiển thị link đến outro
+        navHTML += `<a href="outro.html" class="next-chapter">Lời kết</a>`;
     } else {
         navHTML += `<span class="next-chapter" style="visibility: hidden">Chương tiếp</span>`;
     }
@@ -345,12 +356,48 @@ function renderFooterNavigation(chapterId, totalChapters) {
     // Link chương sau
     if (chapterId < totalChapters) {
         navHTML += `<a href="chapter.html?id=${chapterId + 1}" class="next-chapter">Chương tiếp</a>`;
+    } else if (chapterId == totalChapters) {
+        // Nếu là chương cuối, hiển thị link đến outro
+        navHTML += `<a href="outro.html" class="next-chapter">Lời kết</a>`;
     } else {
         navHTML += `<span class="next-chapter" style="visibility: hidden">Chương tiếp</span>`;
     }
     
     navHTML += '</div>';
     navElement.innerHTML = navHTML;
+}
+
+// Đếm số lượng file chapter trong thư mục data
+async function countChapterFiles() {
+    try {
+        // Tạo một mảng từ 1 đến 200 (một số đủ lớn)
+        const potentialChapters = Array.from({ length: 200 }, (_, i) => i + 1);
+        
+        // Kiểm tra file nào tồn tại
+        const checkFileExists = async (chapterNum) => {
+            try {
+                const response = await fetch(`data/chapter-${chapterNum}.json`, { method: 'HEAD' });
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        };
+        
+        // Kiểm tra từng file
+        const checkResults = await Promise.all(
+            potentialChapters.map(async num => {
+                const exists = await checkFileExists(num);
+                return exists ? num : null;
+            })
+        );
+        
+        // Lọc ra các file tồn tại và lấy số lượng
+        const existingChapters = checkResults.filter(num => num !== null);
+        return existingChapters.length;
+    } catch (error) {
+        console.error('Error counting chapter files:', error);
+        return 81; // Giá trị mặc định nếu có lỗi
+    }
 }
 
 // Hàm để xử lý định dạng Markdown cơ bản

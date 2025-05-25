@@ -1,29 +1,25 @@
 {
-  "title": "ĐẠO CỦA CODE",
-  "subtitle": "Nghệ Thuật Vĩnh Cửu của Vibe Coding",
-  "author": {
-    "original": "Lão Tử",
-    "adaptation": "Rick Rubin"
+  "banner": {
+    "title": "ĐẠO CỦA CODE",
+    "subtitle": "Nghệ Thuật Vĩnh Cửu của Vibe Coding",
+    "attribution": "Dựa trên Lão Tử - Chuyển thể bởi Rick Rubin"
   },
-  "quote": {
-    "text": "Mỗi lần gặp gỡ với Lão Tử đều chỉ cho tôi thấy điều gì đó mới mẻ. Gần như cuốn sách thay đổi sau mỗi lần đọc. Lần đầu tiên tôi cầm trên tay bản dịch của Stephen Mitchell 40 năm trước tại hiệu sách Bodhi Tree ở Los Angeles, và cuộc đời tôi không bao giờ còn như cũ. ",
-    "author": "Rick Rubin"
-  },
-  "introduction": [
-    {
-      "title": "Giới thiệu về tác phẩm",
-      "paragraphs": [
-        "\"Đạo của Code\" là sự kết hợp độc đáo giữa triết học cổ đại và nghệ thuật lập trình hiện đại. Rick Rubin - nhà sản xuất âm nhạc huyền thoại - đã chuyển thể 81 chương của Đạo Đức Kinh thành những thiền tưởng về \"Vibe Coding\" - cách tiếp cận lập trình từ tâm hồn, nơi code không chỉ là logic mà còn là nghệ thuật sống.",
-        "Tác phẩm này mời gọi các lập trình viên khám phá \"Đạo của Code\" - con đường cân bằng giữa kỹ thuật và trực giác, giữa hiệu quả và thanh lịch, giữa làm và không-làm trong thế giới công nghệ.",
-        "Bản gốc tiếng Anh \"The Way of Code\" của Rick Rubin có thể được xem tại <a href=\"https://www.thewayofcode.com\" target=\"_blank\">thewayofcode.com</a>."
-      ]
+  "content": {
+    "quote": {
+      "text": "Mỗi lần gặp gỡ với Lão Tử đều chỉ cho tôi thấy điều gì đó mới mẻ. Gần như cuốn sách thay đổi sau mỗi lần đọc. Lần đầu tiên tôi cầm trên tay bản dịch của Stephen Mitchell 40 năm trước tại hiệu sách Bodhi Tree ở Los Angeles, và cuộc đời tôi không bao giờ còn như cũ. ",
+      "author": "Rick Rubin"
     },
-    {
-      "title": "Về bản dịch và trang web",
-      "paragraphs": [
-        "Bản dịch tiếng Việt được thực hiện bởi Trọng Phúc với sự hỗ trợ từ AI, tập trung vào việc chuyển tải tinh thần triết lý của nguyên tác sang ngôn ngữ và văn hóa Việt Nam. Trang web được tạo bởi GitHub Copilot theo hướng dẫn của con người - một minh họa cho tinh thần Vibe Coding, với thiết kế tối giản phản ánh nguyên tắc của Đạo: đơn giản là sức mạnh."
-      ]
-    }
-  ],
-  "totalChapters": 81
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "Giới thiệu về tác phẩm",
+        "content": "\"Đạo của Code\" là sự kết hợp độc đáo giữa triết học cổ đại và nghệ thuật lập trình hiện đại. Rick Rubin - nhà sản xuất âm nhạc huyền thoại - đã chuyển thể 81 chương của Đạo Đức Kinh thành những thiền tưởng về \"Vibe Coding\" - cách tiếp cận lập trình từ tâm hồn, nơi code không chỉ là logic mà còn là nghệ thuật sống.\n\nTác phẩm này mời gọi các lập trình viên khám phá \"Đạo của Code\" - con đường cân bằng giữa kỹ thuật và trực giác, giữa hiệu quả và thanh lịch, giữa làm và không-làm trong thế giới công nghệ.\n\nBản gốc tiếng Anh \"The Way of Code\" của Rick Rubin có thể được xem tại <a href=\"https://www.thewayofcode.com\" target=\"_blank\">thewayofcode.com</a>."
+      },
+      {
+        "id": "section-2",
+        "title": "Về bản dịch và trang web",
+        "content": "Bản dịch tiếng Việt được thực hiện bởi Trọng Phúc với sự hỗ trợ từ AI, tập trung vào việc chuyển tải tinh thần triết lý của nguyên tác sang ngôn ngữ và văn hóa Việt Nam. Trang web được tạo bởi GitHub Copilot theo hướng dẫn của con người - một minh họa cho tinh thần Vibe Coding, với thiết kế tối giản phản ánh nguyên tắc của Đạo: đơn giản là sức mạnh."
+      }
+    ]
+  }
 }
