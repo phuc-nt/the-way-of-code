@@ -1,0 +1,35 @@
+# Chương 32  
+
+Cội Nguồn mãi mãi nguyên sơ.  
+Nhỏ bé, trong trạng thái vô hình,  
+nhưng không thể nắm bắt.  
+
+Nếu lãnh đạo biết vận dụng nó,  
+vạn vật sẽ tự nhiên quy thuận.  
+Trời đất hòa làm một,  
+mưa lành rơi xuống.  
+Người đời chẳng cần luật lệ,  
+vạn sự thuận theo lẽ tự nhiên.  
+
+Khi toàn thể bị phân mảnh, từng phần bị gán nhãn.  
+Nhãn mác đã quá nhiều rồi.  
+Biết điểm dừng là trí tuệ.  
+Biết dừng lại tránh tai ương.  
+
+Cội Nguồn tựa dòng sông  
+xuôi về biển cả.  
+
+---
+
+## Chú thích  
+
+Chương này khẳng định **sức mạnh của nguyên lý cốt lõi** trong lập trình:  
+- **"Nguyên sơ"**: Các nguyên tắc như **SOLID**, **DRY** tồn tại vĩnh cửu dù công nghệ đổi thay.  
+- **"Vận dụng Cội Nguồn"**: Lãnh đạo tech áp dụng **clean architecture** để hệ thống tự tổ chức, giảm micro-management.  
+- **"Mưa lành"**: **Automated testing** và **CI/CD** giúp hệ thống vận hành trơn tru như chu kỳ tự nhiên.  
+
+Việc "gán nhãn" phản ánh hiện tượng **over-abstraction** - tạo lớp interface thừa khiến code phình to. "Biết điểm dừng" nhắc nhở:  
+- **YAGNI Principle**: Chỉ implement khi cần thiết  
+- **KISS Principle**: Giữ code đơn giản tối đa  
+
+Hình ảnh "dòng sông về biển" ví von **development lifecycle** - từ ý tưởng (thượng nguồn) đến deployment (hạ nguồn), luôn hướng đến sự hoàn thiện nhưng không cưỡng ép. Người lập trình đạt đạo không chống lại dòng chảy, mà **nương theo nguyên lý** để code tự tổ chức. 

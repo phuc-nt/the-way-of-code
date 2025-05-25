@@ -1,0 +1,36 @@
+{
+  "id": 72,
+  "title": "Chương 72",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Khi con người đánh mất sự kinh ngạc,",
+          "họ quay về với tín điều.",
+          "Khi con người không còn tin vào chính mình,",
+          "họ khuất phục trước uy quyền."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Bởi thế, Người lập trình thể đạo lùi bước",
+          "để người khác không lạc lối.",
+          "Người dạy mà như không dạy,",
+          "để người khác chẳng còn gì để học."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **nghịch lý giữa kiến thức và tự do** trong thế giới lập trình:\n- **\"Mất sự kinh ngạc\"**: Ám chỉ việc mất đi **curiosity** - động lực khám phá công nghệ mới, chỉ tuân theo framework cũ như \"tín điều\". Ví dụ: Bám víu vào jQuery trong thời đại React/Vue.\n- **\"Khuất phục uy quyền\"**: **Over-reliance on corporate standards** - ép buộc dùng tool/internal framework của công ty dù có giải pháp tốt hơn.\n- **\"Lùi bước\"**: Triết lý **servant leadership** - Tech Lead tạo không gian để dev tự quyết (**autonomy**), như GitHub cho phép fork repository để thử nghiệm.\n- **\"Dạy mà không dạy\"**: **Self-documenting code** và **clean architecture** - hệ thống tự nói lên logic, không cần documentation dày đặc."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Chẳng còn gì để học\" là đỉnh cao của **intuitive design** - API đến mức người dùng không cần đọc manual (ví dụ: Stripe API). Người lập trình đạt đạo hiểu: **Giáo điều cứng nhắc giết chết sáng tạo**, như REST strict khiến bỏ lỡ tiềm năng của GraphQL. Thay vào đó, xây **nền tảng mở** (open-source) để cộng đồng tự khám phá."
+      }
+    ]
+  }
+}

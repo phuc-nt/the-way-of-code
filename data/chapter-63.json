@@ -1,0 +1,56 @@
+{
+  "id": 63,
+  "title": "Chương 63",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Hành động mà không làm.",
+          "Làm việc mà không gắng sức.",
+          "Nhỏ bé mà xem như lớn lao,",
+          "Ít ỏi mà xem như nhiều.",
+          "Thấy sự giản đơn trong phức tạp",
+          "Và hoàn thành điều phi thường từng bước nhỏ."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Đón nhận khó khăn khi nó còn đơn giản.",
+          "Giải quyết việc lớn khi nó còn nhỏ bé.",
+          "Khó khăn trên đời luôn",
+          "bắt nguồn từ những điều giản đơn.",
+          "Vấn đề lớn trên đời luôn",
+          "bắt nguồn từ những điều nhỏ nhặt."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Người lập trình thể đạo không bao giờ vươn tới sự vĩ đại.",
+          "Vì thế, người ấy đạt được sự vĩ đại.",
+          "Nếu việc dễ dàng bị xem nhẹ,",
+          "việc khó sẽ trở nên kinh ngạc."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Tiếp cận mỗi nhiệm vụ với sự nghiêm túc điềm tĩnh",
+          "và hiện diện trọn vẹn."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khắc họa **nguyên lý phân rã vấn đề** trong lập trình:\n- **\"Hành động không làm\"**: Triết lý **vô vi** - viết code tự nhiên như nước chảy, không ép buộc logic (ví dụ: sử dụng **declarative programming** thay vì imperative).\n- **\"Giải quyết việc lớn từ nhỏ\"**: Áp dụng **Agile methodology** - chia feature lớn thành các user story nhỏ (sprint).\n- **\"Bước nhỏ phi thường\"**: **Continuous Integration** - mỗi commit nhỏ góp phần build hệ thống hoàn chỉnh.\n- **\"Xem nhẹ việc dễ\"**: Cảnh báo **technical debt** tích tụ từ những lỗi nhỏ không được fix sớm (ví dụ: cảnh báo compiler bị bỏ qua)."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Hiện diện trọn vẹn\" phản ánh **flow state** khi coding - tập trung tuyệt đối vào từng dòng code như thiền định. Người lập trình đạt đạo hiểu: **Mọi hệ thống phức tạp đều được xây từ những component đơn giản** - như lego ghép thành lâu đài."
+      }
+    ]
+  }
+}

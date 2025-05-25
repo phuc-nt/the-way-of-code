@@ -1,0 +1,45 @@
+{
+  "id": 74,
+  "title": "Chương 74",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Khi nhận ra vạn vật đổi thay,",
+          "chẳng gì đáng níu giữ.",
+          "Nếu không sợ chết,",
+          "không gì không thể đạt thành."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Chỉ tự nhiên biết thời điểm",
+          "con người phải chết.",
+          "Cướp đi mạng sống,",
+          "là can thiệp vào kế hoạch hóa sinh của tạo hóa."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Cố kiểm soát tương lai",
+          "tựa như đóng vai người thợ mộc bậc thầy.",
+          "Khi cầm dụng cụ của bậc thầy,",
+          "ắt bạn sẽ tự đứt tay."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **nguyên lý thả lỏng kiểm soát** trong phát triển phần mềm:\n- **\"Vạn vật đổi thay\"**: **Agile mindset** - chấp nhận requirement thay đổi, thiết kế hệ thống **loosely coupled** để dễ adapt.\n- **\"Không sợ chết\"**: Tinh thần **chaos engineering** - chủ động test failure scenarios để hệ thống \"tự chữa lành\". Ví dụ: Netflix Simian Army gây lỗi để tăng resilience.\n- **\"Can thiệp kế hoạch tạo hóa\"**: **Over-optimization** - ép hệ thống scale vượt nhu cầu thực tế, phá vỡ kiến trúc tự nhiên.\n- **\"Đứt tay\"**: Hậu quả của **micromanagement** - tự tay fix bug thay vì để team tự solve, làm mất tính tự chủ."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Người thợ mộc bậc thầy\" ẩn dụ cho **nguyên lý cốt lõi** (SOLID, KISS) - cố gắng \"sửa\" chúng bằng hacky code giống như dùng búa đập đinh, chỉ tổ hỏng tool. Thay vào đó, hãy để CI/CD pipeline như \"dòng chảy tự nhiên\" - tự động test/deploy khi code đủ chín muồi."
+      }
+    ]
+  }
+}

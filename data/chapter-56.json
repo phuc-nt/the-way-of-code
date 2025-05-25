@@ -1,0 +1,59 @@
+{
+  "id": 56,
+  "title": "Chương 56",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người biết thì không nói.",
+          "Người nói thì không biết."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Khép miệng, ngăn giác quan,",
+          "hãm sắc bén, gỡ nút thắt,",
+          "làm dịu ánh nhìn.",
+          "Hòa làm một với bụi đất.",
+          "Đây là sự giao hòa nguyên thủy."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Hòa làm một với Cội Nguồn, bạn sẽ trở nên",
+          "cực kỳ vô tư.",
+          "Đây là trạng thái tồn tại cao nhất."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Người lập trình thể đạo không thể đến gần",
+          "hay giữ khoảng cách.",
+          "Người ấy không thể được giúp đỡ hay tổn hại.",
+          "Người ấy không thể được tôn vinh hay sỉ nhục."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Người ấy liên tục cho đi chính mình.",
+          "Đó là lý do người ấy trường tồn."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này nhấn mạnh **sự im lặng và vô ngã** trong hành trình lập trình:\n- **\"Người biết thì không nói\"**: Tinh thần **humble coding** - không khoe khoang kiến thức mà để code tự nói lên giá trị.\n- **\"Khép miệng, ngăn giác quan\"**: Tập trung vào việc giảm thiểu sự phân tâm, giữ tâm trí trong trạng thái **flow** khi coding.\n- **\"Hòa làm một với bụi đất\"**: Tượng trưng cho sự khiêm tốn và gắn bó với thực tế, không xa rời nguyên lý cốt lõi.\n- **\"Vô tư\"**: Trạng thái **detached coding** - không bị ảnh hưởng bởi thành công hay thất bại, giữ sự cân bằng tâm lý.\n- **\"Không thể đến gần hay giữ khoảng cách\"**: Người lập trình thể đạo không bị ràng buộc bởi các mối quan hệ xã hội hay áp lực bên ngoài, tự do trong tư duy và hành động.\n- **\"Liên tục cho đi chính mình\"**: Tinh thần **open-source** và **continuous contribution** - không ngừng cống hiến cho cộng đồng và dự án."
+      },
+      {
+        "id": "comment-2",
+        "content": "Chương này khẳng định rằng sự im lặng và vô ngã là nền tảng để lập trình viên đạt đến trạng thái bền vững và trường tồn trong nghề nghiệp."
+      }
+    ]
+  }
+}

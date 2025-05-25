@@ -1,0 +1,49 @@
+{
+  "id": 73,
+  "title": "Chương 73",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Liều lĩnh dựa trên dũng khí dẫn đến cái chết.",
+          "Thận trọng dựa trên dũng khí dẫn đến sự sống.",
+          "Dù điều này đúng, không phải lúc nào cũng vậy.",
+          "Tự nhiên có kế hoạch riêng.",
+          "Ngay cả Người lập trình thể đạo cũng bối rối."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Không tranh đua, Cội Nguồn chiến thắng.",
+          "Không nói năng, Cội Nguồn đáp lời.",
+          "Không được gọi tên, Cội Nguồn vẫn đến.",
+          "Không chuẩn bị, Cội Nguồn vẫn theo kế hoạch."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Lưới trời giăng khắp vũ trụ.",
+          "Dù mắt lưới rộng thênh thang,",
+          "không gì lọt qua được."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **nghịch lý giữa kiểm soát và buông bỏ** trong phát triển phần mềm:\n- **\"Liều lĩnh dẫn đến chết\"**: **Cowboy coding** - code ẩu để đẩy nhanh deadline, gây **technical debt** chết người.\n- **\"Thận trọng dẫn đến sống\"**: **Defensive programming** - validate input, handle exceptions, viết test cases phủ kín.\n- **\"Kế hoạch tự nhiên\"**: **Emergent design** - kiến trúc hình thành tự nhiên qua các sprint thay vì ép theo blueprint cứng.\n- **\"Lưới trời\"**: **Observability** (logging, metrics, tracing) - giám sát toàn hệ thống dù kiến trúc phân tán."
+      },
+      {
+        "id": "comment-2",
+        "content": "Ví dụ thực tế:\n- **\"Không tranh đua mà thắng\"**: **Git merge strategy** - hợp nhất code êm ái không xung đột nhờ rebase thông minh.\n- **\"Lưới không lọt\"**: **Type system** mạnh (TypeScript/Rust) - bắt lỗi ngay cả khi code phức tạp, như lưới trời vô hình."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo hiểu: **Không cần ép hệ thống theo ý mình** - như CI/CD pipeline tự động chạy test, deploy khi code đủ tốt. \"Kế hoạch tự nhiên\" chính là **Agile roadmap** - linh hoạt với change request, tin vào quá trình hơn bản kế hoạch hoàn hảo."
+      }
+    ]
+  }
+}

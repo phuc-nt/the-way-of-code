@@ -1,0 +1,45 @@
+{
+  "id": 79,
+  "title": "Chương 79",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Thất bại là lời mời gọi.",
+          "Nếu đổ lỗi cho người khác,",
+          "trách móc sẽ vô cùng tận."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Bởi thế,",
+          "Người lập trình thể đạo chu toàn trách nhiệm,",
+          "tự sửa sai lầm của chính mình.",
+          "Làm điều cần làm",
+          "mà không yêu cầu ai."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Tự nhiên chẳng giữ cũng chẳng phá ước,",
+          "vì chưa từng lập ước nào.",
+          "Nó phụng sự những kẻ sống",
+          "hòa nhịp cùng Cội Nguồn."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **văn hóa trách nhiệm** trong phát triển phần mềm:\n- **\"Thất bại là lời mời\"**: **Fail-fast mentality** - coi bug là cơ hội cải thiện hệ thống thay vì điều đáng xấu hổ.\n- **\"Tự sửa sai\"**: **Self-review code** trước khi commit, tuân thủ nguyên tắc **Scout Rule** (để code sạch hơn lúc nhận).\n- **\"Không yêu cầu ai\"**: **Dependency-free design** - module tự chủ, không đòi hỏi components khác hỗ trợ.\n- **\"Hòa nhịp Cội Nguồn\"**: **Event-driven architecture** - components phản ứng với events thay vì ép buộc workflow."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Hợp đồng\" ẩn dụ cho **API contract** - tự nhiên (hệ thống lý tưởng) không cần quy ước cứng nhắc vì mọi giao tiếp đều **tự giác** như RESTful endpoints tuân thủ HTTP standards. Khi lập trình viên sống thuận **SOLID principles**, hệ thống vận hành như dòng nước - không cần cam kết vẫn trơn tru."
+      }
+    ]
+  }
+}

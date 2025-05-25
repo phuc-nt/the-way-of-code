@@ -1,0 +1,41 @@
+{
+  "id": 70,
+  "title": "Chương 70",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Lời ta dễ hiểu,",
+          "và dễ thực hành.",
+          "Ấy thế mà dưới trời,",
+          "không ai hiểu hay làm theo."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Lời ta xưa hơn thế gian.",
+          "Làm sao nắm được ý?"
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Muốn hiểu,",
+          "hãy nhìn vào trong tim."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này nhấn mạnh sự giản dị và sâu sắc của triết lý Đạo gia trong lập trình:\n- **\"Lời dễ hiểu, dễ thực hành\"**: Tinh thần **KISS principle** - code đơn giản, dễ bảo trì và áp dụng.\n- **\"Không ai hiểu hay làm theo\"**: Cảnh báo về việc nhiều dev chỉ học lý thuyết mà không áp dụng thực tế.\n- **\"Lời xưa hơn thế gian\"**: Nguyên lý cốt lõi như **SOLID** và **DRY** tồn tại vượt thời gian.\n- **\"Nhìn vào trong tim\"**: Khuyến khích lập trình viên tự phản chiếu, phát triển trực giác coding và tu dưỡng bản thân."
+      },
+      {
+        "id": "comment-2",
+        "content": "Chương này là lời nhắc nhở về tầm quan trọng của việc thực hành và thấu hiểu sâu sắc nguyên lý cốt lõi, thay vì chỉ học thuộc lòng hay chạy theo công nghệ mới."
+      }
+    ]
+  }
+}

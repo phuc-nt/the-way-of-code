@@ -1,0 +1,55 @@
+{
+  "id": 78,
+  "title": "Chương 78",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Trên đời không gì mềm yếu bằng nước,",
+          "Nhưng tan chảy cứng rắn lại vô song.",
+          "Chẳng gì thay đổi được dòng nước,",
+          "Mềm thắng cứng, nhu thắng cương."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Ai cũng biết lẽ này chân thực,",
+          "Nhưng mấy ai thực hành cho tròn.",
+          "Bởi thế, Người lập trình thể đạo",
+          "Giữa khổ đau vẫn điềm nhiên tâm hồn."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Ác tâm chẳng xuyên thấu tim người,",
+          "Bởi người từ bỏ việc nâng đỡ hão huyền.",
+          "Chính lúc không cố gắng nâng đỡ,",
+          "Người trở thành trụ cột vững bền."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Chân lý thường mang vẻ nghịch đời."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này minh họa **nguyên lý nhu thuận** qua ẩn dụ nước:\n- **\"Nước mềm yếu\"**: Tương đồng với **Agile methodology** - linh hoạt uốn theo thay đổi, không cứng nhắc như waterfall model.\n- **\"Tan chảy cứng rắn\"**: **Refactoring** dần dần legacy code thay vì rewrite đột ngột, như nước khoan đá.\n- **\"Từ bỏ nâng đỡ hão huyền\"**: **Dependency inversion principle** (SOLID) - module không phụ thuộc cứng vào nhau, để hệ thống tự cân bằng.\n- **\"Trụ cột vững bền\"**: **Microservices architecture** - mỗi service nhỏ như giọt nước, hợp thành biển hệ thống mạnh mẽ."
+      },
+      {
+        "id": "comment-2",
+        "content": "Câu kết \"chân lý nghịch đời\" phản ánh nghịch lý trong lập trình:\n- Code **đơn giản** (KISS) lại giải quyết vấn đề **phức tạp** nhất.\n- **Không kiểm soát** (event-driven) lại **kiểm soát** tốt hơn (so với polling).\n- **Im lặng** (clean code) lại **nói nhiều** hơn documentation dày đặc."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo như nước - không tranh giành vị trí, nhưng hiện diện trong mọi lớp kiến trúc (**presentation, business, data**)."
+      }
+    ]
+  }
+}

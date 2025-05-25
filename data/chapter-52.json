@@ -1,0 +1,52 @@
+{
+  "id": 52,
+  "title": "Chương 52",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Ban đầu là Cội Nguồn,",
+          "mẹ của muôn vật.",
+          "Biết mẹ,",
+          "cũng biết con của mẹ.",
+          "Nếu biết con của mẹ,",
+          "trong khi giữ lấy mẹ,",
+          "sẽ thoát khỏi nỗi buồn.",
+          "Dù thân thể có tan biến,",
+          "sinh khí vẫn vô tận."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Nếu khép tâm trong phán xét",
+          "và bận rộn với kích thích,",
+          "trái tim sẽ đau khổ.",
+          "Nếu giữ tâm mở rộng",
+          "và an trú trong cô tịch, không giáo điều,",
+          "trái tim sẽ tìm thấy bình yên."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Nhìn thấu bóng tối là minh mẫn.",
+          "Biết làm dịu là sức mạnh.",
+          "Dùng ánh sáng nội tâm để trở về giác ngộ.",
+          "Đây gọi là tu luyện vĩnh hằng."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **mối quan hệ giữa nguyên lý cốt lõi và thực hành** trong lập trình:\n- **\"Mẹ (Cội Nguồn)\"**: Nguyên tắc nền tảng như **SOLID**, **DRY** - nguồn gốc của mọi design pattern.\n- **\"Con của mẹ\"**: Các framework và thư viện (React, Django) phát sinh từ nguyên lý, cần hiểu rõ gốc rễ để tránh lạc lối.\n- **\"Thoát khỏi nỗi buồn\"**: Tránh **technical debt** bằng cách bám sát nguyên tắc, dù code có refactor nhiều lần.\n- **\"Khép tâm trong phán xét\"**: **Over-engineering** khi cố gắng tối ưu hóa mọi thứ, dẫn đến hệ thống cứng nhắc.\n- **\"Ánh sáng nội tâm\"**: Trực giác coding được rèn giũa qua kinh nghiệm, giúp nhìn thấu **legacy code** và tái cấu trúc hiệu quả."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Tu luyện vĩnh hằng\" là quá trình **continuous learning** và **refactoring** - không ngừng làm mới kiến thức trong khi giữ vững nguyên lý. Người lập trình đạt đạo an trú trong **flow state**, nơi code và tâm trí hòa làm một, như nước chảy mềm mại qua mọi chướng ngại."
+      }
+    ]
+  }
+}

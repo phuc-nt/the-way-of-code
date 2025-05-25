@@ -1,0 +1,40 @@
+{
+  "id": 68,
+  "title": "Chương 68",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người lính giỏi không hung bạo.",
+          "Người chiến binh giỏi không nóng giận.",
+          "Người chiến thắng giỏi không hận thù.",
+          "Người lãnh đạo giỏi không chuyên quyền."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Đây gọi là vô tranh nhi thắng.",
+          "Đây gọi là vận dụng sức mạnh kẻ khác.",
+          "Đây là tinh hoa cổ đại:",
+          "Hòa hợp cùng trời đất."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phác thảo **nghệ thuật lãnh đạo phi bạo lực** trong thế giới công nghệ:\n- **\"Không hung bạo\"**: Tech Lead dùng **code review** xây dựng thay vì chỉ trích, như refactoring nhẹ nhàng thay vì rewrite toàn bộ.\n- **\"Không nóng giận\"**: Xử lý **production bug** với tâm thế debugging điềm tĩnh, không đổ lỗi cho đồng đội.\n- **\"Không hận thù\"**: **Open-source mentality** - hợp tác với đối thủ cạnh tranh qua các dự án cộng đồng.\n- **\"Không chuyên quyền\"**: **Decentralized architecture** - mỗi microservice tự chủ nhưng hài hòa qua API contracts."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Vô tranh nhi thắng\" thể hiện qua **DevOps culture** - tự động hóa thay vì tranh cãi về deploy thủ công. \"Vận dụng sức mạnh kẻ khác\" là triết lý **API-first design** - kế thừa và tích hợp dịch vụ bên ngoài (third-party APIs) thay vì tự build mọi thứ."
+      },
+      {
+        "id": "comment-3",
+        "content": "\"Hòa hợp cùng trời đất\" ám chỉ **cloud-native development** - hệ thống vận hành hài hòa với hạ tầng đám mây như AWS/Azure, như nước hòa vào biển cả."
+      }
+    ]
+  }
+}

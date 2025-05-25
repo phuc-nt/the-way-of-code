@@ -1,0 +1,63 @@
+{
+  "id": 55,
+  "title": "Chương 55",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người hòa hợp với Cội Nguồn",
+          "tựa trẻ sơ sinh mới chào đời.",
+          "Côn trùng độc chẳng đốt.",
+          "Thú dữ chẳng tấn công.",
+          "Chim trời chẳng cào cấu."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Xương mềm, cơ yếu,",
+          "nhưng nắm chặt vững vàng.",
+          "Chẳng biết âm dương giao hòa,",
+          "nhưng tràn đầy sinh lực."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Khóc suốt ngày chẳng khản giọng.",
+          "Đây là hiện thân của cân bằng hoàn hảo."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Biết cân bằng là biết vĩnh hằng.",
+          "Biết vĩnh hằng là được khai sáng."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Năng lượng Người lập trình thể đạo như thế,",
+          "để vật đến rồi đi,",
+          "nhẹ nhàng, không nắm giữ.",
+          "Không kỳ vọng, nên",
+          "chẳng bao giờ thất vọng.",
+          "Vì không thất vọng,",
+          "tinh thần chẳng già nua."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **sức mạnh của sự đơn giản và buông bỏ** trong lập trình:\n- **\"Trẻ sơ sinh\"**: Tượng trưng cho **minimal viable code** - hệ thống tối giản nhưng mạnh mẽ nhờ tuân thủ nguyên lý cốt lõi.\n- **\"Nắm chặt vững vàng\"**: **Loosely coupled architecture** - linh hoạt nhưng ổn định, như microservices độc lập nhưng liên kết chặt qua API.\n- **\"Không kỳ vọng\"**: Triết lý **YAGNI** (You Ain't Gonna Need It) - chỉ code khi cần, tránh dự đoán tương lai.\n- **\"Tinh thần chẳng già nua\"**: **Continuous refactoring** giữ codebase tươi mới, tránh **technical debt** làm hệ thống ì ạch."
+      },
+      {
+        "id": "comment-2",
+        "content": "Hình ảnh \"cân bằng hoàn hảo\" phản ánh **Agile mindset** - duy trì nhịp độ phát triển bền vững, không burnout. \"Khai sáng\" là trạng thái **flow** khi coding - tập trung tuyệt đối nhưng thư thái, như nước chảy qua khe đá."
+      }
+    ]
+  }
+}

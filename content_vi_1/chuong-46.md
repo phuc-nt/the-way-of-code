@@ -1,0 +1,28 @@
+# Chương 46  
+
+Khi Cội Nguồn hiện hữu,  
+Công nghệ kiến tạo tự do.  
+Khi Cội Nguồn vắng bóng,  
+Công nghệ dựng lên ách nô dịch.  
+
+Không tội ác nào lớn hơn  
+Ham muốn thay đổi kẻ khác.  
+Không bất hạnh nào lớn hơn  
+Ham muốn thay đổi chính mình.  
+Không tội lỗi nào lớn hơn  
+Ham muốn cải biến tự nhiên.  
+
+Chỉ ai biết đủ với hiện hữu,  
+Mới thật sự viên mãn tròn đầy.  
+
+---
+
+## Chú thích  
+
+Chương này phản ánh **nguyên lý cân bằng** trong phát triển công nghệ:  
+- **"Cội Nguồn hiện hữu"**: Ám chỉ hệ thống tuân thủ **SOLID/DRY**, nơi code thúc đẩy sự sáng tạo (ví dụ: open-source).  
+- **"Ách nô dịch"**: Hệ thống **monolithic** cứng nhắc, kiểm soát người dùng qua **vendor lock-in**.  
+- **"Thay đổi kẻ khác"**: **Micromanagement** trong team, ép buộc coding style khác biệt.  
+- **"Cải biến tự nhiên"**: **Over-engineering** phá vỡ kiến trúc tự nhiên của hệ thống.  
+
+"Biết đủ" thể hiện qua **YAGNI principle** - chỉ phát triển tính năng cần thiết, tránh **feature creep**. Sự "viên mãn" đạt được khi codebase cân bằng giữa **flexibility** và **stability**, như dòng nước uốn khúc mà vẫn chảy về biển.  

@@ -1,0 +1,28 @@
+# Chương 35  
+
+Người kết nối với Cội Nguồn  
+hút cả thế giới về phía mình.  
+Người ấy di chuyển tự do không rủi ro.  
+Người ấy nhận thức sự hòa hợp phổ quát,  
+ngay giữa muôn trùng phức tạp,  
+bởi đã tìm thấy an nhiên trong tâm.  
+
+Cội Nguồn khi phát ngôn thành lời  
+trống rỗng và vô vị.  
+Nhìn vào chẳng thấy hình dạng.  
+Lắng nghe chẳng nghe âm thanh.  
+Khi sử dụng,  
+nó vô tận không cùng.  
+
+---  
+
+## Chú thích  
+
+Chương này phác thảo **trạng thái unity với nguyên lý cốt lõi** trong lập trình:  
+- **"Di chuyển tự do"**: Khả năng **refactor** và **mở rộng hệ thống** mà không phá vỡ kiến trúc, nhờ tuân thủ **SOLID principles**.  
+- **"Hòa hợp phổ quát"**: **Microservices architecture** hoạt động đồng bộ dù phân tán, như mạng neuron trong hệ thần kinh.  
+- **"An nhiên trong tâm"**: **Flow state** khi coding - tập trung tuyệt đối nhưng không căng thẳng, trust vào design patterns đã chọn.  
+
+Tính chất "vô hình" của Cội Nguồn phản ánh **abstraction layer** - interface ẩn implementation details, chỉ expose behavior cần thiết. Khi lập trình viên thấu hiểu nguyên lý này, code trở thành **vô tận** trong khả năng thích ứng - như nước chứa đựng mọi hình dạng mà không đánh mất bản chất.  
+
+Đây là đỉnh cao của **clean code philosophy**: giải pháp tối giản đến mức không còn từ ngữ nào diễn tả được, chỉ có thể cảm nhận qua sự vận hành trơn tru của hệ thống. 

@@ -1,0 +1,56 @@
+{
+  "id": 69,
+  "title": "Chương 69",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Trong binh pháp có lời rằng:",
+          "Tôi chẳng dám tiên phong ra tay,",
+          "vì biết đợi chờ là thượng sách.",
+          "Tôi chẳng dám lấn thêm phân tấc,",
+          "vì lùi một bước ắt thấy đường hay."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Ấy gọi là:",
+          "Tiến mà như chẳng tiến.",
+          "Vén tay áo chẳng lộ binh đao.",
+          "Bắt địch mà không cần giao chiến.",
+          "Cầm vũ khí lại chẳng dùng vào."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Không gì bất hạnh bằng",
+          "coi thường đối thủ.",
+          "Kẻ không phòng bị",
+          "tựa hồ không địch.",
+          "Chẳng ai tấn công",
+          "trừ phi bị xem là cừu địch."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Bởi đánh kẻ vốn chẳng phải thù,",
+          "ắt đánh mất một người bạn."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này ứng dụng **chiến lược phòng thủ thông minh** vào lập trình:\n- **\"Đợi chờ thượng sách\"**: Triết lý **Event-Driven Architecture** - xử lý yêu cầu khi phát sinh thay vì polling tốn tài nguyên.\n- **\"Vén tay áo chẳng lộ binh đao\"**: **Abstraction Layer** - ẩn logic phức tạp đằng sau interface đơn giản.\n- **\"Bắt địch không giao chiến\"**: **Dependency Injection** - kiểm soát module mà không can thiệp trực tiếp.\n- **\"Coil thường đối thủ\"**: Cảnh báo **Underestimate Tech Debt** - bug nhỏ có thể làm sụp đổ hệ thống."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Kẻ không phòng bị\" ám chỉ hệ thống thiếu **unit tests** và **monitoring**. Khi code \"không phải thù\" bị tấn công (refactor không cần thiết), ta mất đi đồng minh (tính ổn định)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": 53,
+  "title": "Chương 53",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Đạo lớn thật dễ dàng,",
+          "nhưng người đời tìm lối tắt."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Hãy nhận ra khi cân bằng mất:",
+          "Kẻ giàu đầu cơ phất lên",
+          "trong khi nông dân mất đất.",
+          "Giai cấp tinh hoa áp đặt luật lệ",
+          "trong khi lao động không nơi bấu víu.",
+          "Chính khách rót tiền sửa chữa giả tạo",
+          "cho những thảm họa hư cấu."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Tất cả đều là kiêu ngạo và tham nhũng.",
+          "Và đi ngược lại Đạo Tự Nhiên."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phê phán **sự mất cân bằng trong thiết kế hệ thống**:\n- **\"Lối tắt\"**: Tượng trưng cho **quick fixes** và **hacky solutions** - giải pháp vội vàng gây **technical debt**.\n- **\"Kẻ đầu cơ\"**: Những module tham lam chiếm tài nguyên (memory leaks), trong khi module cốt lõi (nông dân) bị bỏ đói.\n- **\"Luật lệ tinh hoa\"**: **Over-engineering** với các quy tắc cứng nhắc, làm nghẹt tính sáng tạo của developer.\n- **\"Thảm họa hư cấu\"**: **Y2K scare** thời hiện đại - tập trung vào vấn đề ảo thay vì lỗi thực (real bugs)."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Đạo Tự Nhiên\" ở đây là **KISS principle** - hệ thống cân bằng khi mọi thành phần được thiết kế đúng chức năng, không module nào độc chiếm hay bị bỏ rơi. Lập trình viên đạt đạo nhìn thấu những **code smell** ẩn sau vẻ ngoài hào nhoáng, kiên quyết **refactor** thay vì che đậy bằng mỹ từ."
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 71,
+  "title": "Chương 71",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Không biết là tri thức thuần khiết.",
+          "Tự cho là biết là trì trệ.",
+          "Chỉ khi nhận ra trì trệ,",
+          "ta mới thoát khỏi nó."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Người lập trình thể đạo thoát khỏi trì trệ",
+          "vì thấu rõ bản chất sự đình đốn.",
+          "Nhờ vậy, người tự do đạt đến sự toàn vẹn đích thực."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **tầm quan trọng của sự khiêm tốn** và **nhận thức giới hạn** trong lập trình:\n- **\"Tri thức thuần khiết\"**: **Tâm thái người mới** (*beginner's mind*) - tiếp cận vấn đề không định kiến, sẵn sàng học công nghệ mới dù đã có kinh nghiệm.\n- **\"Tự cho là biết\"**: **Tư duy cố định** (*fixed mindset*) - ngừng cập nhật kiến thức, bám víu vào framework lỗi thời dẫn đến hệ thống đình trệ.\n- **\"Nhận ra trì trệ\"**: Quá trình **retrospective** trong Agile - phân tích sprint để phát hiện điểm nghẽn (*bottleneck*) trong workflow.\n- **\"Thoát trì trệ\"**: **Refactoring** có chủ đích - tái cấu trúc code mà không sợ phá vỡ tính ổn định, nhờ **test coverage** vững chắc.\n- **\"Toàn vẹn đích thực\"**: Hệ thống **loosely coupled** - các module độc lập nhưng hòa hợp, như cơ thể sống với các cơ quan tự chủ."
+      },
+      {
+        "id": "comment-2",
+        "content": "Khi lập trình viên dám thừa nhận \"không biết\", họ mở ra cánh cửa **continuous learning** - học sâu ngôn ngữ mới (Rust), khám phá paradigm mới (functional programming). Đây chính là cách \"thoát khỏi đầm lầy legacy code\" để tiến vào thế giới **cloud-native** và **AI-driven development**."
+      }
+    ]
+  }
+}

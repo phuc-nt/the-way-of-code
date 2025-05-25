@@ -1,0 +1,36 @@
+{
+  "id": 75,
+  "title": "Chương 75",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Khi thuế quá cao,",
+          "dân đói khát.",
+          "Khi chính quyền quá can thiệp,",
+          "dân mất tinh thần."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Tự cho biết điều tốt nhất cho người khác",
+          "là ảo tưởng của kiêu ngạo.",
+          "Hãy để dân tự lợi.",
+          "Tin tưởng họ và để họ yên."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **nguyên lý tối giản và tôn trọng tự do cá nhân** trong phát triển phần mềm:\n- **\"Thuế quá cao\"**: Ẩn dụ cho **technical debt** và **over-engineering** - khi hệ thống quá phức tạp, gây khó khăn cho developer và người dùng.\n- **\"Chính quyền can thiệp quá mức\"**: Tượng trưng cho **micromanagement** và **over-control** trong quản lý dự án, làm giảm sáng tạo và động lực của team.\n- **\"Ảo tưởng kiêu ngạo\"**: Cảnh báo về việc **imposing solutions** mà không lắng nghe feedback từ người dùng hoặc developer.\n- **\"Để dân tự lợi\"**: Tinh thần **empowerment** và **self-organizing teams** - trao quyền cho nhóm tự quyết định cách làm việc.\n- **\"Tin tưởng và để yên\"**: Triết lý **laissez-faire leadership** - lãnh đạo không can thiệp quá sâu, tạo không gian cho sự phát triển tự nhiên."
+      },
+      {
+        "id": "comment-2",
+        "content": "Chương này nhấn mạnh rằng sự cân bằng giữa kiểm soát và tự do là chìa khóa để hệ thống phát triển bền vững và hiệu quả."
+      }
+    ]
+  }
+}

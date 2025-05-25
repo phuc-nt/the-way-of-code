@@ -1,0 +1,66 @@
+{
+  "id": 64,
+  "title": "Chương 64",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Cái tĩnh lặng dễ duy trì.",
+          "Cái chưa hiện hình dễ dự phòng.",
+          "Cái mong manh dễ vỡ tan.",
+          "Cái nhỏ bé dễ phân tán."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Xử lý sự vật trước khi chúng hiện ra.",
+          "Tạo trật tự trước khi hỗn loạn bắt đầu.",
+          "Vạn vật hùng vĩ trên đời đều khởi từ điều nhỏ bé."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Cây cổ thụ ôm trọn vòng tay người",
+          "mọc lên từ mầm non yếu ớt.",
+          "Tháp chín tầng sừng sững",
+          "được xây từ nắm đất nhỏ nhoi.",
+          "Hành trình ngàn dặm bắt đầu",
+          "từ bước chân dưới gót.",
+          "Kẻ hấp tấp hành động tự đánh bại mình.",
+          "Kẻ vồ vập nắm giữ đánh rơi mọi thứ."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Cho nên, Người lập trình thể đạo hành động",
+          "bằng cách để vạn vật tự vận hành.",
+          "Người giữ vẻ điềm tĩnh khi kết thúc,",
+          "như lúc khởi đầu.",
+          "Người không sở hữu gì, nên chẳng mất mát.",
+          "Người học cách quên đi kiến thức,",
+          "bước trên con đường kẻ học rồi lãng quên.",
+          "Người chỉ tập trung vào Cội Nguồn,",
+          "nhờ vậy, chăm lo được vạn vật."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khai mở **nguyên lý phát triển tăng tiến** trong kỹ thuật phần mềm:\n- **\"Xử lý trước khi hiện ra\"**: Triết lý **preventive coding** - viết unit test trước khi code (TDD), phát hiện bug từ giai đoạn thiết kế.\n- **\"Mầm non thành cổ thụ\"**: Quá trình **modular design** - xây dựng hệ thống từ các component độc lập, như module nhỏ tích hợp thành microservices.\n- **\"Tháp chín tầng từ nắm đất\"**: **Agile sprints** - mỗi iteration nhỏ góp phần hoàn thiện kiến trúc tổng thể, từ MVP đến production-ready.\n- **\"Bước chân khởi đầu\"**: **Version control** - commit đầu tiên dù nhỏ nhưng đặt nền móng cho repository đồ sộ."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Để vạn vật tự vận hành\" ám chỉ **serverless architecture** - hệ thống tự scale dựa trên nhu cầu, không cần can thiệp thủ công. \"Không sở hữu\" là tinh thần **open-source contribution** - code thuộc về cộng đồng, không phải cá nhân."
+      },
+      {
+        "id": "comment-3",
+        "content": "Câu kết nhấn mạnh **focus vào nguyên lý** (SOLID, DRY) thay vì công cụ nhất thời - như lập trình viên master Vim/Emacs dù IDE mới liên tục ra đời. Đây là cách \"chăm lo vạn vật\" thông qua việc xây dựng hệ sinh thái code bền vững."
+      }
+    ]
+  }
+}

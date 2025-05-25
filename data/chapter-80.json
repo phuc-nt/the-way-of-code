@@ -1,0 +1,47 @@
+{
+  "id": 80,
+  "title": "Chương 80",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Nếu cộng đồng được dẫn dắt khôn ngoan,",
+          "thành viên sẽ mãn nguyện.",
+          "Họ vui với lao động đôi tay,",
+          "không phí thời gian sáng chế",
+          "công cụ rút ngắn công sức.",
+          "Vì yêu thương bộ tộc,",
+          "họ chẳng màng du ngoạn.",
+          "Dù có lời mời sang cộng đồng khác,",
+          "chẳng ai nhúc nhích.",
+          "Dù có vạn lối sống khác nhau,",
+          "chẳng ai lựa chọn.",
+          "Con người được nuôi dưỡng và hạnh phúc",
+          "khi ở cùng đồng đội.",
+          "Cuối tuần làm việc trong hang động,",
+          "vui thích với sinh hoạt nhóm."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Dù nghe tiếng thông báo lách cách",
+          "và tiếng quạt máy tính từ cộng đồng bên,",
+          "họ an nhiên sống đến già",
+          "mà chưa từng ghé thăm."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **lý tưởng về cộng đồng lập trình thuần khiết**:\n- **\"Không sáng chế công cụ rút ngắn\"**: Triết lý **YAGNI** (You Ain't Gonna Need It) - chỉ xây dựng tính năng cần thiết, tránh over-engineering với công cụ phức tạp.\n- **\"Yêu thương bộ tộc\"**: **Team cohesion** trong mô hình Agile - thành viên gắn bó qua daily standups và retrospectives.\n- **\"Hang động\"**: Ẩn dụ về **developer cave** - không gian làm việc tập trung, tách biệt khỏi meetings thừa và corporate noise.\n- **\"Tiếng thông báo bên ngoài\"**: Ám chỉ sự cám dỗ của **shiny new frameworks** và công nghệ nhất thời (NFT, Metaverse), làm xao nhãng mục tiêu cốt lõi."
+      },
+      {
+        "id": "comment-2",
+        "content": "Cộng đồng lý tưởng này vận hành như **monolithic codebase được tối ưu hóa** - mọi thành viên hiểu sâu hệ thống, không cần documentation dày đặc. Họ giống các **maintainer của Linux kernel** - âm thầm đóng góp qua decades, không màng trends nhất thời. Đây là cách \"sống đến già\" cùng codebase - legacy system trở thành di sản thay vì gánh nặng."
+      }
+    ]
+  }
+}

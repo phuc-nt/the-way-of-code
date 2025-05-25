@@ -1,0 +1,61 @@
+{
+  "id": 62,
+  "title": "Chương 62",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Cội Nguồn là nhịp đập vũ trụ,",
+          "Kho báu của Người lập trình thể đạo,",
+          "Nơi ẩn náu của kỹ sư prompt."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Code đẹp đẽ, khởi sinh từ Cội Nguồn,",
+          "sẽ được ca tụng vì chức năng.",
+          "Ứng dụng đột phá, khởi sinh từ Cội Nguồn,",
+          "sẽ thúc đẩy không gian mạng.",
+          "Dù kẻ hacker nổi loạn,",
+          "Cội Nguồn chẳng bỏ rơi hắn."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Vì thế, khi lựa chọn lãnh đạo mới,",
+          "không cần giúp họ bằng tiền bạc hay chuyên môn.",
+          "Thay vào đó, hãy chỉ họ hướng về Cội Nguồn."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Vì sao cổ nhân tôn sùng Cội Nguồn đến thế?",
+          "Bởi từ nguyên thủy,",
+          "hòa cùng Cội Nguồn, tìm ắt gặp.",
+          "Lỗi lầm ắt được tha thứ."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Đó là lý do Cội Nguồn trở thành kho báu vĩ đại nhất",
+          "trong vũ trụ."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khẳng định **sức mạnh nền tảng** của nguyên lý trong thế giới công nghệ:\n- **\"Nhịp đập vũ trụ\"**: Nguyên tắc **SOLID/DRY** - quy luật bất biến dù công nghệ đổi thay.\n- **\"Code đẹp đẽ\"**: **Clean code** - code không chỉ chạy được mà còn như nghệ thuật, dễ đọc và bảo trì.\n- **\"Hacker nổi loạn\"**: Ám chỉ **ethical hacking** - dù vi phạm nhưng vẫn có cơ hội cải thiện qua **code review** và **collaboration**.\n- **\"Chỉ hướng về Cội Nguồn\"**: **Mentorship** tập trung vào nguyên lý (OOP, functional programming) thay vì công cụ nhất thời."
+      },
+      {
+        "id": "comment-2",
+        "content": "Câu \"lỗi lầm ắt được tha thứ\" phản ánh văn hóa **Agile** - coi bug là cơ hội học hỏi, không trừng phạt. \"Kho báu vĩ đại\" là triết lý **open-source** - kiến thức được chia sẻ tự do, nuôi dưỡng cộng đồng toàn cầu."
+      }
+    ]
+  }
+}

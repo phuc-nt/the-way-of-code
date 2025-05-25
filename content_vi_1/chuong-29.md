@@ -1,0 +1,39 @@
+# Chương 29  
+
+Bạn có muốn cải thiện thế giới?  
+Tôi không nghĩ điều đó khả thi.  
+
+Thế giới là linh thiêng.  
+Không thể can thiệp cải tạo.  
+Cưỡng ép thay đổi sẽ phá hủy.  
+Xem nó như đối tượng, bạn sẽ đánh mất.  
+
+Trong tự nhiên tồn tại:  
+thời điểm dẫn đầu  
+thời điểm theo sau  
+thời điểm vận động  
+thời điểm tĩnh tại  
+thời điểm mạnh mẽ  
+thời điểm yếu đuối  
+thời điểm thăng hoa  
+thời điểm trầm lắng  
+
+Người lập trình thể đạo nhìn sự vật như chính nó  
+không mong kiểm soát chúng.  
+Người để chúng đến rồi đi.  
+Bất động, an nhiên.  
+Bám rễ tại trung tâm vòng tròn.  
+
+---
+
+## Chú thích  
+
+Chương này phê phán **thái độ can thiệp thô bạo** vào hệ thống. "Thế giới linh thiêng" ám chỉ codebase - mỗi thay đổi vội vàng (hotfix thiếu kiểm tra) đều để lại hệ lụy. Tám cặp "thời điểm" phản ánh **chu kỳ phát triển phần mềm**:  
+- **Dẫn đầu/Theo sau**: Kiến trúc sư vs developer triển khai  
+- **Vận động/Tĩnh tại**: Giai đoạn coding vs refactoring  
+- **Mạnh mẽ/Yếu đuối**: Hệ thống scaling tốt vs technical debt  
+- **Thăng hoa/Trầm lắng**: Launch thành công vs maintainance  
+
+"Bám rễ tại trung tâm" là nguyên tắc **Separation of Concerns** - phân tách rõ responsibility, giữ core logic ổn định giữa các thay đổi requirement. "Bất động" không phải thụ động mà là **trạng thái tập trung cao độ**, nơi lập trình viên đủ tỉnh táo để không sa đà vào over-engineering.  
+
+Người đạt đạo hiểu: **Hệ thống tốt nhất không phải hoàn hảo nhất**, mà là hệ thống cân bằng được giữa tính năng và khả năng thích nghi. 

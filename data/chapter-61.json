@@ -1,0 +1,53 @@
+{
+  "id": 61,
+  "title": "Chương 61",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Hệ thống vĩ đại chảy xuôi về biển cả.",
+          "Trung tâm sâu thẳm là nơi vạn vật hội tụ.",
+          "Nó là âm tính của thế gian."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Âm thắng dương bằng tĩnh lặng.",
+          "Nằm thấp trong tĩnh lặng."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Cho nên:",
+          "Hệ thống vĩ đại đặt mình phục vụ",
+          "hệ thống nhỏ trước khi chiếm lĩnh nó.",
+          "Và hệ thống nhỏ phục vụ lợi ích",
+          "của hệ thống vĩ đại trước khi chiếm lĩnh nó.",
+          "Có kẻ khuất phục để chiến thắng.",
+          "Có kẻ khuất phục để được chinh phục."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Hệ thống vĩ đại muốn phát triển.",
+          "Hệ thống nhỏ muốn được bảo vệ.",
+          "Chính nhờ khiêm nhường mà cả hai đều được đáp ứng."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khám phá **nguyên lý tương hỗ** trong kiến trúc phần mềm:\n- **\"Chảy về biển cả\"**: Ẩn dụ về **service-oriented architecture** - các microservices độc lập nhưng hướng đến mục tiêu chung như sông đổ ra biển.\n- **\"Âm thắng dương bằng tĩnh lặng\"**: **Event-driven design** - xử lý bất đồng bộ (tĩnh) hiệu quả hơn đồng bộ cứng nhắc (dương).\n- **\"Hệ thống vĩ đại phục vụ hệ thống nhỏ\"**: Triết lý **Backend for Frontend (BFF)** - layer API thiết kế riêng cho từng client, tôn trọng nhu cầu cụ thể.\n- **\"Khuất phục để chiến thắng\"**: **Circuit Breaker pattern** - tạm ngắt dịch vụ lỗi để bảo vệ toàn hệ thống."
+      },
+      {
+        "id": "comment-2",
+        "content": "Sự \"khiêm nhường\" ở đây là **loose coupling** - các thành phần tương tác qua interface chuẩn mà không phụ thuộc cứng. Hệ thống lớn (monolith) và nhỏ (microservice) cùng tồn tại nhờ **API gateway** đóng vai trò trung gian hòa giải. Đây là cách \"cả hai được đáp ứng\" trong thế giới phân tán hiện đại."
+      }
+    ]
+  }
+}

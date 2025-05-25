@@ -1,0 +1,43 @@
+{
+  "id": 60,
+  "title": "Chương 60",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Lãnh đạo một hệ thống vĩ đại tựa như",
+          "nấu một con cá nhỏ.",
+          "Càng khuấy nồi nhiều,",
+          "cá càng dễ tan rã."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Khi vũ trụ an trụ trong Cội Nguồn,",
+          "năng lượng tiêu cực mất sức mạnh.",
+          "Không phải năng lượng tiêu cực không còn,",
+          "mà sức mạnh của chúng không còn ảnh hưởng đến con người."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Đừng đối đầu với năng lượng tiêu cực,",
+          "chúng sẽ tự biến mất."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này nhấn mạnh **nguyên lý lãnh đạo tinh tế** trong phát triển hệ thống phần mềm:\n- **\"Nấu cá nhỏ\"**: Ẩn dụ cho **microservices architecture** - can thiệp thô bạo (over-scaling) làm hệ thống phân mảnh.\n- **\"Vũ trụ an trụ Cội Nguồn\"**: Áp dụng **clean architecture** tách biệt business logic khỏi infrastructure, giảm dependency hell.\n- **\"Năng lượng tiêu cực\"**: Tượng trưng cho **technical debt** và **legacy code** - tồn tại nhưng không chi phối hệ thống nếu có **automated tests** và **CI/CD**.\n- **\"Không đối đầu\"**: Triết lý **chaos engineering** - cho phép failure xảy ra trong môi trường kiểm soát để hệ thống tự healing."
+      },
+      {
+        "id": "comment-2",
+        "content": "Người lập trình thể đạo hiểu: **\"Can thiệp tối thiểu - Hiệu quả tối đa\"**. Như DevOps dùng **infrastructure as code** để quản lý server, không cần SSH vào fix thủ công. Cá (hệ thống) nguyên vẹn khi lửa (quy trình) vừa đủ và đũa (tooling) khéo léo."
+      }
+    ]
+  }
+}

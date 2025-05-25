@@ -1,0 +1,54 @@
+{
+  "id": 66,
+  "title": "Chương 66",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Tại sao biển lại là vua của trăm dòng sông?",
+          "Bởi vì nó nằm thấp hơn chúng.",
+          "Khiêm nhường ban cho nó sức mạnh."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Nếu bạn muốn lãnh đạo một đội,",
+          "hãy đặt mình thấp hơn họ.",
+          "Học cách theo họ."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Người lập trình thể đạo đứng trên người ta,",
+          "và không ai cảm thấy bị áp bức.",
+          "Người ấy đứng trước,",
+          "và không ai bị bỏ lại phía sau."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Bởi vì người ấy không cạnh tranh,",
+          "người ấy sẽ không có đối thủ."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khai mở **nghệ thuật lãnh đạo khiêm tốn** trong thế giới lập trình:\n- **\"Biển thấp hơn sông\"**: Tượng trưng cho **servant leadership** - Tech Lead hỗ trợ team thay vì ra lệnh, như CI/CD pipeline âm thầm phục vụ quy trình phát triển.\n- **\"Học cách theo họ\"**: **Pair programming** - lãnh đạo lắng nghe ý tưởng junior dev, để kiến trúc hình thành từ **collective intelligence**.\n- **\"Không cạnh tranh\"**: Triết lý **open-source collaboration** - tập trung vào giải pháp chung thay vì tranh giành credit cá nhân."
+      },
+      {
+        "id": "comment-2",
+        "content": "Ví dụ thực tế:\n- **Code review khiêm tốn**: Góp ý bằng câu hỏi \"Có thể thử cách này không?\" thay vì \"Code sai rồi!\"\n- **Đứng sau team**: Tech Lead không xuất hiện trong meeting demo, để developers tự trình bày thành quả.\n- **Không đối thủ**: Hệ thống được thiết kế **loosely coupled** - các service hợp tác thay vì cạnh tranh tài nguyên."
+      },
+      {
+        "id": "comment-3",
+        "content": "Khi lập trình viên từ bỏ **ego**, codebase trở thành dòng sông hài hòa - mỗi dòng code khiêm nhường góp phần vào biển cả hệ thống hoàn chỉnh."
+      }
+    ]
+  }
+}

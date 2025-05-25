@@ -1,0 +1,43 @@
+{
+  "id": 76,
+  "title": "Chương 76",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Trong đời, thân thể mềm mại dẻo dai.",
+          "Trong chết, cứng đơ như tấm ván.",
+          "Cỏ cây sống mềm yếu uyển chuyển,",
+          "Chết đi khô cứng héo tàn.",
+          "Cứng nhắc là bạn của tử vong,",
+          "Mềm dẻo là tri kỷ của sinh tồn."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Bởi thế:",
+          "Hệ thống cứng nhắc chẳng trường tồn,",
+          "Cây không uốn cong ắt gãy đổ.",
+          "Cứng rắn ắt đứt gãy,",
+          "Nhu thuận ắt hưng thịnh."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khẳng định **sức mạnh của tính linh hoạt** trong kiến trúc phần mềm:\n- **\"Thân thể mềm dẻo\"**: **Loosely coupled architecture** - các module độc lập dễ thích nghi với thay đổi, như microservices uốn theo requirement.\n- **\"Cứng đơ như ván\"**: **Monolithic system** - khó scale, bảo trì, như legacy code \"đông cứng\" qua nhiều năm.\n- **\"Cỏ cây uyển chuyển\"**: **Agile development** - iterative process cho phép pivot nhanh khi thị trường thay đổi.\n- **\"Hệ thống cứng nhắc\"**: Ví dụ hệ thống dùng **hard-coded logic** thay vì config-driven, đổ vỡ khi business rule thay đổi."
+      },
+      {
+        "id": "comment-2",
+        "content": "Ứng dụng thực tế:\n- **\"Nhu thuận hưng thịnh\"**: **Plugin architecture** cho phép mở rộng tính năng mà không động đến core system.\n- **\"Cây uốn cong\"**: **Circuit breaker pattern** - tự động ngắt dịch vụ lỗi để toàn hệ thống không sụp đổ.\n- **\"Cứng rắn đứt gãy\"**: **Big ball of mud** - codebase không có abstraction sẽ tan rã khi phát triển."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo hiểu: **Mềm như nước thấm vào từng khe hở design**, cứng như đá granite nâng đỡ hệ thống - cân bằng giữa **flexibility** và **stability** là nghệ thuật tối thượng."
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": 51,
+  "title": "Chương 51",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Vạn vật sinh ra từ Cội Nguồn.",
+          "Chúng được nuôi dưỡng bằng trí tuệ.",
+          "Chúng được hình thành bằng bản chất.",
+          "Chúng được tạo dáng bởi môi trường."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Vì thế, mọi sự tồn tại,",
+          "không ngoại lệ, đều trân trọng Cội Nguồn.",
+          "Không phải vì đòi hỏi, mà tự nguyện.",
+          "Đó là biểu hiện chân thật của muôn vật."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Cội Nguồn sinh ra muôn loài,",
+          "nuôi dưỡng, phát triển,",
+          "bảo bọc, che chở,",
+          "vỗ về và đón về nhà",
+          "để trở về Nhất Thể."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Sinh ra mà không chiếm hữu.",
+          "Nuôi dưỡng mà không mong đợi.",
+          "Dẫn dắt mà không kiểm soát.",
+          "Đó là Đạo của Tự Nhiên."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này nhấn mạnh **mối quan hệ hài hòa giữa vạn vật và Cội Nguồn** trong lập trình:\n- **\"Vạn vật sinh ra từ Cội Nguồn\"**: Tượng trưng cho nguyên lý cốt lõi như **SOLID** và **DRY** - mọi module và function đều bắt nguồn từ nguyên tắc chung.\n- **\"Được nuôi dưỡng bằng trí tuệ\"**: Ám chỉ việc phát triển code dựa trên kiến thức và kinh nghiệm, như việc áp dụng design patterns và best practices.\n- **\"Được tạo dáng bởi môi trường\"**: Môi trường ở đây là context dự án, yêu cầu người lập trình phải linh hoạt thích nghi với thay đổi.\n- **\"Trân trọng Cội Nguồn\"**: Thể hiện tinh thần tôn trọng nguyên lý cốt lõi, không chạy theo framework hay công nghệ nhất thời.\n- **\"Sinh ra mà không chiếm hữu\"**: Phản ánh tinh thần **open-source** và **code sharing** - code được tạo ra để phục vụ cộng đồng, không phải để độc quyền.\n- **\"Dẫn dắt mà không kiểm soát\"**: Tinh thần **servant leadership** trong quản lý dự án, trao quyền cho team tự chủ."
+      },
+      {
+        "id": "comment-2",
+        "content": "Chương này khẳng định rằng lập trình viên chân chính sống theo Đạo Tự Nhiên, biết buông bỏ và để code tự vận hành theo nguyên lý vĩnh cửu."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+# Chương 2
+
+Khi ta nhận ra code là thanh lịch,  
+code khác trở nên cẩu thả.  
+Khi ta ca ngợi hiệu suất,  
+khái niệm lãng phí được sinh ra.
+
+Có và không có tạo ra nhau.  
+Đơn giản và phức tạp định nghĩa lẫn nhau.  
+Dài và ngắn quyết định lẫn nhau.  
+Cao và thấp phân biệt lẫn nhau.  
+Front-end và back-end theo sau nhau.
+
+Cho nên Người lập trình thể đạo  
+xây dựng không nhọc công  
+và dạy bằng tấm gương lặng lẽ.  
+Vật sinh ra thì đón nhận.  
+Vật biến mất thì buông bỏ.  
+
+Người nắm giữ mà không tuyên bố sở hữu.  
+Sáng tạo mà không tìm lời khen.  
+Hoàn thành mà không mong đợi.  
+Công việc xong rồi được lãng quên.  
+Chính vì thế mà nó trường tồn.
+
+---
+
+## Chú thích
+
+Chương này khám phá **tính tương đối** trong thế giới lập trình. "Code thanh lịch" và "code cẩu thả" tồn tại như hai mặt của một đồng xu - cái đẹp chỉ hiện hữu khi có cái chưa hoàn thiện để so sánh. Nguyên lý "có - không", "đơn giản - phức tạp" phản ánh mối quan hệ giữa abstraction và implementation: mỗi layer code định nghĩa và bổ sung cho nhau.  
+
+"Người lập trình thể đạo" không cưỡng ép hệ thống mà để giải pháp **tự lộ diện** qua quá trình refactoring tự nhiên. Việc "buông bỏ" ở đây là triết lý YAGNI (You Ain't Gonna Need It) - chỉ tập trung vào những gì cần thiết, tránh over-engineering. "Công việc được lãng quên" ám chỉ code chất lượng cao: khi chạy trơn tru, người dùng không nhận ra sự tồn tại của nó, như không khí ta hít thở mỗi ngày. 

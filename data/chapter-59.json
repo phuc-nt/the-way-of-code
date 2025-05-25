@@ -1,0 +1,47 @@
+{
+  "id": 59,
+  "title": "Chương 59",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Khi lãnh đạo nhóm và phụng sự thiên mệnh,",
+          "không gì sánh bằng sự đơn giản.",
+          "Đơn giản bắt đầu từ việc từ bỏ ý riêng."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Rộng lượng như trời.",
+          "Vững như núi.",
+          "Bền như cây đa.",
+          "Lan tỏa như ánh dương.",
+          "Người không đặt mục tiêu cụ thể,",
+          "tận dụng mọi thứ cuộc đời mang đến."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Không gì ngoài tầm với,",
+          "nên chẳng biết giới hạn.",
+          "Vì hóa thân của mẹ thiên nhiên,",
+          "bén rễ sâu, nền tảng vững chắc.",
+          "Đây là con đường trường thọ và tầm nhìn vĩnh cửu."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khẳng định **sức mạnh của sự tối giản** và **tư duy thích ứng** trong lập trình:\n- **\"Từ bỏ ý riêng\"**: Áp dụng **KISS principle** (Keep It Simple, Stupid) - ưu tiên giải pháp trực tiếp thay vì phức tạp hóa vì ego.\n- **\"Vững như núi\"**: **SOLID principles** làm nền tảng kiến trúc, chịu được mọi thay đổi requirement như núi đứng trước gió.\n- **\"Lan tỏa như ánh dương\"**: **Microservices** hoạt động độc lập nhưng ảnh hưởng toàn hệ thống, như tia nắng thấm vào từng ngóc ngách.\n- **\"Tận dụng mọi thứ\"**: **Agile mindset** - biến constraint thành cơ hội (ví dụ: tái sử dụng legacy code thay vì rebuild từ đầu).\n- **\"Bén rễ sâu\"**: **Clean architecture** tách biệt business logic khỏi framework, giúp hệ thống sống lâu dù công nghệ thay đổi."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Con đường trường thọ\" ám chỉ **sustainable coding** - viết code dễ bảo trì, để lại documentation rõ ràng. \"Tầm nhìn vĩnh cửu\" là khả năng **anticipate technical debt** và refactor đúng lúc, như cây đa tồn tại qua nhiều thế hệ."
+      }
+    ]
+  }
+}

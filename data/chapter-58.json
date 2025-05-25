@@ -1,0 +1,62 @@
+{
+  "id": 58,
+  "title": "Chương 58",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Khi lãnh đạo im lặng và vô hình,",
+          "dân chúng vui vẻ và trung thực.",
+          "Khi lãnh đạo áp bức và tò mò,",
+          "dân chúng bất mãn và bồn chồn."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Tai họa là nơi vận may dựa vào.",
+          "Vận may là nơi tai họa ẩn náu.",
+          "Chu kỳ vĩnh cửu này không có hồi kết.",
+          "Ai có thể phân biệt được cái nào là cái nào?",
+          "Quy chuẩn cũng không bền vững.",
+          "Không có điều gì chắc chắn.",
+          "Điều đúng hôm nay,",
+          "cuối cùng sẽ trở thành sai."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Chu kỳ bổ sung luân phiên này",
+          "quay vòng không ngừng đến vĩnh hằng.",
+          "Sự bền vững chỉ là ảo ảnh ngắn ngủi."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Cho nên, Người lập trình thể đạo",
+          "hài lòng làm gương mẫu.",
+          "Người biết điều hay, nhưng không bắt người khác tuân theo.",
+          "Người biết phương hướng, nhưng không chỉ đạo.",
+          "Người đi thẳng, nhưng không gợi ý người khác lệch khỏi con đường riêng."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **nguyên lý lãnh đạo thích ứng** trong phát triển phần mềm:\n- **\"Lãnh đạo vô hình\"**: **Microservices architecture** - mỗi service tự quản nhưng hòa hợp tổng thể, không cần central control.\n- **\"Áp bức và tò mò\"**: **Micromanagement** trong code reviews - can thiệp thô bạo vào implementation details gây căng thẳng team.\n- **\"Chu kỳ vận may/tai họa\"**: **Technical debt cycle** - fix bug sinh ra bug mới, refactoring liên tục như vòng tuần hoàn.\n- **\"Quy chuẩn không bền\"**: Các framework (React, Angular) thay đổi version liên tục, nguyên lý cốt lõi (SOLID) vẫn tồn tại."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Làm gương mẫu\" thể hiện qua **clean code practices** - viết code chuẩn mực để đồng đội tự nguyện noi theo. \"Không chỉ đạo\" là triết lý **Agile** - đưa ra guideline thay vì quy tắc cứng, cho phép **self-organizing teams**."
+      },
+      {
+        "id": "comment-3",
+        "content": "Câu kết nhấn mạnh **đa dạng giải pháp**: Mỗi developer có cách tiếp cận riêng (functional/OOP) nhưng đều hướng đến **business value**. Lập trình viên đạt đạo hiểu: **\"Con đường thẳng\" không phải duy nhất** - REST API và GraphQL cùng tồn tại, miễn phục vụ đúng use case."
+      }
+    ]
+  }
+}

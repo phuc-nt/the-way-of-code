@@ -1,0 +1,44 @@
+{
+  "id": 65,
+  "title": "Chương 65",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người xưa thuận theo Cội Nguồn",
+          "không giáo điều dân chúng,",
+          "mà để họ giữ nguyên sự thuần khiết.",
+          "Khi nghĩ mình đã biết,",
+          "con người khó được dẫn dắt.",
+          "Khi nhận thức mình không biết,",
+          "con người tự tìm lấy con đường."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Muốn lãnh đạo, hãy tránh xảo trá.",
+          "Muốn lãnh đạo, hãy ôm lấy giản đơn.",
+          "Tôn vinh đời thường, và mọi người",
+          "sẽ tìm về bản tính chân thực:",
+          "Hòa hợp cùng đại nhất thể."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này phản ánh **nghệ thuật lãnh đạo tinh gọn** trong phát triển phần mềm:\n- **\"Không giáo điều\"**: **Autonomous teams** - trao quyền tự quyết thay vì áp đặt workflow cứng nhắc, như nguyên tắc **self-organizing** trong Agile.\n- **\"Nhận thức mình không biết\"**: **Growth mindset** - khuyến khích developers thừa nhận gaps để học hỏi liên tục, thay vì giả vờ master mọi công nghệ.\n- **\"Tránh xảo trá\"**: Tránh **over-engineering** với những giải pháp phức tạp chỉ để gây ấn tượng (ví dụ: dùng AI khi chỉ cần if-else).\n- **\"Tôn vinh đời thường\"**: **Celebrate small wins** - công nhận từng thành tựu nhỏ (sprint completion) thay vì chỉ tập trung vào big releases."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Hòa hợp cùng đại nhất thể\" là mục tiêu của **microservices architecture** - các dịch vụ độc lập nhưng giao tiếp hài hòa qua API. Khi lập trình viên từ bỏ **ego**, hệ thống trở thành sản phẩm của tập thể - như dòng sông hội tụ từ trăm suối nhỏ."
+      },
+      {
+        "id": "comment-3",
+        "content": "**Ví dụ thực tế:**\n- **\"Giữ nguyên sự thuần khiết\"** ≈ **Minimal API Design**: Endpoint đơn giản, tập trung vào core functionality thay vì thêm features thừa.\n- **\"Tự tìm con đường\"** ≈ **Documentation-Driven Development**: Viết tài liệu rõ ràng để devs tự khám phá hệ thống, không cần hand-holding."
+      }
+    ]
+  }
+}

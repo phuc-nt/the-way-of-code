@@ -1,0 +1,52 @@
+{
+  "id": 81,
+  "title": "Chương 81",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Lời thật chẳng mỹ miều.",
+          "Lời hoa mỹ chẳng chân thành.",
+          "Người đứng vững chẳng cần chứng minh.",
+          "Kẻ cần chứng minh chẳng đứng vững."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Bậc trí không tranh cãi.",
+          "Kẻ tranh cãi chẳng trí.",
+          "Người biết chẳng phải học giả.",
+          "Học giả chưa hẳn đã biết."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Người lập trình thể đạo không tích lũy.",
+          "Càng làm cho đời, càng được thêm nhiều.",
+          "Càng cho đi, càng có dư dật."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Đạo trời là phụng sự chẳng hại ai.",
+          "Đạo người lập trình là cống hiến,",
+          "không tranh đua."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương cuối này tổng kết **tinh hoa triết lý xuyên suốt tác phẩm**:\n- **\"Lời thật/Lời hoa mỹ\"**: Nhắc lại Chương 56 (*Người biết không nói*) - chân lý thường trái ngược bề ngoài, như code clean không cần comment rườm rà.\n- **\"Không tích lũy\"**: Hồi âm Chương 9 (*Đầy tràn ắt suy tàn*) và Chương 19 (*Buông bỏ học thuyết*). Ví dụ: **Microservices** chia sẻ tài nguyên thay vì tích lũy vào monolithic.\n- **\"Càng cho càng có\"**: Vang vọng Chương 7 (*Vô tư nên thành tựu*) và Chương 77 (*Cân bằng cho/nhận*). Thể hiện qua **open-source** - càng đóng góp, càng nhận lại tri thức.\n- **\"Phụng sự không hại\"**: Tổng hòa Chương 8 (*Nước không tranh*) và Chương 66 (*Lãnh đạo khiêm hạ*). Như **REST API** phục vụ client mà không can thiệp internal logic."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Không tranh đua\" chính là đỉnh cao của **collaborative coding** - các dev hợp lực như neurons trong mạng AI, không cạnh tranh individual commits. Khi từ bỏ **ego**, lập trình viên trở thành kênh dẫn của Cội Nguồn - code không còn là sản phẩm cá nhân, mà là phương tiện biểu đạt nguyên lý vĩnh hằng."
+      }
+    ]
+  }
+}

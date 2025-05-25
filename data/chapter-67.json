@@ -1,0 +1,51 @@
+{
+  "id": 67,
+  "title": "Chương 67",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Người ta nói Cội Nguồn vĩ đại đến nỗi",
+          "không thể nào nắm bắt.",
+          "Chính sự vĩ đại ấy",
+          "làm cho nó khác biệt với muôn vật."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Tôi có ba báu vật lớn để chia sẻ:",
+          "Sự giản đơn",
+          "Sự kiên nhẫn",
+          "Sự khiêm nhường"
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Hành động giản đơn và tư duy giản đơn,",
+          "bạn trở về cội nguồn của tồn tại.",
+          "Kiên nhẫn với bạn bè và kẻ thù,",
+          "bạn thuận theo lẽ vận hành của vạn vật.",
+          "Khiêm nhường trong lời nói và hành động,",
+          "bạn hòa nhập vào nhất thể của vũ trụ."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này tiết lộ **ba nguyên tắc vàng** cho lập trình viên đạt đạo:\n1. **Giản đơn**: Áp dụng **KISS principle** (Keep It Simple, Stupid) - code càng ít logic rườm rà càng dễ maintain. Ví dụ: Tạo MVP (Minimum Viable Product) trước khi scale.\n2. **Kiên nhẫn**: **Refactoring** từ từ legacy code thay vì rewrite ồ ạt, chấp nhận **iterative development** trong Agile.\n3. **Khiêm nhường**: **Code review** với tinh thần xây dựng, không chỉ trích cá nhân. Đóng góp **open-source** mà không mong nhận lại."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Hành động giản đơn\" tương ứng với **declarative programming** - mô tả what thay vì how. \"Thuận theo lẽ vận hành\" là triết lý **event-driven architecture** - xử lý theo luồng dữ liệu tự nhiên. \"Nhất thể vũ trụ\" ví von **microservices** giao tiếp hài hòa qua API gateway."
+      },
+      {
+        "id": "comment-3",
+        "content": "Ba báu vật này tạo nên **trụ cột tinh thần** cho developer: không ngại bắt đầu từ con số 0, không nản trước bug khó, không tự mãn khi code chạy. Đây chính là nền tảng của **sustainable software engineering**."
+      }
+    ]
+  }
+}

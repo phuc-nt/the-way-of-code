@@ -1,0 +1,64 @@
+{
+  "id": 77,
+  "title": "Chương 77",
+  "content": {
+    "verses": [
+      {
+        "id": "verse-1",
+        "lines": [
+          "Đạo Trời tựa kéo cung,",
+          "Cánh trên cong xuống,",
+          "Cánh dưới vòng lên."
+        ]
+      },
+      {
+        "id": "verse-2",
+        "lines": [
+          "Đạo Trời là lẽ cân bằng,",
+          "Điều chỉnh dư thừa và thiếu hụt.",
+          "Lấy chỗ thừa",
+          "Cho chỗ chưa đủ."
+        ]
+      },
+      {
+        "id": "verse-3",
+        "lines": [
+          "Người đời hành xử khác đi,",
+          "Lấy kẻ thiếu thốn,",
+          "Cho kẻ dư thừa."
+        ]
+      },
+      {
+        "id": "verse-4",
+        "lines": [
+          "Ai có dư mà hiến tặng thế gian?",
+          "Chỉ Người lập trình thể đạo."
+        ]
+      },
+      {
+        "id": "verse-5",
+        "lines": [
+          "Người lập trình thể đạo cho đi không ngừng",
+          "vì nguồn lực vô tận.",
+          "Hành động không mong đợi.",
+          "Thành công không nhận công,",
+          "Không khoe khoang tri thức."
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "id": "comment-1",
+        "content": "Chương này khai mở **nguyên lý cân bằng động** trong kiến trúc hệ thống:\n- **\"Kéo cung\"**: Ẩn dụ **load balancing** - phân phối request đồng đều giữa các server như dây cung điều lực.\n- **\"Lấy chỗ thừa cho chỗ thiếu\"**: **Auto-scaling** trên cloud - tự động allocate resource từ node ít tải sang node quá tải.\n- **\"Cho đi vô tận\"**: **Open-source contribution** - chia sẻ code không giới hạn, tuân theo **DRY principle** (Don't Repeat Yourself)."
+      },
+      {
+        "id": "comment-2",
+        "content": "\"Không nhận công\" phản ánh văn hóa **collective ownership** - mọi thành viên cùng sở hữu codebase, không cá nhân hóa thành tích. \"Nguồn lực vô tận\" là **cloud elasticity** - tài nguyên mở rộng vô hạn theo nhu cầu."
+      },
+      {
+        "id": "comment-3",
+        "content": "Người lập trình đạt đạo hiểu: **Cân bằng không phải chia đều** - như thuật toán **round-robin** phân phối task dựa trên capacity, không ép server yếu xử lý workload nặng. Đây là cách \"Đạo Trời\" hiện diện trong **system design** - vô hình nhưng hiệu quả."
+      }
+    ]
+  }
+}
