@@ -6,9 +6,7 @@
     <title>Đạo Của Code - Lời Kết</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/scroll-navigation.css">
     <link rel="stylesheet" href="assets/css/edge-glow.css">
-    <link rel="stylesheet" href="assets/css/outro-fixes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -49,7 +47,6 @@
     </div>
     
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/scroll-navigation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Khởi tạo theme manager từ main.js
@@ -73,39 +70,24 @@
                     document.getElementById('outro-content').innerHTML = '<p>Đã xảy ra lỗi khi tải dữ liệu. Vui lòng thử lại sau.</p>';
                 });
         });
-
-        // Render nội dung outro
+        
+        // Render nội dung outro sử dụng parseMarkdown
         function renderOutroContent(data) {
             const contentElement = document.getElementById('outro-content');
             if (!contentElement) return;
             
-            let contentHTML = '';
-            
-            // Thêm tiêu đề nếu có
-            if (data.title) {
-                contentHTML += `<h1 class="chapter-heading fade-in">${data.title}</h1>`;
-            } else {
-                contentHTML += `<h1 class="chapter-heading fade-in">Lời Kết</h1>`;
-            }
+            let contentHTML = `<h1 class="chapter-heading fade-in">${data.title || 'Lời Kết'}</h1>`;
             
             // Render các đoạn thơ (verses)
             contentHTML += `<div class="verse-container">`;
             
-            if (data.content && data.content.verses && data.content.verses.length > 0) {
+            if (data.content?.verses?.length > 0) {
                 data.content.verses.forEach(verse => {
                     contentHTML += `<p class="verse" id="${verse.id}">`;
                     
                     verse.lines.forEach((line, index) => {
-                        // Xử lý định dạng Markdown cho từng dòng
-                        let parsedLine = line;
-                        
-                        // Xử lý in đậm
-                        parsedLine = parsedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                        
-                        // Xử lý in nghiêng
-                        parsedLine = parsedLine.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                        
-                        contentHTML += parsedLine;
+                        // Sử dụng hàm parseMarkdown
+                        contentHTML += parseMarkdown(line);
                         if (index < verse.lines.length - 1) {
                             contentHTML += `<br>`;
                         }
@@ -117,53 +99,46 @@
             
             contentHTML += '</div>';
             
-            // Hiển thị quote nếu có
-            if (data.content && data.content.quote && data.content.quote.text) {
+            // Hiển thị quote nếu có, sử dụng cùng class với chapter
+            if (data.content?.quote?.text) {
                 contentHTML += `
-                    <blockquote class="outro-quote fade-in-delayed">
-                        <p>${data.content.quote.text}</p>
-                        ${data.content.quote.author ? `<footer>— <em>${data.content.quote.author}</em></footer>` : ''}
-                    </blockquote>
+                    <div class="comment-section">
+                        <h3>Lời cuối</h3>
+                        <div class="commentary-content fade-in">
+                            <div class="commentary-item">
+                                <p>${parseMarkdown(data.content.quote.text)}</p>
+                                ${data.content.quote.author ? `<p>— <em>${data.content.quote.author}</em></p>` : ''}
+                            </div>
+                        </div>
+                    </div>
                 `;
             }
             
             contentElement.innerHTML = contentHTML;
             
-            // Áp dụng class fade-in cho container
+            // Fade-in animation
             document.querySelector('.container').classList.add('fade-in-content');
             
-            // Thêm các phần tử glow edge
+            // Edge glow elements
             if (typeof addGlowElements === 'function') {
                 addGlowElements();
             }
             
-            // Cập nhật styles cho navigation để đồng bộ với trang chapter
             styleNavigation();
         }
         
         // Hàm này áp dụng cùng kiểu dáng cho navigation như trong main.js
         function styleNavigation() {
-            // Áp dụng style giống chapter.html cho các phần tử navigation
+            // Thêm class fade-in cho animation
             const headerNav = document.getElementById('chapter-navigation');
             const footerNav = document.getElementById('footer-navigation');
             
             if (headerNav) {
                 headerNav.classList.add('fade-in');
-                // Đảm bảo cấu trúc và spacing giống với chapter.html
-                headerNav.style.display = 'flex';
-                headerNav.style.justifyContent = 'space-between';
-                headerNav.style.width = '100%';
-                headerNav.style.maxWidth = '400px';
             }
             
             if (footerNav) {
                 footerNav.classList.add('fade-in');
-                // Đảm bảo cấu trúc và spacing giống với chapter.html
-                footerNav.style.display = 'flex';
-                footerNav.style.justifyContent = 'space-between';
-                footerNav.style.width = '100%';
-                footerNav.style.maxWidth = '400px';
-                footerNav.style.margin = '2rem auto 1rem';
             }
         }
     </script>

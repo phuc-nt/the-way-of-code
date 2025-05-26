@@ -113,7 +113,4 @@ body.page-transition {
     font-family: Georgia, serif;
 }
 
-/* Control scroll behavior via JavaScript instead for better compatibility */
-html {
-    /* scroll-behavior: smooth; */
-}
+

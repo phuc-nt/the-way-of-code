@@ -7,18 +7,9 @@
     },
     "verses": [
       {
-        "id": "verse-1",
-        "lines": [
-          "Tác phẩm nghệ thuật trên được tạo ra từ *mã hóa cảm hứng*,",
-          "sinh thành dựa trên chủ đề mỗi chương.",
-          "Bạn có thể thêm **gợi ý** để thay đổi hình ảnh theo ý muốn.",
-          "Cuối cùng, chính bạn định hình từng tác phẩm."
-        ]
-      },
-      {
         "id": "verse-2",
         "lines": [
-          "**Sáng tạo nghệ thuật luôn khởi đầu như thế.**"
+          "**Sáng tạo luôn khởi đầu như thế.**"
         ]
       },
       {

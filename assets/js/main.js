@@ -98,6 +98,7 @@ function renderHomeHeader(data) {
         <h1 class="main-title fade-in">${data.banner.title}</h1>
         <p class="subtitle fade-in-delayed">${data.banner.subtitle}</p>
         <p class="author fade-in-delayed">${data.banner.attribution}</p>
+        <img src="assets/image/illustrator.png" alt="Minh họa Đạo Của Code" class="hero-illustration fade-in-delayed">
     `;
 }
 
@@ -241,14 +242,14 @@ function renderChapterContent(data) {
     
     contentHTML += `</div>`;
     
-    // Thêm phần chú thích (commentary) nếu có
+    // Thêm phần chú giải (commentary) nếu có
     if (data.content.commentary && data.content.commentary.length > 0) {
         contentHTML += `
             <div class="comment-section">
                 <h3>Chú giải</h3>
-                <blockquote class="comment-quote fade-in">
+                <div class="commentary-container fade-in">
                     ${renderCommentaryContent(data.content.commentary)}
-                </blockquote>
+                </div>
             </div>
         `;
     }
@@ -367,37 +368,9 @@ function renderFooterNavigation(chapterId, totalChapters) {
     navElement.innerHTML = navHTML;
 }
 
-// Đếm số lượng file chapter trong thư mục data
+// Trả về số chương cố định
 async function countChapterFiles() {
-    try {
-        // Tạo một mảng từ 1 đến 200 (một số đủ lớn)
-        const potentialChapters = Array.from({ length: 200 }, (_, i) => i + 1);
-        
-        // Kiểm tra file nào tồn tại
-        const checkFileExists = async (chapterNum) => {
-            try {
-                const response = await fetch(`data/chapter-${chapterNum}.json`, { method: 'HEAD' });
-                return response.ok;
-            } catch (error) {
-                return false;
-            }
-        };
-        
-        // Kiểm tra từng file
-        const checkResults = await Promise.all(
-            potentialChapters.map(async num => {
-                const exists = await checkFileExists(num);
-                return exists ? num : null;
-            })
-        );
-        
-        // Lọc ra các file tồn tại và lấy số lượng
-        const existingChapters = checkResults.filter(num => num !== null);
-        return existingChapters.length;
-    } catch (error) {
-        console.error('Error counting chapter files:', error);
-        return 81; // Giá trị mặc định nếu có lỗi
-    }
+    return 81; // Website có 81 chương cố định
 }
 
 // Hàm để xử lý định dạng Markdown cơ bản
