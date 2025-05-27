@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="vi">
+    
     <title>Đạo Của Code - Lời Kết</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Đạo Của Code - Lời Kết">
+    <meta name="description" content="Lời kết của 81 chương triết lý lập trình từ Đạo Đức Kinh - hành trình khám phá nghệ thuật code từ cội nguồn">
+    <meta name="author" content="Phuc NT">
+    <meta name="keywords" content="lập trình, coding, triết học, đạo đức kinh, vibe coding, rick rubin, lão tử">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/image/outro.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phuc-nt.github.io/the-way-of-code/outro.html">
+    <meta property="og:site_name" content="Đạo Của Code">
+    <meta property="og:title" content="Đạo Của Code - Lời Kết">
+    <meta property="og:description" content="Lời kết của 81 chương triết lý lập trình từ Đạo Đức Kinh - hành trình khám phá nghệ thuật code từ cội nguồn">
+    <meta property="og:image" content="https://phuc-nt.github.io/the-way-of-code/assets/image/outro.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://phuc-nt.github.io/the-way-of-code/outro.html">
+    <meta name="twitter:title" content="Đạo Của Code - Lời Kết">
+    <meta name="twitter:description" content="Lời kết của 81 chương triết lý lập trình từ Đạo Đức Kinh - hành trình khám phá nghệ thuật code từ cội nguồn">
+    <meta name="twitter:image" content="https://phuc-nt.github.io/the-way-of-code/assets/image/outro.png">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/edge-glow.css">
@@ -78,6 +108,11 @@
             
             let contentHTML = `<h1 class="chapter-heading fade-in">${data.title || 'Lời Kết'}</h1>`;
             
+            // Thêm ảnh minh họa
+            contentHTML += `<div class="outro-illustration">
+                <img src="assets/image/outro.png" alt="Minh họa Lời Kết" class="hero-illustration fade-in-delayed">
+            </div>`;
+            
             // Render các đoạn thơ (verses)
             contentHTML += `<div class="verse-container">`;
             
@@ -104,10 +139,10 @@
                 contentHTML += `
                     <div class="comment-section">
                         <h3>Lời cuối</h3>
-                        <div class="commentary-content fade-in">
+                        <div class="commentary-container fade-in">
                             <div class="commentary-item">
                                 <p>${parseMarkdown(data.content.quote.text)}</p>
-                                ${data.content.quote.author ? `<p>— <em>${data.content.quote.author}</em></p>` : ''}
+                                ${data.content.quote.author ? `<p class="quote-author">— <em>${data.content.quote.author}</em></p>` : ''}
                             </div>
                         </div>
                     </div>

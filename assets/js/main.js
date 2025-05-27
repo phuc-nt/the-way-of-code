@@ -98,7 +98,7 @@ function renderHomeHeader(data) {
         <h1 class="main-title fade-in">${data.banner.title}</h1>
         <p class="subtitle fade-in-delayed">${data.banner.subtitle}</p>
         <p class="author fade-in-delayed">${data.banner.attribution}</p>
-        <img src="assets/image/illustrator.png" alt="Minh họa Đạo Của Code" class="hero-illustration fade-in-delayed">
+        <img src="assets/image/intro.png" alt="Minh họa Đạo Của Code" class="hero-illustration fade-in-delayed">
     `;
 }
 

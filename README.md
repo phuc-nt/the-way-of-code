@@ -1,6 +1,6 @@
 # Đạo Của Code - The Way of Code
 
-![Đạo Của Code](assets/image/illustrator.png)
+![Đạo Của Code](assets/image/intro.png)
 
 > "Mỗi lần gặp gỡ với Lão Tử đều chỉ cho tôi thấy điều gì đó mới mẻ. Gần như cuốn sách thay đổi sau mỗi lần đọc."
 > — *Rick Rubin*
