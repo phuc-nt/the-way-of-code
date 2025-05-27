@@ -35,7 +35,6 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/edge-glow.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,6 +82,8 @@
             if (typeof themeManager !== 'undefined') {
                 themeManager.init();
             }
+            
+            // Animation sẽ tự khởi tạo sau khi nội dung được tải
             
             // Tải nội dung của outro.json
             fetch('data/outro.json')
@@ -158,6 +159,8 @@
             if (typeof addGlowElements === 'function') {
                 addGlowElements();
             }
+            
+            // Animation đã được chuyển sang chapter 1
             
             styleNavigation();
         }

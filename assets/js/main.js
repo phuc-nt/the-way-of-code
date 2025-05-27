@@ -220,6 +220,20 @@ function renderChapterContent(data) {
         return;
     }
     
+    // Thêm animation container cho các chapter có animation
+    if (data.id === 1 || data.id === 2 || data.id === 3 || data.id === 4 || data.id === 5 || data.id === 6 || data.id === 7 || data.id === 8 || data.id === 9 || data.id === 10) {
+        contentHTML += `
+            <div class="animation-container" id="animation-container">
+                <div class="animation-loader">
+                    <div>
+                        <span class="loading-text">Đang tải hiệu ứng visual...</span>
+                        <noscript>JavaScript cần được bật để hiển thị hiệu ứng</noscript>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
     // Render các đoạn thơ (verses)
     contentHTML += `<div class="verse-container">`;
     
@@ -255,6 +269,22 @@ function renderChapterContent(data) {
     }
     
     contentElement.innerHTML = contentHTML;
+
+    // Khởi tạo animation dựa trên chapter ID
+    if (data.id === 1 || data.id === 2 || data.id === 3 || data.id === 4 || data.id === 5 || data.id === 6 || data.id === 7 || data.id === 8 || data.id === 9 || data.id === 10) {
+        // Đợi 800ms để đảm bảo module animationManager đã được tải
+        setTimeout(() => {
+            try {
+                if (typeof window.animationManager !== 'undefined') {
+                    window.animationManager.initAnimation('animation-container', data.id);
+                } else {
+                    console.error('animationManager chưa được tải');
+                }
+            } catch (e) {
+                console.error('Lỗi khởi tạo animation:', e);
+            }
+        }, 800);
+    }
 }
 
 // Hàm riêng để xử lý nội dung phần chú giải (commentary)

@@ -1,5 +1,75 @@
 /* animations.css - File CSS chứa các animation */
 
+/* Common animation container styling for both Three.js and Canvas animations */
+.animation-container {
+    margin: 0;
+    background: #F0EEE6;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px; /* Có thể tùy chỉnh */
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    margin: 2rem auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+/* Canvas specific styling for chapter 2 tessellation */
+.animation-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive design cho animation */
+@media (max-width: 600px) {
+    .animation-container {
+        height: 350px;
+    }
+}
+
+/* Loader hiển thị trong khi loading Three.js */
+.animation-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--secondary-color);
+    background: #F0EEE6;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+/* Hiệu ứng cho loading text */
+.loading-text {
+    position: relative;
+    display: inline-block;
+}
+
+.loading-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--accent-color);
+    animation: loadingProgress 2s infinite ease-in-out;
+}
+
+@keyframes loadingProgress {
+    0% { width: 0; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0; left: 100%; }
+}
+
 /* Fade in từ từ */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-15px); }
