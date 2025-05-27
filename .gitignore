@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Thư mục nội dung gốc
 content_vi/
+
+# Thư mục animation gốc
+raw_animation/
