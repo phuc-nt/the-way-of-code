@@ -3,10 +3,28 @@
 Tài liệu này hướng dẫn cách thêm hiệu ứng visual mới vào dự án. Dự án sử dụng một hệ thống animation module hóa, hỗ trợ cả Three.js và Canvas 2D.
 
 ## Mục Lục
+
+- [Thiết Lập Môi Trường](#thiết-lập-môi-trường)
 - [Kiến Trúc Hệ Thống](#kiến-trúc-hệ-thống)
 - [Hướng Dẫn Từng Bước](#hướng-dẫn-từng-bước)
-- [Ví Dụ: Chuyển Đổi Component React của Chương 1](#ví-dụ-chuyển-đổi-component-react-của-chương-1)
+- [Ví Dụ: Chuyển Đổi Component React Sang Module](#ví-dụ-chuyển-đổi-component-react-sang-module)
 - [Quy Tắc Thực Hành](#quy-tắc-thực-hành)
+
+## Thiết Lập Môi Trường
+
+1. **Three.js**: Dự án sử dụng Three.js r128
+   - Phiên bản local được lưu trong `/assets/js/three.min.js`
+   - Có thể tải phiên bản mới nhất từ https://threejs.org/build/three.min.js
+
+2. **Trình duyệt hiện đại**:
+   - Hỗ trợ ES6 modules
+   - Hỗ trợ WebGL
+   - Các tính năng JavaScript hiện đại
+
+3. **Kiến thức cần thiết**:
+   - JavaScript/ES6
+   - Three.js hoặc Canvas 2D
+   - Hiểu biết về module system
 
 ## Kiến Trúc Hệ Thống
 
@@ -15,6 +33,7 @@ Hệ thống animation được tổ chức theo kiến trúc module như sau:
 ```
 assets/
   ├── js/
+  │   ├── three.min.js              # Three.js local library (r128)
   │   ├── animations/
   │   │   ├── animation-utils.js      # Tiện ích và cấu hình dùng chung
   │   │   ├── animation-manager.js    # Quản lý animation module
@@ -27,7 +46,17 @@ assets/
   │   │   ├── chapter7-pinecone.js
   │   │   ├── chapter8-waterascii.js
   │   │   ├── chapter9-canyonflows.js
-  │   │   └── chapter10-yinyang.js
+  │   │   ├── chapter10-yinyang.js
+  │   │   ├── chapter11-voidarchitecture.js
+  │   │   ├── chapter12-metamorphosis.js
+  │   │   ├── chapter13-doublehelix.js
+  │   │   ├── chapter14-formlesswaves.js
+  │   │   ├── chapter15-watchfulwaves.js
+  │   │   ├── chapter16-morphingcontours.js
+  │   │   ├── chapter17-kaleidoscope.js
+  │   │   └── chapter18-hasharchitecture.js
+  │   │   ├── chapter19-vortexparticles.js
+  │   │   ├── chapter20-flowingpaths.js
   │   └── animations-import.js        # Bridge giữa module và global scope
 ```
 
@@ -140,9 +169,9 @@ assets/
    }
    ```
 
-## Ví Dụ: Chuyển Đổi Component React sang Module JS
+## Ví Dụ: Chuyển Đổi Component React Sang Module
 
-Đây là cách chúng ta chuyển đổi component React thành module JavaScript:
+Khi bạn có một component React (ví dụ từ thư mục `raw_animation/`) và muốn chuyển đổi thành module JavaScript cho dự án, hãy làm theo các bước sau:
 
 1. **Chuyển Đổi Cấu Hình**
    ```javascript
@@ -247,5 +276,3 @@ assets/
    - Đảm bảo `import` và `export` đúng cú pháp
    - Khi chỉnh sửa cấu trúc module, cập nhật đồng thời trong `animation-manager.js`
    - Sử dụng dynamic import để tải animation theo demand
-
-Nhớ cập nhật tài liệu này khi thêm tính năng mới hoặc quy tắc thực hành mới.
