@@ -39,12 +39,25 @@ const animationUtils = {
     return Math.min(window.devicePixelRatio || 1, 2);
   },
   
+  // Tạo và thiết lập canvas vuông chuẩn cho tất cả animation
+  createSquareCanvas(container) {
+    if (!container) return null;
+    
+    const canvas = document.createElement('canvas');
+    // Sử dụng kích thước mặc định vuông
+    canvas.width = this.settings.defaultWidth;
+    canvas.height = this.settings.defaultHeight;
+    container.appendChild(canvas);
+    
+    return canvas;
+  },
+  
   // Các thông số chung
   settings: {
     frameRate: 60,
     fadeTransitionDuration: 500, // thời gian fade in/out (ms)
     defaultWidth: 550,
-    defaultHeight: 500
+    defaultHeight: 550 // Đặt chiều cao bằng chiều rộng để tạo hình vuông
   },
   
   // Hiển thị hoặc ẩn loading element

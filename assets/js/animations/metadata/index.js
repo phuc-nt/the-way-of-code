@@ -28,6 +28,8 @@ import chapter26 from './chapter26-metadata.js';
 import chapter27 from './chapter27-metadata.js';
 import chapter28 from './chapter28-metadata.js';
 import chapter29 from './chapter29-metadata.js';
+import chapter30 from './chapter30-metadata.js';
+import chapter31 from './chapter31-metadata.js';
 
 export default {
   1: chapter1,
@@ -58,6 +60,8 @@ export default {
   26: chapter26,
   27: chapter27,
   28: chapter28,
-  29: chapter29
+  29: chapter29,
+  30: chapter30,
+  31: chapter31
   // ... các chương khác sẽ được thêm ở đây
 };
