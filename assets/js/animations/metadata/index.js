@@ -30,6 +30,15 @@ import chapter28 from './chapter28-metadata.js';
 import chapter29 from './chapter29-metadata.js';
 import chapter30 from './chapter30-metadata.js';
 import chapter31 from './chapter31-metadata.js';
+import chapter32 from './chapter32-metadata.js';
+import chapter33 from './chapter33-metadata.js';
+import chapter34 from './chapter34-metadata.js';
+import chapter35 from './chapter35-metadata.js';
+import chapter36 from './chapter36-metadata.js';
+import chapter37 from './chapter37-metadata.js';
+import chapter38 from './chapter38-metadata.js';
+import chapter39 from './chapter39-metadata.js';
+import chapter40 from './chapter40-metadata.js';
 
 export default {
   1: chapter1,
@@ -62,6 +71,15 @@ export default {
   28: chapter28,
   29: chapter29,
   30: chapter30,
-  31: chapter31
+  31: chapter31,
+  32: chapter32,
+  33: chapter33,
+  34: chapter34,
+  35: chapter35,
+  36: chapter36,
+  37: chapter37,
+  38: chapter38,
+  39: chapter39,
+  40: chapter40,
   // ... các chương khác sẽ được thêm ở đây
 };

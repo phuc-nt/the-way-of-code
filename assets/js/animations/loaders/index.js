@@ -33,5 +33,14 @@ export default {
   fractalBranchesSacred: () => import('../chapter29-fractalbranchesacred.js'),
   dimensionalResonance: () => import('../chapter30-dimensionalresonance.js'),
   mobiusStrip: () => import('../chapter31-mobiusstrip.js'),
+  waveVariationSparse: () => import('../chapter32-wavevariationsparse.js'),
+  torusFieldDynamics: () => import('../chapter33-torusfielddynamics.js'),
+  phaseDistortionWaves: () => import('../chapter34-phasedistortionwaves.js'),
+  blackWhiteBlobs: () => import('../chapter35-blackwhiteblobs.js'),
+  particleReverie: () => import('../chapter36-particlereverie.js'),
+  waveInterferenceV5: () => import('../chapter37-waveinterferencev5.js'),
+  morphingShapesStipple: () => import('../chapter38-morphingshapesstipple.js'),
+  flowingPattern: () => import('../chapter39-flowingpattern.js'),
+  'Torus Energy Flow': () => import('../chapter40-torusenergyflow.js'),
   // ...các chương khác
 };
