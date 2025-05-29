@@ -57,7 +57,15 @@ assets/
   │   │   └── chapter18-hasharchitecture.js
   │   │   ├── chapter19-vortexparticles.js
   │   │   ├── chapter20-flowingpaths.js
+  │   │   ├── chapter21-bouncingpointcloud.js
   │   └── animations-import.js        # Bridge giữa module và global scope
+  │   ├── metadata/
+  │   │   ├── chapter1-metadata.js
+  │   │   ├── chapter2-metadata.js
+  │   │   ├── chapter3-metadata.js
+  │   │   └── index.js
+  │   ├── loaders/
+  │   │   └── index.js
 ```
 
 ### Các Thành Phần Chính
@@ -71,19 +79,21 @@ assets/
 
 2. **animation-manager.js**: Hệ thống quản lý animation module trung tâm:
    - Khởi tạo animation dựa trên chapter ID
-   - Sử dụng dynamic import để tải các module animation
+   - Sử dụng dynamic import qua loader map (`loaders/index.js`)
+   - Metadata được tách riêng qua `metadata/index.js`
    - Xử lý trạng thái loading
    - Quản lý việc dọn dẹp
    - Cung cấp metadata
 
-3. **animations-import.js**: Bridge giữa hệ thống module và global scope:
+3. **loaders/index.js**: Map tên animation sang dynamic import module tương ứng.
+   - Dễ mở rộng, không cần switch-case dài.
+
+4. **metadata/index.js**: Tổng hợp metadata từng chương từ các file nhỏ.
+   - Dễ bảo trì, chỉ cần thêm file metadata mới cho mỗi chương.
+
+5. **animations-import.js**: Bridge giữa hệ thống module và global scope:
    - Import animationManager từ module system
    - Expose animationManager ra global scope để các file khác có thể sử dụng
-
-4. **Animation Từng Chương**: Mỗi chapter có một module animation riêng:
-   - Tuân thủ interface thống nhất
-   - Sử dụng cấu hình dùng chung
-   - Tự quản lý việc thiết lập và dọn dẹp
 
 ## Hướng Dẫn Từng Bước
 
@@ -124,35 +134,35 @@ assets/
    export default chapterXAnimation;
    ```
 
-2. **Cập Nhật Metadata trong Animation Manager**
-   ```javascript
-   // Trong animation-manager.js, thêm metadata cho chapter mới
-   metadata: {
-     // ...existing code...
-     X: {  // Số chapter của bạn
+2. **Cập Nhật Metadata**
+   - Tạo file mới trong `assets/js/animations/metadata/chapterX-metadata.js`:
+     ```js
+     export default {
        name: "animationName",
        themes: "Theme 1, Theme 2, ...",
        visualization: "Mô tả visualization",
        description: "Mô tả chi tiết về ý nghĩa của animation"
-     }
-   }
-   ```
+     };
+     ```
+   - Thêm import vào `assets/js/animations/metadata/index.js`:
+     ```js
+     import chapterX from './chapterX-metadata.js';
+     export default {
+       ...existing code...
+       X: chapterX,
+     };
+     ```
 
-3. **Thêm Case cho Animation trong Switch**
-   ```javascript
-   // Trong animation-manager.js, thêm case mới trong switch
-   case "animationName":
-     import('./chapter-X-name.js')
-       .then(module => {
-         this.instance = module.default.init(container);
-       })
-       .catch(error => {
-         this.handleError(container, `Lỗi khi tải animation: ${error.message}`);
-       });
-     break;
-   ```
+3. **Thêm Loader cho Animation**
+   - Thêm vào `assets/js/animations/loaders/index.js`:
+     ```js
+     animationName: () => import('../chapterX-animationfile.js'),
+     ```
 
-4. **Cập Nhật Main.js**
+4. **Không cần sửa switch-case trong animation-manager.js**
+   - animation-manager sẽ tự động lấy loader và metadata qua map.
+
+5. **Cập Nhật Main.js**
    ```javascript
    // Trong main.js, thêm điều kiện cho chapter mới
    if (data.id === 1 || data.id === 2 || data.id === X) {  // Thêm số chapter của bạn
