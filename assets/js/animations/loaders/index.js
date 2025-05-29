@@ -31,6 +31,6 @@ export default {
   chapter27BouncingPointCloud: () => import('../chapter27-bouncingpointcloud.js'),
   chapter28CrystallineBiology: () => import('../chapter28-crystallinebiology.js'),
   fractalBranchesSacred: () => import('../chapter29-fractalbranchesacred.js'),
-  dimensionalResonance: () => import('../chapter30-dimensionalresonance.js'),
+  // Đã xoá loader dimensionalResonance cho chapter 30
   // ...các chương khác
 };
