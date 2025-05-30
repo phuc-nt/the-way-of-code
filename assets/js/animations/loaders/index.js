@@ -62,5 +62,15 @@ export default {
   'Breathing Rhombus': () => import('../chapter58-breathingrhombus.js'),
   'Implicit Dreams': () => import('../chapter59-implicitdreams.js'),
   'Spiral Storm': () => import('../chapter60-spiralstorm.js'),
+  'Flowing Lattice': () => import('../chapter61-flowinglattice.js'),
+  'Effortless Particles': () => import('../chapter62-effortlessparticles.js'),
+  'Delicate Torus Knot': () => import('../chapter63-delicatetorus.js'),
+  'Hourglass Spiral': () => import('../chapter64-hourglassspiral.js'),
+  'Radial Mesh Flower': () => import('../chapter65-radialmeshflower.js'),
+  'Wave Interference Optimized': () => import('../chapter66-waveinterferenceoptimized.js'),
+  'Rhythmic Pulse Grid': () => import('../chapter67-rhythmicpulsegrid.js'),
+  'Glowing Eye': () => import('../chapter68-glowingeye.js'),
+  'Gentle Architecture': () => import('../chapter69-gentlearchitecture.js'),
+  'Delicate ASCII Dots': () => import('../chapter70-delicateasciidots.js'),
   // ...các chương khác
 };

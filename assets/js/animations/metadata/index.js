@@ -59,6 +59,16 @@ import chapter57 from './chapter57-metadata.js';
 import chapter58 from './chapter58-metadata.js';
 import chapter59 from './chapter59-metadata.js';
 import chapter60 from './chapter60-metadata.js';
+import chapter61 from './chapter61-metadata.js';
+import chapter62 from './chapter62-metadata.js';
+import chapter63 from './chapter63-metadata.js';
+import chapter64 from './chapter64-metadata.js';
+import chapter65 from './chapter65-metadata.js';
+import chapter66 from './chapter66-metadata.js';
+import chapter67 from './chapter67-metadata.js';
+import chapter68 from './chapter68-metadata.js';
+import chapter69 from './chapter69-metadata.js';
+import chapter70 from './chapter70-metadata.js';
 
 export default {
   1: chapter1,
@@ -121,5 +131,15 @@ export default {
   58: chapter58,
   59: chapter59,
   60: chapter60,
+  61: chapter61,
+  62: chapter62,
+  63: chapter63,
+  64: chapter64,
+  65: chapter65,
+  66: chapter66,
+  67: chapter67,
+  68: chapter68,
+  69: chapter69,
+  70: chapter70,
   // ... các chương khác sẽ được thêm ở đây
 };

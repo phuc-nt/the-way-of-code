@@ -222,7 +222,7 @@ function renderChapterContent(data) {
     
     // Thêm animation container cho các chapter có animation
     if (
-      data.id >= 1 && data.id <= 60 // Đã thêm animation cho chương 1-60
+      data.id >= 1 && data.id <= 70 // Đã thêm animation cho chương 1-70
     ) {
         contentHTML += `
             <div class="animation-container" id="animation-container">
@@ -274,7 +274,7 @@ function renderChapterContent(data) {
 
     // Khởi tạo animation dựa trên chapter ID
     if (
-      data.id >= 1 && data.id <= 60 // Đã thêm animation cho chương 1-60
+      data.id >= 1 && data.id <= 70 // Đã thêm animation cho chương 1-70
     ) {
         // Đợi 800ms để đảm bảo module animationManager đã được tải
         setTimeout(() => {
