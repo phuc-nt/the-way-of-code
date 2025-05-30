@@ -42,5 +42,15 @@ export default {
   morphingShapesStipple: () => import('../chapter38-morphingshapesstipple.js'),
   flowingPattern: () => import('../chapter39-flowingpattern.js'),
   'Torus Energy Flow': () => import('../chapter40-torusenergyflow.js'),
+  'Animated ASCII Mandala': () => import('../chapter41-asciimandala.js'),
+  'Diagonal Petals': () => import('../chapter42-diagonalpetals.js'),
+  'Pinecone Constellation': () => import('../chapter43-pineconeconstellation.js'),
+  'Intricate Radial Mesh': () => import('../chapter44-radialmesh.js'),
+  'Continuous Line Drawing': () => import('../chapter45-continuousline.js'),
+  'Dramatic Ribbon Fold': () => import('../chapter46-dramaticribbon.js'),
+  'Shell Ridge Pattern': () => import('../chapter47-shellridge.js'),
+  'Swaying Branches': () => import('../chapter48-swayingbranches.js'),
+  'Flower of Life': () => import('../chapter49-floweroflife.js'),
+  'Flowing Ribbons': () => import('../chapter50-flowingribbons.js'),
   // ...các chương khác
 };
