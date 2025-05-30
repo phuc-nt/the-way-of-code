@@ -52,5 +52,15 @@ export default {
   'Swaying Branches': () => import('../chapter48-swayingbranches.js'),
   'Flower of Life': () => import('../chapter49-floweroflife.js'),
   'Flowing Ribbons': () => import('../chapter50-flowingribbons.js'),
+  'stratifiedUndulations': () => import('../chapter51-stratifiedundulations.js'),
+  'asciiBlob': () => import('../chapter52-asciiblob.js'),
+  'radialGrowth': () => import('../chapter53-radialgrowth.js'),
+  'vectorFieldLines': () => import('../chapter54-vectorfieldlines.js'),
+  'oscillatingHatching': () => import('../chapter55-oscillatinghatching.js'),
+  'waveInterferenceV4': () => import('../chapter56-waveinterferencev4.js'),
+  'moireMandalaPattern': () => import('../chapter57-moiremandalapattern.js'),
+  'Breathing Rhombus': () => import('../chapter58-breathingrhombus.js'),
+  'Implicit Dreams': () => import('../chapter59-implicitdreams.js'),
+  'Spiral Storm': () => import('../chapter60-spiralstorm.js'),
   // ...các chương khác
 };
