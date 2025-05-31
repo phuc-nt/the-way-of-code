@@ -60,9 +60,9 @@ const chapter12Animation = {
         const phi = v * Math.PI;
         
         // Scale base radius based on canvas size
-        const baseRadius = Math.min(width, height) * 0.25; // 25% of smallest dimension
-        let r = baseRadius + (baseRadius * 0.25) * Math.sin(phi * 4 + theta * 2);
-        r += (baseRadius * 0.15) * Math.sin(phi * 6) * Math.cos(theta * 3);
+        const baseRadius = Math.min(width, height) * 0.15; // Reduced to 15% of smallest dimension
+        let r = baseRadius + (baseRadius * 0.2) * Math.sin(phi * 4 + theta * 2);
+        r += (baseRadius * 0.1) * Math.sin(phi * 6) * Math.cos(theta * 3);
         
         let x = r * Math.sin(phi) * Math.cos(theta);
         let y = r * Math.sin(phi) * Math.sin(theta);
@@ -76,7 +76,7 @@ const chapter12Animation = {
         const theta = u * Math.PI * 2;
         const phi = v * Math.PI;
         
-        const baseRadius = Math.min(width, height) * 0.3; // 30% of smallest dimension
+        const baseRadius = Math.min(width, height) * 0.18; // 18% of smallest dimension
         let r = baseRadius + baseRadius * 0.15 * Math.cos(phi * 8);
         r *= 0.8 + 0.2 * Math.abs(Math.cos(theta * 2));
         
@@ -92,7 +92,7 @@ const chapter12Animation = {
         const theta = u * Math.PI * 2;
         const phi = v * Math.PI;
         
-        const baseRadius = Math.min(width, height) * 0.25; // 25% of smallest dimension
+        const baseRadius = Math.min(width, height) * 0.16; // 16% of smallest dimension
         let r = baseRadius;
         r += baseRadius * 0.4 * Math.sin(phi * 3) * Math.sin(theta * 2.5);
         r += baseRadius * 0.25 * Math.cos(phi * 5 + theta);
@@ -194,7 +194,7 @@ const chapter12Animation = {
           const rotatedZ = point.z;
           
           // Project to screen - chiếu lên màn hình
-          const scale = 1.5 + rotatedZ * 0.001;
+          const scale = 1.0 + rotatedZ * 0.0005; // Reduced scale to zoom out
           const projX = width / 2 + rotatedX * scale;
           const projY = height / 2 + rotatedY * scale;
           
@@ -245,7 +245,7 @@ const chapter12Animation = {
           const rotatedZ = point.z;
           
           // Project to screen
-          const scale = 1.5 + rotatedZ * 0.001;
+          const scale = 1.0 + rotatedZ * 0.0005; // Reduced scale to zoom out
           const projX = width / 2 + rotatedX * scale;
           const projY = height / 2 + rotatedY * scale;
           
