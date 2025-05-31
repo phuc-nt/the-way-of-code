@@ -20,12 +20,33 @@ const chapter12Animation = {
     if (!container) return null;
     
     // Khởi tạo canvas và context
-    const canvas = animationUtils.createCanvas(container);
+    const canvas = document.createElement('canvas');
     if (!canvas) return null;
     
+    // Set size based on container and device pixel ratio
+    const containerWidth = container.offsetWidth || this.settings.width;
+    const containerHeight = container.offsetHeight || this.settings.height;
+    const dpr = window.devicePixelRatio || 1;
+    
+    canvas.width = containerWidth * dpr;
+    canvas.height = containerHeight * dpr;
+    canvas.style.width = containerWidth + 'px';
+    canvas.style.height = containerHeight + 'px';
+    canvas.style.display = 'block';
+    canvas.style.margin = '0 auto';
+    canvas.style.maxWidth = '100%';
+    canvas.style.maxHeight = '100%';
+    container.style.display = 'flex';
+    container.style.alignItems = 'center';
+    container.style.justifyContent = 'center';
+    container.style.background = this.settings.colors.background;
+    container.appendChild(canvas);
+    
     const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
+    ctx.scale(dpr, dpr);
+    
+    const width = containerWidth;
+    const height = containerHeight;
     
     // Các biến nội bộ
     let animationFrameId = null;
@@ -38,12 +59,14 @@ const chapter12Animation = {
         const theta = u * Math.PI * 2;
         const phi = v * Math.PI;
         
-        let r = 120 + 30 * Math.sin(phi * 4 + theta * 2);
-        r += 20 * Math.sin(phi * 6) * Math.cos(theta * 3);
+        // Scale base radius based on canvas size
+        const baseRadius = Math.min(width, height) * 0.25; // 25% of smallest dimension
+        let r = baseRadius + (baseRadius * 0.25) * Math.sin(phi * 4 + theta * 2);
+        r += (baseRadius * 0.15) * Math.sin(phi * 6) * Math.cos(theta * 3);
         
         let x = r * Math.sin(phi) * Math.cos(theta);
         let y = r * Math.sin(phi) * Math.sin(theta);
-        let z = r * Math.cos(phi) + 20 * Math.sin(theta * 5 + phi * 3);
+        let z = r * Math.cos(phi) + (baseRadius * 0.15) * Math.sin(theta * 5 + phi * 3);
         
         return { x, y, z };
       },
@@ -53,7 +76,8 @@ const chapter12Animation = {
         const theta = u * Math.PI * 2;
         const phi = v * Math.PI;
         
-        let r = 150 + 20 * Math.cos(phi * 8);
+        const baseRadius = Math.min(width, height) * 0.3; // 30% of smallest dimension
+        let r = baseRadius + baseRadius * 0.15 * Math.cos(phi * 8);
         r *= 0.8 + 0.2 * Math.abs(Math.cos(theta * 2));
         
         let x = r * Math.sin(phi) * Math.cos(theta);
@@ -68,9 +92,10 @@ const chapter12Animation = {
         const theta = u * Math.PI * 2;
         const phi = v * Math.PI;
         
-        let r = 120;
-        r += 50 * Math.sin(phi * 3) * Math.sin(theta * 2.5);
-        r += 30 * Math.cos(phi * 5 + theta);
+        const baseRadius = Math.min(width, height) * 0.25; // 25% of smallest dimension
+        let r = baseRadius;
+        r += baseRadius * 0.4 * Math.sin(phi * 3) * Math.sin(theta * 2.5);
+        r += baseRadius * 0.25 * Math.cos(phi * 5 + theta);
         
         let x = r * Math.sin(phi) * Math.cos(theta);
         let y = r * Math.sin(phi) * Math.sin(theta);
