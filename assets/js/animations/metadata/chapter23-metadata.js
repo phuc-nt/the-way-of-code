@@ -1,7 +1,7 @@
 // chapter23-metadata.js
 export default {
-  name: "continuousLine",
-  themes: "perfection in imperfection, wisdom in simplicity, natural authenticity",
-  visualization: "A single continuous line that appears unrefined yet creates perfect harmony through its natural movement",
-  description: "Hình ảnh một nét vẽ liên tục, tưởng như vụng về nhưng lại tạo nên sự hài hòa hoàn hảo nhờ chuyển động tự nhiên."
+  name: "fibonacciRectangleSpiral",
+  themes: "natural silence, opening to source, trust in response",
+  visualization: "Forms spiral inward to silence, naturally responding to an unseen center",
+  description: "Hình ảnh dãy Fibonacci tạo thành các hình chữ nhật xoắn ốc, thể hiện sự mở rộng từ trung tâm trong im lặng."
 };

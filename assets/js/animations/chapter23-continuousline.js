@@ -1,8 +1,8 @@
-// chapter23-continuousline.js - Animation cho chương 23: Continuous Line Drawing
+// chapter23-continuousline.js - Animation cho chương 23: Fibonacci Rectangle Spiral
 // Được chuyển từ raw_animation/23, chuẩn module animation-manager
 import animationUtils from './animation-utils.js';
 
-const chapter23ContinuousLine = {
+const chapter23FibonacciRectangleSpiral = {
   settings: {
     colors: animationUtils.colors,
     width: 550,
@@ -14,8 +14,8 @@ const chapter23ContinuousLine = {
     const loader = container.querySelector('.animation-loader');
     let animationFrameId = null;
     let canvas, ctx, width, height;
-    let currentTime = 0;
-    let centerX, centerY, currentPosition, currentAngle, radius, points;
+    let time = 0;
+    const phi = (1 + Math.sqrt(5)) / 2; // Golden ratio
 
     // Setup canvas
     canvas = document.createElement('canvas');
@@ -28,68 +28,87 @@ const chapter23ContinuousLine = {
     container.appendChild(canvas);
     ctx = canvas.getContext('2d');
 
-    // Initialize state
-    centerX = width / 2;
-    centerY = height / 2;
-    currentTime = 0;
-    currentPosition = { x: centerX, y: centerY };
-    currentAngle = 0;
-    radius = 0;
-    points = [{ x: centerX, y: centerY, timestamp: 0 }];
-
-    // Clear canvas with background color
-    const clearCanvas = () => {
-      ctx.fillStyle = animationUtils.colors.background;
-      ctx.fillRect(0, 0, width, height);
-    };
-
-    // Draw just the dot
-    const drawDot = (x, y) => {
-      ctx.beginPath();
-      ctx.arc(x, y, 3, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(80, 80, 80, 1)';
-      ctx.fill();
-    };
-
     // Animation function
     function animate() {
-      currentTime += 0.00375;
-      clearCanvas();
-      radius += 0.0375;
-      currentAngle += 0.025;
-      const newX = centerX + Math.cos(currentAngle) * radius;
-      const newY = centerY + Math.sin(currentAngle) * radius;
-      currentPosition.x = newX;
-      currentPosition.y = newY;
-      points.push({ x: currentPosition.x, y: currentPosition.y, timestamp: currentTime });
-      if (radius > 260) {
-        radius = 0;
-        points = [{ x: centerX, y: centerY, timestamp: currentTime }];
-        currentPosition = { x: centerX, y: centerY };
-        currentAngle = 0;
+      ctx.fillStyle = animationUtils.colors.background;
+      ctx.fillRect(0, 0, width, height);
+      
+      ctx.save();
+      ctx.translate(width / 2, height / 2);
+      
+      // Animate the number of rectangles
+      const maxRectangles = Math.min(60, Math.floor((time * 0.02) % 80));
+      
+      // Begin from silence at the center
+      let rectangleWidth = 300;
+      let rectangleHeight = rectangleWidth / phi;
+      let scale = 1;
+      let angle = time * 0.00025; // Half speed global rotation
+      
+      for (let i = 0; i < maxRectangles; i++) {
+        ctx.save();
+        
+        // Calculate position along Fibonacci spiral
+        const spiralAngle = i * 0.174533; // Approximately 10 degrees per step
+        const radius = scale * 100;
+        
+        // Position rectangle along the spiral
+        const x = Math.cos(spiralAngle) * radius;
+        const y = Math.sin(spiralAngle) * radius;
+        
+        ctx.translate(x, y);
+        ctx.rotate(spiralAngle + angle);
+        
+        // Draw the rectangle with lighter lines
+        const alpha = 0.5 - i * 0.01;
+        ctx.strokeStyle = `rgba(83, 81, 70, ${alpha})`;
+        ctx.lineWidth = 0.8;
+        ctx.strokeRect(-rectangleWidth/2, -rectangleHeight/2, rectangleWidth, rectangleHeight);
+        
+        // Add subtle internal divisions
+        if (i % 3 === 0) {
+          // Draw diagonals
+          ctx.beginPath();
+          ctx.moveTo(-rectangleWidth/2, -rectangleHeight/2);
+          ctx.lineTo(rectangleWidth/2, rectangleHeight/2);
+          ctx.moveTo(rectangleWidth/2, -rectangleHeight/2);
+          ctx.lineTo(-rectangleWidth/2, rectangleHeight/2);
+          ctx.strokeStyle = `rgba(50, 50, 50, ${alpha * 0.2})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+        
+        ctx.restore();
+        
+        // Update for next rectangle
+        // Scale down by the golden ratio
+        rectangleWidth *= 0.95;
+        rectangleHeight *= 0.95;
+        scale *= 0.98;
       }
-      for (let i = 1; i < points.length; i++) {
-        const p1 = points[i - 1];
-        const p2 = points[i];
-        const age = Math.min((currentTime - p1.timestamp) / 10, 1);
-        const startGray = 170;
-        const endGray = 85;
-        const intensity = Math.floor(startGray + (endGray - startGray) * age);
-        const startAlpha = 0.3;
-        const endAlpha = 1.0;
-        const alpha = startAlpha + (endAlpha - startAlpha) * age;
-        ctx.beginPath();
-        ctx.moveTo(p1.x, p1.y);
-        ctx.lineTo(p2.x, p2.y);
-        ctx.strokeStyle = `rgba(${intensity}, ${intensity}, ${intensity}, ${alpha})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
+      
+      // Draw the natural response to source (spiral curve)
+      ctx.beginPath();
+      for (let i = 0; i <= maxRectangles; i++) {
+        const spiralAngle = i * 0.174533;
+        const radius = Math.pow(0.98, i) * 100;
+        const x = Math.cos(spiralAngle) * radius;
+        const y = Math.sin(spiralAngle) * radius;
+        
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
       }
-      drawDot(currentPosition.x, currentPosition.y);
+      ctx.strokeStyle = 'rgba(150, 150, 150, 0.3)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      
+      ctx.restore();
+      
+      time += 0.75; // 75% speed time increment
       animationFrameId = requestAnimationFrame(animate);
     }
 
-    clearCanvas();
+    // Start animation
     animate();
     animationUtils.fadeOutLoader(container);
     return {
@@ -98,7 +117,6 @@ const chapter23ContinuousLine = {
           cancelAnimationFrame(animationFrameId);
         }
         if (ctx) ctx.clearRect(0, 0, width, height);
-        points.length = 0;
         if (canvas && canvas.parentNode) {
           canvas.parentNode.removeChild(canvas);
         }
@@ -107,4 +125,4 @@ const chapter23ContinuousLine = {
   }
 };
 
-export default chapter23ContinuousLine;
+export default chapter23FibonacciRectangleSpiral;

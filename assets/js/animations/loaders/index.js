@@ -23,7 +23,7 @@ export default {
   chapter21KaleidoscopeWaveCenterSquare: () => import('../chapter21-kaleidoscopewavecentersquare.js'),
   dispersingVase: () => import('../chapter22-dispersingvase.js'),
   rawAnimation23: () => import('../chapter23-rawanimation.js'),
-  continuousLine: () => import('../chapter23-continuousline.js'),
+  fibonacciRectangleSpiral: () => import('../chapter23-continuousline.js'),
   slidingBars: () => import('../chapter24-slidingbars.js'),
   chapter25EtherealTorusFlow: () => import('../chapter25-etherealtorusflow.js'),
   chapter26FlowingRibbons: () => import('../chapter26-flowingribbons.js'),
