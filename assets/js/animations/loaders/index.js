@@ -74,7 +74,7 @@ export default {
   'Delicate ASCII Dots': () => import('../chapter70-delicateasciidots.js'),
   'Wave Interference V3': () => import('../chapter71-waveinterferencev3.js'),
   'Gentle Waves': () => import('../chapter72-gentlewaves.js'),
-  'Gentle Weaving Lines': () => import('../chapter71-gentleweavinglines.js'),
+  // Removing duplicate reference to chapter71: 'Gentle Weaving Lines'
   'Organic Cellular Grid': () => import('../chapter73-organiccellulargrid.js'),
   'Canyon Undulating Walls': () => import('../chapter74-canyonundulatingwalls.js'),
   'ASCII Clarity From Stillness': () => import('../chapter75-asciiclarityfromstillness.js'),
