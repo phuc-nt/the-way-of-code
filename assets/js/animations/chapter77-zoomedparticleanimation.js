@@ -13,9 +13,9 @@ function createZoomedParticleAnimation(container) {
     canvas.width = container.offsetWidth || 550;
     canvas.height = canvas.width; // Make it square
     isSmallContainer = canvas.width < 440;
-    zoomLevel = 2.5;
-    zoomOffsetX = canvas.width / 18;
-    zoomOffsetY = canvas.height / 18 - 60;
+    zoomLevel = 1.7; // Giảm zoom từ 2.5 xuống 1.7 để hiển thị rộng hơn
+    zoomOffsetX = canvas.width / 25; // Giảm offset để cân bằng hình ảnh tốt hơn
+    zoomOffsetY = canvas.height / 25 - 30; // Giảm offset
     centerX = canvas.width / (2 * zoomLevel) + zoomOffsetX;
     centerY = canvas.height / (2 * zoomLevel) + zoomOffsetY;
   }
@@ -31,9 +31,9 @@ function createZoomedParticleAnimation(container) {
       particles.push({
         x: centerX + Math.cos(angle) * (radius + clusterOffset),
         y: centerY + Math.sin(angle) * (radius + clusterOffset),
-        speedX: (Math.random() - 0.5) * 0.05,
-        speedY: (Math.random() - 0.5) * 0.05,
-        size: Math.random() * 1.5 + 0.8,
+        speedX: (Math.random() - 0.5) * 0.05 * 0.02, // Giảm tốc độ ban đầu xuống 1/50 để ổn định hơn
+        speedY: (Math.random() - 0.5) * 0.05 * 0.02, // Giảm tốc độ ban đầu xuống 1/50 để ổn định hơn
+        size: Math.random() * 0.6 + 0.7, // Giảm kích thước hạt xuống còn 1/3 so với ban đầu
         connections: [],
         noiseOffset: Math.random() * 1000,
         idealSpace: 60 + Math.random() * 20,
@@ -43,11 +43,11 @@ function createZoomedParticleAnimation(container) {
   }
 
   function animate() {
-    time += 0.0025;
+    time += 0.0025 * 0.033; // Giảm tốc độ toàn cục xuống 1/30 so với ban đầu
     ctx.fillStyle = '#F0EEE6';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     particles.forEach(p => p.connections = []);
-    const maxConnectionDistance = isSmallContainer ? 200 / zoomLevel : 180 / zoomLevel;
+    const maxConnectionDistance = isSmallContainer ? 150 / zoomLevel : 130 / zoomLevel; // Giảm khoảng cách kết nối
     const fadeZoneWidth = isSmallContainer ? 40 / zoomLevel : 60 / zoomLevel;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -77,7 +77,8 @@ function createZoomedParticleAnimation(container) {
       const noiseVal =
         Math.sin(noiseX + time) * Math.cos(noiseY - time) +
         Math.sin(noiseX * 2 + time * 0.6) * Math.cos(noiseY * 2 - time * 0.6) * 0.3;
-      const noiseMultiplier = isSmallContainer ? 0.0085 : 0.00125;
+      // Giảm ảnh hưởng của noise xuống 1/20 so với ban đầu để giảm sự chớp tắt
+      const noiseMultiplier = isSmallContainer ? 0.0085 * 0.05 : 0.00125 * 0.05;
       particle.speedX += Math.cos(noiseVal * Math.PI * 2) * noiseMultiplier;
       particle.speedY += Math.sin(noiseVal * Math.PI * 2) * noiseMultiplier;
       const dx = centerX - particle.x;
@@ -85,7 +86,8 @@ function createZoomedParticleAnimation(container) {
       const distanceToCenter = Math.sqrt(dx * dx + dy * dy);
       const centerRange = particle.allowClustering ? 130 : 200;
       const minDistance = particle.allowClustering ? 60 : 90;
-      const centerForceMultiplier = isSmallContainer ? 0.1 : 1.0;
+      // Giảm lực hướng tâm để các hạt di chuyển chậm hơn, ổn định hơn
+      const centerForceMultiplier = isSmallContainer ? 0.1 * 0.2 : 1.0 * 0.2;
       if (distanceToCenter > centerRange) {
         particle.speedX += dx / distanceToCenter * 0.002 * centerForceMultiplier;
         particle.speedY += dy / distanceToCenter * 0.002 * centerForceMultiplier;
@@ -99,14 +101,16 @@ function createZoomedParticleAnimation(container) {
         const dy = particle.y - other.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         if (distance < particle.idealSpace) {
-          const force = particle.allowClustering && other.allowClustering ? 0.005 : 0.015;
+          // Giảm lực đẩy giữa các hạt xuống 0.3 lần để giảm hiệu ứng chớp tắt
+          const force = (particle.allowClustering && other.allowClustering ? 0.005 : 0.015) * 0.3;
           if (distance < particle.idealSpace * 0.7) {
             particle.speedX += dx / distance * force;
             particle.speedY += dy / distance * force;
           }
         }
       });
-      const damping = isSmallContainer ? 0.97 : 0.98;
+      // Tăng damping để hạt dừng lại nhanh hơn, giảm hiệu ứng chớp tắt
+      const damping = isSmallContainer ? 0.97 * 0.9995 : 0.98 * 0.9995;
       particle.speedX *= damping;
       particle.speedY *= damping;
       particle.x += particle.speedX;
@@ -154,7 +158,8 @@ function createZoomedParticleAnimation(container) {
         Math.pow(particle.y - centerY, 2)
       );
       const alphaVariation = isSmallContainer ? 0.4 : 0.5;
-      const alpha = Math.max(0.3, Math.min(0.7, 1 - distanceToCenter / (500 + alphaVariation * 100)));
+      // Giảm độ đậm của các hạt
+      const alpha = Math.max(0.2, Math.min(0.5, 1 - distanceToCenter / (500 + alphaVariation * 100)));
       ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
