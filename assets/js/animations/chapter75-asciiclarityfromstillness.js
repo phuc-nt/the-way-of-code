@@ -17,16 +17,24 @@ function createAsciiClarityFromStillnessAnimation(container) {
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
   }
+  
+  function handleResize() {
+    if (!container) return;
+    // Đảm bảo animation được vẽ lại khi kích thước thay đổi
+    renderAsciiArt();
+  }
 
   function renderAsciiArt() {
     const centerX = width / 2;
     const centerY = height / 2;
+    const containerWidth = container.offsetWidth || 550;
+    const containerHeight = container.offsetHeight || 550;
     let art = [];
     for (let y = 0; y < height; y++) {
       let line = '';
       for (let x = 0; x < width; x++) {
-        const mouseX = (mouse.x / 550) * width;
-        const mouseY = (mouse.y / 550) * height;
+        const mouseX = (mouse.x / containerWidth) * width;
+        const mouseY = (mouse.y / containerHeight) * height;
         const autoX = mouseX + Math.sin(time * 0.25) * 2;
         const autoY = mouseY + Math.cos(time * 0.15) * 2;
         const mouseDist = Math.sqrt(Math.pow(x - autoX, 2) + Math.pow(y - autoY, 2));
@@ -63,6 +71,7 @@ function createAsciiClarityFromStillnessAnimation(container) {
 
   function cleanup() {
     window.removeEventListener('mousemove', handleMouseMove);
+    window.removeEventListener('resize', handleResize);
     if (container && pre && pre.parentNode === container) {
       container.removeChild(pre);
     }
@@ -75,24 +84,26 @@ function createAsciiClarityFromStillnessAnimation(container) {
   container.style.background = '#F0EEE6';
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
-  container.style.width = '550px';
-  container.style.height = '550px';
+  // Không cần set width và height vì container cha sẽ điều này
   container.style.display = 'flex';
   container.style.justifyContent = 'center';
   container.style.alignItems = 'center';
   container.style.fontFamily = 'monospace';
-  container.style.fontSize = '12px';
-  container.style.lineHeight = '12px';
+  container.style.fontSize = '14px';  // Tăng kích thước font để dễ nhìn hơn
+  container.style.lineHeight = '14px';
   container.style.color = '#333333';
   container.style.cursor = 'none';
   pre = document.createElement('pre');
   pre.style.margin = 0;
-  pre.style.width = '100%';
-  pre.style.height = '100%';
-  pre.style.display = 'block';
+  pre.style.display = 'flex';
+  pre.style.justifyContent = 'center';
+  pre.style.alignItems = 'center';
   pre.style.textAlign = 'center';
+  pre.style.width = '90%';  // Sử dụng % để đảm bảo co giãn trong container
+  pre.style.height = '90%';
   container.appendChild(pre);
   window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('resize', handleResize);
   animationFrameId = requestAnimationFrame(animate);
   return { cleanup };
 }
