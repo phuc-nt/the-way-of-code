@@ -30,7 +30,8 @@ function createIronFillingsAnimation(container) {
     ctx.fillRect(0, 0, width, height);
     const centerX = width / 2;
     const centerY = height / 2;
-    const scale = Math.min(width, height) / 550;
+    const minDimension = Math.min(width, height);
+    const scale = minDimension / 550;
     const circles = [
       { cx: centerX, cy: centerY - 75 * scale, r: 150 * scale },
       { cx: centerX, cy: centerY + 75 * scale, r: 150 * scale },
@@ -68,19 +69,22 @@ function createIronFillingsAnimation(container) {
   }
 
   function handleResize() {
-    const containerRect = container.getBoundingClientRect();
+    if (!container) return;
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+    canvas.style.width = container.offsetWidth + 'px';
+    canvas.style.height = container.offsetHeight + 'px';
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = containerRect.width * dpr;
-    canvas.height = containerRect.height * dpr;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
     // Re-init particles for new size
-    particles = initParticles(canvas.width, canvas.height, PARTICLE_COUNT);
+    particles = initParticles(canvas.width / dpr, canvas.height / dpr, PARTICLE_COUNT);
   }
 
   function animate() {
     time += 0.016;
-    drawScene(ctx, canvas.width, canvas.height, particles, time);
+    const dpr = window.devicePixelRatio || 1;
+    drawScene(ctx, canvas.width / dpr, canvas.height / dpr, particles, time);
     animationFrameId = requestAnimationFrame(animate);
   }
 
@@ -107,6 +111,9 @@ function createIronFillingsAnimation(container) {
   ctx = canvas.getContext('2d');
   handleResize();
   window.addEventListener('resize', handleResize);
+  // Initialize particles
+  const dpr = window.devicePixelRatio || 1;
+  particles = initParticles(canvas.width / dpr, canvas.height / dpr, PARTICLE_COUNT);
   animationFrameId = requestAnimationFrame(animate);
   return { cleanup };
 }
