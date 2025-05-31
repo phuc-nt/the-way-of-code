@@ -27,16 +27,24 @@ const swayingBranchesAnimation = {
 
     const ctx = canvas.getContext('2d');
 
-    // Responsive canvas
+    // Responsive canvas with improved scaling
     function adjustCanvas() {
       const dpr = window.devicePixelRatio || 1;
       const width = container.offsetWidth || window.innerWidth;
       const height = container.offsetHeight || window.innerHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      
+      // Set display size (css pixels)
       canvas.style.width = width + 'px';
       canvas.style.height = height + 'px';
+      
+      // Set actual size in memory (scaled to account for extra pixel density)
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      
+      // Reset transformation matrix to default
       ctx.setTransform(1, 0, 0, 1, 0, 0);
+      
+      // Scale all drawing operations by the dpr
       ctx.scale(dpr, dpr);
     }
     adjustCanvas();
@@ -64,17 +72,18 @@ const swayingBranchesAnimation = {
       }
       return result;
     }
+    // Adjusted branch lengths to match original animation (reduced overall size)
     const precomputedSystems = [
       {
-        config: { iterations: 3, angleDelta: Math.PI / 7, length: 25 },
+        config: { iterations: 3, angleDelta: Math.PI / 7, length: 15 },
         system: generateLSystem(axiom, 3)
       },
       {
-        config: { iterations: 4, angleDelta: Math.PI / 7, length: 21 },
+        config: { iterations: 4, angleDelta: Math.PI / 7, length: 12 },
         system: generateLSystem(axiom, 4)
       },
       {
-        config: { iterations: 5, angleDelta: Math.PI / 8, length: 17 },
+        config: { iterations: 5, angleDelta: Math.PI / 8, length: 9 },
         system: generateLSystem(axiom, 5, finalRule)
       }
     ];
@@ -91,8 +100,12 @@ const swayingBranchesAnimation = {
     function drawLSystem(systemData, alpha = 1) {
       const { config, system } = systemData;
       const { angleDelta, length } = config;
-      let x = canvas.width / (2 * (window.devicePixelRatio || 1));
-      let y = canvas.height / (window.devicePixelRatio || 1) * 0.98;
+      // Use width and height directly to avoid the double scaling issue
+      const canvasWidth = canvas.width / (window.devicePixelRatio || 1);
+      const canvasHeight = canvas.height / (window.devicePixelRatio || 1);
+      // Position at the center bottom of the canvas
+      let x = canvasWidth / 2;
+      let y = canvasHeight * 0.98;
       let baseAngle = -Math.PI / 2 + (Math.sin(time * 0.2) * swayFactor);
       const stack = [];
       for (let i = 0; i < system.length; i++) {
@@ -103,7 +116,8 @@ const swayingBranchesAnimation = {
             const y2 = y + length * Math.sin(baseAngle);
             const transparency = (0.2 - (i / system.length) * 0.08) * alpha;
             ctx.strokeStyle = `rgba(51, 51, 51, ${transparency})`;
-            ctx.lineWidth = 2;
+            // Giảm độ dày của các nhánh từ 2px xuống 1px để giống bản gốc hơn
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(x, y);
             ctx.lineTo(x2, y2);
@@ -129,7 +143,8 @@ const swayingBranchesAnimation = {
               if (dotAlpha > 0.01) {
                 ctx.fillStyle = `rgba(51, 51, 51, ${dotAlpha})`;
                 ctx.beginPath();
-                ctx.arc(x, y, 2, 0, Math.PI * 2);
+                // Giảm kích thước của các điểm từ bán kính 2px xuống 1px để phù hợp với độ mảnh mới của các nhánh
+                ctx.arc(x, y, 1, 0, Math.PI * 2);
                 ctx.fill();
               }
             }
@@ -140,33 +155,46 @@ const swayingBranchesAnimation = {
     }
 
     function animate() {
+      // Clear canvas with background color
       ctx.fillStyle = BG_COLOR;
       ctx.fillRect(0, 0, canvas.width / (window.devicePixelRatio || 1), canvas.height / (window.devicePixelRatio || 1));
+      
+      // Use smoother time increment for animation as in the original
       time += 0.008;
+      
       if (!growthComplete) {
         if (isTransitioning) {
+          // Smoother transition with cubic easing
           transitionFactor += 0.02;
+          
           if (transitionFactor >= 1) {
             isTransitioning = false;
             transitionFactor = 0;
             currentSystemIndex++;
+            
+            // Check if we've reached the final stage
             if (currentSystemIndex >= precomputedSystems.length - 1) {
               growthComplete = true;
               currentSystemIndex = precomputedSystems.length - 1;
             }
           } else {
+            // Use cubic easing for smoother transitions
             const easeOut = 1 - Math.pow(1 - transitionFactor, 3);
             drawLSystem(precomputedSystems[currentSystemIndex], 1 - easeOut);
             const nextIndex = Math.min(currentSystemIndex + 1, precomputedSystems.length - 1);
             drawLSystem(precomputedSystems[nextIndex], easeOut);
           }
         } else {
+          // Draw current system
           drawLSystem(precomputedSystems[currentSystemIndex]);
-          if (time % 1 < 0.016) {
+          
+          // Start next transition periodically
+          if (time % 1 < 0.016) {  // Approximately one frame at 60fps
             isTransitioning = true;
           }
         }
       } else {
+        // Enhanced swaying in final form
         swayFactor = 0.4 + Math.sin(time * 0.1) * 0.05;
         drawLSystem(precomputedSystems[precomputedSystems.length - 1]);
       }
