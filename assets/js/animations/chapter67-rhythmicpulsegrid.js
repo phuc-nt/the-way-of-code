@@ -1,8 +1,8 @@
 // Animation for Chapter 67: Rhythmic Pulse Grid
+import animationUtils from './animation-utils.js';
 // Visualization: A grid where dots move with patience and humility, showing how simplicity leads to harmony
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const RhythmicPulseGridAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const RhythmicPulseGridAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -72,7 +72,7 @@ const RhythmicPulseGridAnimation = {
 
     function animate() {
       if (!running) return;
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       time += 0.0045;
       // Draw horizontal lines

@@ -1,8 +1,8 @@
 // Animation for Chapter 45: Continuous Line Drawing (Canvas)
+import animationUtils from './animation-utils.js';
 // Visualization: A single continuous line that appears unrefined yet creates perfect harmony through its natural movement
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const continuousLineDrawingAnimation = {
   init(container) {
@@ -16,7 +16,7 @@ const continuousLineDrawingAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -24,7 +24,7 @@ const continuousLineDrawingAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(canvas);
 
@@ -40,7 +40,7 @@ const continuousLineDrawingAnimation = {
     let animationFrameId = null;
 
     function clearCanvas() {
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 

@@ -1,8 +1,9 @@
 // Animation for Chapter 61: Flowing Lattice
-// Visualization: A lattice where each element yields to others, creating harmony through gentle influence
+// Visualization: A lattice that moves like water, showing how structure and flow can coexist
+
+import animationUtils from './animation-utils.js';
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const FlowingLatticeAnimation = {
   init(container) {
@@ -12,7 +13,7 @@ const FlowingLatticeAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -87,7 +88,7 @@ const FlowingLatticeAnimation = {
 
     function animate() {
       if (!running) return;
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, width, height);
       time += 0.008;
       const globalRotation = Math.sin(time * 0.1) * 0.15;

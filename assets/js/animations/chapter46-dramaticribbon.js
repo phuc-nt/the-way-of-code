@@ -1,8 +1,8 @@
 // Animation for Chapter 46: Dramatic Ribbon Fold (Canvas)
+import animationUtils from './animation-utils.js';
 // Visualization: A ribbon that flows freely yet follows mathematical principles, showing how technology can align with natural movement
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const dramaticRibbonFoldAnimation = {
   init(container) {
@@ -16,7 +16,7 @@ const dramaticRibbonFoldAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -24,7 +24,7 @@ const dramaticRibbonFoldAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(canvas);
 
@@ -163,7 +163,7 @@ const dramaticRibbonFoldAnimation = {
 
     function animate() {
       if (!running) return;
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       time += 0.00125;
       ribbon.update(time);

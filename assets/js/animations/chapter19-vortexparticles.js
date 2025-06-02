@@ -28,7 +28,7 @@ const chapter19VortexParticles = {
     camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(this.settings.width, this.settings.height);
-    renderer.setClearColor(0xF0EEE6, 1);
+    renderer.setClearColor(animationUtils.colors.background, 1);
     container.appendChild(renderer.domElement);
     camera.position.z = 7;
 

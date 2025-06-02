@@ -20,7 +20,7 @@ const chapter29FractalBranchesSacred = {
     camera = new window.THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     renderer = new window.THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(width, height);
-    renderer.setClearColor('#F0EEE7');
+    renderer.setClearColor(animationUtils.colors.background);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
     camera.position.z = 5;

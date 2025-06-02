@@ -1,4 +1,5 @@
 // chapter80-moire6circles.js - Moiré Six Circles animation for Chapter 80
+import animationUtils from './animation-utils.js';
 // Themes: contentment in simplicity, community wisdom, natural satisfaction
 // Visualization: Circles that create complex patterns through simple overlapping, showing beauty in basic forms
 
@@ -8,7 +9,7 @@ function createMoireSixCirclesAnimation(container) {
   let canvas, ctx;
 
   function drawPattern(time) {
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
     const centerX = canvas.width / 2;
@@ -16,7 +17,7 @@ function createMoireSixCirclesAnimation(container) {
     const minDimension = Math.min(canvas.width, canvas.height);
     const radius = minDimension * 0.25; // Adjusted for better scaling
     
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = animationUtils.colors.background === '#ffffff' ? '#000' : '#333';
     ctx.lineWidth = 0.8;
     
     const numClusters = 6;
@@ -69,7 +70,7 @@ function createMoireSixCirclesAnimation(container) {
   if (!container) return { cleanup: () => {} };
   
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   

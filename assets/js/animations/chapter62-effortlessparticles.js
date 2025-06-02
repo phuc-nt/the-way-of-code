@@ -1,8 +1,8 @@
 // Animation for Chapter 62: Effortless Particles
+import animationUtils from './animation-utils.js';
 // Visualization: Particles spiral around a central point of energy, showing how all things return to Source
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const EffortlessParticlesAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const EffortlessParticlesAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -158,7 +158,7 @@ const EffortlessParticlesAnimation = {
       renderer.setPixelRatio(pixelRatio);
       renderer.setSize(threeContainer.clientWidth, threeContainer.clientHeight);
       threeContainer.appendChild(renderer.domElement);
-      scene.background = new THREE.Color(BG_COLOR);
+      scene.background = new THREE.Color(animationUtils.colors.background);
       camera.position.z = 5;
       points = new THREE.Points(geometry, particleMaterial);
       scene.add(points);

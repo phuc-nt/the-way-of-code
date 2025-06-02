@@ -1,8 +1,8 @@
 // Animation for Chapter 65: Radial Mesh Flower
+import animationUtils from './animation-utils.js';
 // Visualization: A flower that responds to presence without force, showing how patterns emerge through gentle guidance
 
 const CANVAS_SIZE = 600;
-const BG_COLOR = '#F0EEE6';
 
 const RadialMeshFlowerAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const RadialMeshFlowerAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';

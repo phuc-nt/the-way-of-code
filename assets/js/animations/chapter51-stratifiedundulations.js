@@ -6,7 +6,6 @@ import animationUtils from './animation-utils.js';
 const CANVAS_SIZE = 550;
 const PARTICLE_COUNT = 18000;
 const STRATA_LAYERS = 12;
-const BG_COLOR = '#F0EEE6';
 
 const stratifiedUndulationsAnimation = {
   settings: {
@@ -28,7 +27,7 @@ const stratifiedUndulationsAnimation = {
     canvas.style.width = '100%';
     canvas.style.height = 'auto';
     canvas.style.maxWidth = '100%';
-    canvas.style.backgroundColor = BG_COLOR;
+    canvas.style.backgroundColor = animationUtils.colors.background;
     container.appendChild(canvas);
     
     const ctx = canvas.getContext('2d');
@@ -81,8 +80,10 @@ const stratifiedUndulationsAnimation = {
     function animate() {
       time += 0.016;
       
-      // Clear with stratified effect
-      ctx.fillStyle = 'rgba(240, 238, 230, 0.025)';
+      // Tạo màu overlay với alpha từ background color
+      const bgColor = animationUtils.colors.background;
+      const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+      ctx.fillStyle = `rgba(${rgb}, 0.025)`;
       ctx.fillRect(0, 0, width, height);
       
       // Sort by z-depth and stratum

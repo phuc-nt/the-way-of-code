@@ -1,11 +1,11 @@
 // Animation for Chapter 44: Intricate Radial Mesh (SVG)
+import animationUtils from './animation-utils.js';
 // Visualization: A radial pattern that finds harmony in simplicity, showing how contentment emerges from accepting what is
 
 const CANVAS_SIZE = 600;
 const RADIUS = CANVAS_SIZE * 0.25;
 const LINE_COUNT = 300;
 const CIRCLE_COUNT = 6;
-const BG_COLOR = '#F0EEE6';
 
 const intricateRadialMeshAnimation = {
   init(container) {
@@ -20,7 +20,7 @@ const intricateRadialMeshAnimation = {
     svg.setAttribute('height', CANVAS_SIZE);
     svg.setAttribute('viewBox', `0 0 ${CANVAS_SIZE} ${CANVAS_SIZE}`);
     svg.style.display = 'block';
-    svg.style.background = BG_COLOR;
+    svg.style.background = animationUtils.colors.background;
     svg.style.margin = '0 auto';
     svg.style.maxWidth = '100%';
     svg.style.maxHeight = '100%';
@@ -28,7 +28,7 @@ const intricateRadialMeshAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(svg);
 

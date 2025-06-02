@@ -1,8 +1,8 @@
 // Animation for Chapter 66: Wave Interference Optimized
+import animationUtils from './animation-utils.js';
 // Visualization: Waves that influence each other without domination, showing how strength emerges from yielding
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const WaveInterferenceOptimizedAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const WaveInterferenceOptimizedAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -83,7 +83,7 @@ const WaveInterferenceOptimizedAnimation = {
     function animate() {
       if (!running) return;
       // Clear buffer
-      bufferCtx.fillStyle = BG_COLOR;
+      bufferCtx.fillStyle = animationUtils.colors.background;
       bufferCtx.fillRect(0, 0, width, height);
       // Calculate interference pattern
       for (let i = 0; i < rows; i++) {

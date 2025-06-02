@@ -1,4 +1,5 @@
 // chapter77-zoomedparticleanimation.js - Zoomed Particle Animation for Chapter 77
+import animationUtils from './animation-utils.js';
 // Themes: giving without expectation, endless abundance, natural success
 // Visualization: A form that continuously gives and receives, showing the cycle of natural abundance
 
@@ -44,7 +45,7 @@ function createZoomedParticleAnimation(container) {
 
   function animate() {
     time += 0.0025 * 0.033; // Giảm tốc độ toàn cục xuống 1/30 so với ban đầu
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     particles.forEach(p => p.connections = []);
     const maxConnectionDistance = isSmallContainer ? 150 / zoomLevel : 130 / zoomLevel; // Giảm khoảng cách kết nối
@@ -182,7 +183,7 @@ function createZoomedParticleAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

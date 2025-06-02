@@ -1,8 +1,8 @@
 // Animation for Chapter 68: Glowing Eye
+import animationUtils from './animation-utils.js';
 // Visualization: Particles that transform through gentle convergence, showing how power emerges through harmony
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const GlowingEyeAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const GlowingEyeAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -94,8 +94,11 @@ const GlowingEyeAnimation = {
       if (elapsed > frameDelay) {
         time += 0.008;
         lastTime = currentTime;
-        ctx.fillStyle = 'rgba(240, 238, 230, 0.1)';
-        ctx.fillRect(0, 0, width, height);
+        // Tạo màu overlay với alpha từ background color
+        const bgColor = animationUtils.colors.background;
+        const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+        ctx.fillStyle = `rgba(${rgb}, 0.1)`;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         particles.forEach(particle => {
           particle.convergencePhase += particle.convergenceSpeed;
           particle.transitionPhase += particle.transitionSpeed;

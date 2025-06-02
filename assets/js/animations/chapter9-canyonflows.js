@@ -11,10 +11,7 @@ const chapter9Animation = {
     width: 550,
     height: 550,
     particleCount: 20000, // Giảm số lượng hạt để có hiệu ứng mềm mại hơn
-    wallLayers: 8,
-    colors: {
-      background: 'rgba(240, 238, 230, 0.05)' // Màu nền với độ mờ
-    }
+    wallLayers: 8
   },
   
   init(container) {
@@ -32,7 +29,7 @@ const chapter9Animation = {
     canvasContainer.style.width = `${this.settings.width}px`;
     canvasContainer.style.height = `${this.settings.height}px`;
     canvasContainer.style.margin = 'auto';
-    canvasContainer.style.backgroundColor = '#F0EEE6';
+    canvasContainer.style.backgroundColor = animationUtils.colors.background;
     canvasContainer.style.overflow = 'hidden';
     
     // Tạo canvas element
@@ -99,7 +96,10 @@ const chapter9Animation = {
       state.time += 0.016;
       
       // Clear with subtle persistence
-      ctx.fillStyle = this.settings.colors.background;
+      // Tạo màu overlay với alpha từ background color
+      const bgColor = animationUtils.colors.background;
+      const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+      ctx.fillStyle = `rgba(${rgb}, 0.05)`;
       ctx.fillRect(0, 0, this.settings.width, this.settings.height);
       
       // Sort particles by z-depth for proper layering

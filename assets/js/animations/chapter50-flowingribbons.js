@@ -1,4 +1,5 @@
 // Animation for Chapter 50: Flowing Ribbons (Canvas)
+import animationUtils from './animation-utils.js';
 // Visualization: A flowing grid that yields to invisible forces, showing how structure can remain while embracing constant change
 
 const CANVAS_SIZE = 550;
@@ -7,7 +8,6 @@ const RIBBON_WIDTH = CANVAS_SIZE * 0.85;
 const RIBBON_OFFSET = (CANVAS_SIZE - RIBBON_WIDTH) / 2;
 const PI4 = Math.PI * 4;
 const PI7 = Math.PI * 7;
-const BG_COLOR = '#F0EEE6';
 
 const flowingRibbonsAnimation = {
   init(container) {
@@ -21,7 +21,7 @@ const flowingRibbonsAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -48,7 +48,7 @@ const flowingRibbonsAnimation = {
 
     function animate() {
       // Clear with background color
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
       ctx.strokeStyle = '#777777';
       ctx.lineWidth = 0.5;

@@ -1,6 +1,8 @@
 // Animation for Chapter 40: Torus Energy Flow (Canvas)
 // Visualization: Energy flows in eternal cycles, yielding and returning to its source
 
+import animationUtils from './animation-utils.js';
+
 const CANVAS_SIZE = 550;
 const MAJOR_RADIUS = 120;
 const TUBE_RADIUS = 100;
@@ -24,7 +26,7 @@ const torusEnergyFlowAnimation = {
   canvas.width = CANVAS_SIZE;
   canvas.height = CANVAS_SIZE;
   canvas.style.display = 'block';
-  canvas.style.background = '#F0EEE6';
+  canvas.style.background = animationUtils.colors.background;
   canvas.style.margin = '0 auto';
   canvas.style.maxWidth = '100%';
   canvas.style.maxHeight = '100%';
@@ -32,7 +34,7 @@ const torusEnergyFlowAnimation = {
   container.style.display = 'flex';
   container.style.alignItems = 'center';
   container.style.justifyContent = 'center';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.appendChild(canvas);
 
@@ -159,7 +161,7 @@ const torusEnergyFlowAnimation = {
 
   function animate() {
     if (!running) return;
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     const rotationX = Math.PI * 0.3;
     const rotationY = time;

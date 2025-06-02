@@ -1,4 +1,5 @@
 // Animation for Chapter 58: Breathing Rhombus
+import animationUtils from './animation-utils.js';
 // Visualization: Rhombi breathing in and out, layered with subtle texture
 
 const BreathingRhombusAnimation = {
@@ -9,7 +10,7 @@ const BreathingRhombusAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = '#F0EEE6';
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';

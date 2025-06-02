@@ -21,7 +21,7 @@ const chapter26ParticleCylinder = {
     renderer = new window.THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0xF0EEE6);
+    renderer.setClearColor(animationUtils.colors.background);
     container.appendChild(renderer.domElement);
     camera.position.z = 6.25;
 

@@ -13,7 +13,7 @@ const chapter18HashArchitecture = {
     const loader = container.querySelector('.animation-loader');
     // Tạo scene Three.js
     const scene = new window.THREE.Scene();
-    scene.background = new window.THREE.Color(0xF0EEE6);
+    scene.background = new window.THREE.Color(animationUtils.colors.background);
     // Camera
     const camera = new window.THREE.PerspectiveCamera(
       50,

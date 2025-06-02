@@ -1,4 +1,5 @@
 // chapter76-organicgrowth.js - Organic Growth animation for Chapter 76
+import animationUtils from './animation-utils.js';
 // Themes: organic growth, cycles, transformation
 // Visualization: Spiraling scales that grow and reverse in a breathing, organic sequence
 
@@ -56,7 +57,10 @@ function createOrganicGrowthAnimation(container) {
       ctx.strokeStyle = '#2a2a2a';
       ctx.lineWidth = 1;
       ctx.stroke();
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+      // Tạo fill color từ background color
+      const bgColor = animationUtils.colors.background;
+      const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+      ctx.fillStyle = `rgba(${rgb}, 0.3)`;
       ctx.fill();
       ctx.restore();
     }
@@ -126,7 +130,7 @@ function createOrganicGrowthAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

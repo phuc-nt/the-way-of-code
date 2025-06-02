@@ -1,4 +1,5 @@
 // chapter71-gentleweavinglines.js - Gentle Weaving Lines animation for Chapter 71
+import animationUtils from './animation-utils.js';
 // Themes: natural reverence, teaching without teaching, self-trust
 // Visualization: Lines that flow and interweave naturally, showing how patterns emerge without instruction
 
@@ -17,7 +18,7 @@ function createGentleWeavingLinesAnimation(container) {
   }
 
   function draw() {
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, width, height);
 
     time += 0.005;
@@ -122,7 +123,7 @@ function createGentleWeavingLinesAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

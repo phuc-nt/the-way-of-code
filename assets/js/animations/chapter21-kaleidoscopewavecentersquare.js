@@ -33,7 +33,7 @@ const chapter21KaleidoscopeWaveCenterSquare = {
     let time = 0;
     function animate() {
       time += 0.007;
-      ctx.fillStyle = '#F0EEE6';
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, width, height);
       segmentCtx.clearRect(0, 0, width, height);
       const resolution = 2;

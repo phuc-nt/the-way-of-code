@@ -34,7 +34,7 @@ const chapter8Animation = {
     // Tạo container cho animation
     const canvas = document.createElement('div');
     canvas.style.margin = '0';
-    canvas.style.background = '#F0EEE6';
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.overflow = 'hidden';
     canvas.style.display = 'flex';
     canvas.style.alignItems = 'center';

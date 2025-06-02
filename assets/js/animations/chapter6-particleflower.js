@@ -92,7 +92,10 @@ const chapter6Animation = {
         
         // Clear with slight trails for ghosting effect
         // More transparent for smoother trails at lower frame rates
-        ctx.fillStyle = 'rgba(240, 238, 230, 0.05)';
+        // Tạo màu overlay với alpha từ background color
+        const bgColor = animationUtils.colors.background;
+        const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+        ctx.fillStyle = `rgba(${rgb}, 0.05)`;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         particles.forEach(particle => {

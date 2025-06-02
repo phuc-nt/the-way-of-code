@@ -1,4 +1,5 @@
 // Animation for Chapter 42: Diagonal Petals (Canvas)
+import animationUtils from './animation-utils.js';
 // Visualization: ASCII patterns emerging from simple elements combining and recombining
 
 const CHARS = '/\\|';
@@ -20,7 +21,7 @@ const asciiDiagonalPetalsAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = '#F0EEE6';
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -28,7 +29,7 @@ const asciiDiagonalPetalsAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = '#F0EEE6';
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(canvas);
 
@@ -40,7 +41,7 @@ const asciiDiagonalPetalsAnimation = {
     function animate() {
       if (!running) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#F0EEE6';
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.font = `${CELL_SIZE}px monospace`;
       ctx.textAlign = 'center';

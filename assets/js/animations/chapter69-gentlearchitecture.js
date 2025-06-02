@@ -1,8 +1,8 @@
 // Animation for Chapter 69: Gentle Architecture
+import animationUtils from './animation-utils.js';
 // Visualization: A structure that stands through stillness, showing how stability comes from non-action
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const GentleArchitectureAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const GentleArchitectureAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -71,7 +71,7 @@ const GentleArchitectureAnimation = {
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(CANVAS_SIZE, CANVAS_SIZE);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.setClearColor(BG_COLOR);
+      renderer.setClearColor(animationUtils.colors.background);
       threeContainer.appendChild(renderer.domElement);
       // Lighting
       const ambientLight = new THREE.AmbientLight(0x404040);

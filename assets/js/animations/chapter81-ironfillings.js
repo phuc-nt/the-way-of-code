@@ -1,4 +1,5 @@
 // chapter81-ironfillings.js - Iron Fillings animation for Chapter 81
+import animationUtils from './animation-utils.js';
 // Themes: wisdom beyond words, service without competition, infinite giving
 // Visualization: Particles that align with invisible forces, showing how truth manifests without being named
 
@@ -26,7 +27,10 @@ function createIronFillingsAnimation(container) {
   }
 
   function drawScene(ctx, width, height, particles, time) {
-    ctx.fillStyle = 'rgba(240, 238, 230, 0.05)';
+    // Tạo màu overlay với alpha từ background color
+    const bgColor = animationUtils.colors.background;
+    const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+    ctx.fillStyle = `rgba(${rgb}, 0.05)`;
     ctx.fillRect(0, 0, width, height);
     const centerX = width / 2;
     const centerY = height / 2;
@@ -100,7 +104,7 @@ function createIronFillingsAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

@@ -6,6 +6,6 @@ export default {
   author: "Đạo Của Code",
   type: "ascii",
   aspectRatio: 2,
-  bg: "#F0EEE6",
+  bg: "#ffffff",
   keywords: ["return to origin", "mother and child", "inexhaustible energy", "ascii", "emptiness", "manifestation", "cycle"],
 };

@@ -4,7 +4,7 @@
 const animationUtils = {
   // Các màu sắc và style mặc định giữ đồng bộ giữa các animation
   colors: {
-    background: '#F0EEE6',
+    background: '#ffffff',
     primary: 'rgba(51, 51, 51, 0.4)',
     accent: '#3498db'
   },

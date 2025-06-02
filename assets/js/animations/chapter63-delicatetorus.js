@@ -1,8 +1,9 @@
 // Animation for Chapter 63: Delicate Torus Knot
 // Visualization: A knot that forms and moves without strain, showing how complexity emerges from simple principles
 
+import animationUtils from './animation-utils.js';
+
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const DelicateTorusKnotAnimation = {
   init(container) {
@@ -12,7 +13,7 @@ const DelicateTorusKnotAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -69,7 +70,7 @@ const DelicateTorusKnotAnimation = {
       scene = new THREE.Scene();
       renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
       renderer.setSize(CANVAS_SIZE, CANVAS_SIZE);
-      renderer.setClearColor(BG_COLOR);
+      renderer.setClearColor(animationUtils.colors.background);
       threeContainer.appendChild(renderer.domElement);
       camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
       camera.position.z = 4;

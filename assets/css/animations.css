@@ -3,7 +3,7 @@
 /* Common animation container styling for both Three.js and Canvas animations */
 .animation-container {
     margin: 0;
-    background: #F0EEE6;
+    background: #ffffff;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
     top: 0;
     left: 0;
     color: var(--secondary-color);
-    background: #F0EEE6;
+    background: #ffffff;
     z-index: 10;
     transition: opacity 0.5s ease;
 }

@@ -4,7 +4,6 @@ import animationUtils from './animation-utils.js';
 
 const CANVAS_WIDTH = 60;
 const CANVAS_HEIGHT = 30;
-const BG_COLOR = '#F0EEE6';
 const CHAR_SET = '░▒▓█';
 const FPS = 10;
 
@@ -21,7 +20,7 @@ const asciiBlobAnimation = {
     pre.style.fontSize = '12px';
     pre.style.lineHeight = '1.1';
     pre.style.textAlign = 'center';
-    pre.style.background = BG_COLOR;
+    pre.style.background = animationUtils.colors.background;
     pre.style.margin = '0 auto';
     pre.style.padding = '0';
     pre.style.display = 'block';

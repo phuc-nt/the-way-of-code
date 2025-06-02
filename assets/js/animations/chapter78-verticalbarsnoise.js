@@ -2,6 +2,8 @@
 // Themes: power of softness, water's way, universal truth
 // Visualization: Bars that yield and flow like water, demonstrating how gentleness overcomes the rigid
 
+import animationUtils from './animation-utils.js';
+
 function createVerticalBarsNoiseAnimation(container) {
   let animationFrameId;
   let time = 0;
@@ -17,7 +19,7 @@ function createVerticalBarsNoiseAnimation(container) {
 
   function animate() {
     time += 0.0005;
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     const lineSpacing = canvas.height / numLines;
     for (let i = 0; i < numLines; i++) {
@@ -53,7 +55,7 @@ function createVerticalBarsNoiseAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   container.style.width = CANVAS_SIZE + 'px';

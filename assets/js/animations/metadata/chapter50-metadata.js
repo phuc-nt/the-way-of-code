@@ -6,6 +6,6 @@ export default {
   author: 'Đạo Của Code',
   type: 'canvas',
   aspectRatio: 1,
-  bg: '#F0EEE6',
+  bg: '#ffffff',
   keywords: ['flow', 'ribbons', 'change', 'structure', 'canvas', 'grid', 'completion', 'surrender'],
 };

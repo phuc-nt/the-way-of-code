@@ -1,4 +1,5 @@
 // chapter71-waveinterferencev3.js - Wave Interference V3 animation for Chapter 71
+import animationUtils from './animation-utils.js';
 // Themes: pure unknowing, freedom from stagnation, true wholeness
 // Visualization: Waves that continuously transform and interfere, showing how patterns emerge from openness to change
 
@@ -32,7 +33,7 @@ function createWaveInterferenceV3Animation(container) {
   }
 
   function animate() {
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, width, height);
     const imageData = ctx.createImageData(width, height);
     const data = imageData.data;
@@ -57,9 +58,9 @@ function createWaveInterferenceV3Animation(container) {
           data[index + 2] = 34;
           data[index + 3] = 255;
         } else {
-          data[index] = 240;
-          data[index + 1] = 238;
-          data[index + 2] = 230;
+          data[index] = 255;
+          data[index + 1] = 255;
+          data[index + 2] = 255;
           data[index + 3] = 255;
         }
       }
@@ -83,7 +84,7 @@ function createWaveInterferenceV3Animation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

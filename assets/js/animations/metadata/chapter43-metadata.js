@@ -6,6 +6,6 @@ export default {
   author: 'Đạo Của Code',
   type: 'threejs',
   aspectRatio: 1,
-  bg: '#F0EEE6',
+  bg: '#ffffff',
   keywords: ['pinecone', 'constellation', 'gentle', 'void', 'threejs', 'structure', 'softness'],
 };

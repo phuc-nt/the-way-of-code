@@ -1,8 +1,8 @@
 // Animation for Chapter 59: Implicit Dreams
+import animationUtils from './animation-utils.js';
 // Visualization: Forms that emerge from simple mathematical rules, showing how complexity arises from fundamental principles
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const ImplicitDreamsAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const ImplicitDreamsAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -188,7 +188,7 @@ const ImplicitDreamsAnimation = {
     let running = true;
     function animate() {
       if (!running) return;
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, width, height);
       time += 0.005;
       updateGridValues(time);

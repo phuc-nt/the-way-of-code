@@ -1,4 +1,5 @@
 // chapter73-organiccellulargrid.js - Organic Cellular Grid animation for Chapter 73
+import animationUtils from './animation-utils.js';
 // Themes: true courage, nature's wisdom, universal net
 // Visualization: A grid that moves with careful balance, showing how strength emerges through wise restraint
 
@@ -59,7 +60,7 @@ function createOrganicCellularGridAnimation(container) {
   }
 
   function draw() {
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, width, height);
     // Animate grid
     for (let i = -1; i < cellsX - 1; i++) {
@@ -90,7 +91,7 @@ function createOrganicCellularGridAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

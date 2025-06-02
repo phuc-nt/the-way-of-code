@@ -77,7 +77,10 @@ const chapter25EtherealTorusFlow = {
       if (!lastFrameTime) lastFrameTime = currentTime;
       const deltaTime = currentTime - lastFrameTime;
       if (deltaTime >= frameInterval) {
-        ctx.fillStyle = 'rgba(240, 238, 230, 0.03)';
+        // Tạo màu overlay với alpha từ background color
+        const bgColor = animationUtils.colors.background;
+        const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+        ctx.fillStyle = `rgba(${rgb}, 0.03)`;
         ctx.fillRect(0, 0, width, height);
         time += 0.004;
         particles.forEach(particle => {

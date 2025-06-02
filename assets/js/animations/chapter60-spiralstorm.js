@@ -1,8 +1,9 @@
 // Animation for Chapter 60: Spiral Storm
 // Visualization: A spiral system that finds its own balance through minimal guidance (Three.js)
 
+import animationUtils from './animation-utils.js';
+
 const CANVAS_SIZE = 550;
-const BG_COLOR = 0xf0eee7;
 
 const SpiralStormAnimation = {
   async init(container) {
@@ -12,7 +13,7 @@ const SpiralStormAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = '#F0EEE7';
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -52,7 +53,7 @@ const SpiralStormAnimation = {
 
     // Setup scene, camera, renderer
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(BG_COLOR);
+    scene.background = new THREE.Color(animationUtils.colors.background);
     const camera = new THREE.PerspectiveCamera(
       75,
       1,

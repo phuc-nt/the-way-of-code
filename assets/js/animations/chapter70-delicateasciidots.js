@@ -2,6 +2,8 @@
 // Themes: simple truth, inner understanding, heart wisdom
 // Visualization: Patterns that reveal meaning through simplicity
 
+import animationUtils from './animation-utils.js';
+
 const GRID_SIZE = 60;
 const CHARS = '⠁⠂⠄⠈⠐⠠⡀⢀⠃⠅⠘⠨⠊⠋⠌⠍⠎⠏';
 
@@ -98,7 +100,7 @@ function createDelicateAsciiDotsAnimation(container) {
         }
       }
     });
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     const cellSize = Math.min(canvas.width, canvas.height) / GRID_SIZE;
     for (let y = 0; y < GRID_SIZE; y++) {
@@ -131,7 +133,7 @@ function createDelicateAsciiDotsAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

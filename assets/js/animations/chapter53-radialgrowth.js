@@ -3,7 +3,6 @@
 import animationUtils from './animation-utils.js';
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const radialGrowthAnimation = {
   init(container) {
@@ -17,7 +16,7 @@ const radialGrowthAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -99,7 +98,7 @@ const radialGrowthAnimation = {
     }
 
     function animate() {
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       animationTime++;
       if (animationTime % 40 === 0) {

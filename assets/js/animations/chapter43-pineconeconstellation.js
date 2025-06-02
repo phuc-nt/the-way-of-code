@@ -1,6 +1,8 @@
 // Animation for Chapter 43: Pinecone Constellation (Three.js)
 // Visualization: A delicate constellation that appears through empty space, showing how the gentlest connections create the strongest patterns
 
+import animationUtils from './animation-utils.js';
+
 const CHAPTER43_SIZE = 550;
 
 const pineconeConstellationAnimation = {
@@ -23,7 +25,7 @@ const pineconeConstellationAnimation = {
     loadThree((THREE) => {
       // Scene setup
       const scene = new THREE.Scene();
-      scene.background = new THREE.Color('#F0EEE6');
+      scene.background = new THREE.Color(animationUtils.colors.background);
       const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
       camera.position.z = 10;
       camera.position.y = 0;

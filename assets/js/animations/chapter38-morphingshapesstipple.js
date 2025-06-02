@@ -5,7 +5,7 @@ import animationUtils from './animation-utils.js';
 
 const chapter38Animation = {
   settings: {
-    backgroundColor: '#F0EEE6',
+    backgroundColor: animationUtils.colors.background,
     width: 550,
     height: 550,
     numPoints: 25000,

@@ -6,6 +6,6 @@ export default {
   author: 'Đạo Của Code',
   type: 'svg',
   aspectRatio: 1,
-  bg: '#F0EEE6',
+  bg: '#ffffff',
   keywords: ['radial', 'mesh', 'contentment', 'acceptance', 'harmony', 'svg', 'simplicity'],
 };

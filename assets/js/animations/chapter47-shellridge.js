@@ -1,8 +1,8 @@
 // Animation for Chapter 47: Shell Ridge Pattern (Canvas)
+import animationUtils from './animation-utils.js';
 // Visualization: A shell pattern that reveals the universe's structure through its simple, repeating forms
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const shellRidgePatternAnimation = {
   init(container) {
@@ -16,7 +16,7 @@ const shellRidgePatternAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -24,7 +24,7 @@ const shellRidgePatternAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(canvas);
 
@@ -34,7 +34,7 @@ const shellRidgePatternAnimation = {
     let animationFrameId = null;
 
     function drawRidgePattern() {
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;

@@ -2,6 +2,8 @@
 // Themes: natural reverence, teaching without teaching, self-trust
 // Visualization: Lines that flow and interweave naturally, showing how patterns emerge without instruction
 
+import animationUtils from './animation-utils.js';
+
 function createGentleWavesAnimation(container) {
   let animationFrameId;
   let time = 0;
@@ -17,7 +19,7 @@ function createGentleWavesAnimation(container) {
   }
 
   function draw() {
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, width, height);
 
     time += 0.005;
@@ -122,7 +124,7 @@ function createGentleWavesAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

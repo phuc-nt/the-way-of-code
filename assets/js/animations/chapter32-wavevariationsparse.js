@@ -8,7 +8,7 @@ const chapter32Animation = {
   settings: {
     colors: animationUtils.colors,
     resolution: 4,              // Độ phân giải cho lưới wave
-    backgroundColor: '#F0EEE6',  // Màu nền
+    backgroundColor: animationUtils.colors.background,  // Màu nền
     lineColor: '#333',          // Màu của đường sóng
     lineWidth: 1.2,             // Độ dày của đường
     targetFPS: 20               // FPS mục tiêu cho hoạt ảnh chạy mượt

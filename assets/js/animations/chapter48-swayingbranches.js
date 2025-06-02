@@ -1,7 +1,9 @@
 // Animation for Chapter 48: Swaying Branches (Canvas)
 // Visualization: A tree that grows through simple rules, demonstrating how complexity naturally emerges when we step back and let things develop
 
-const BG_COLOR = '#F0EEE6';
+import animationUtils from './animation-utils.js';
+
+const CANVAS_SIZE = 550;
 
 const swayingBranchesAnimation = {
   init(container) {
@@ -12,16 +14,15 @@ const swayingBranchesAnimation = {
 
     // Create and style canvas
     const canvas = document.createElement('canvas');
-    canvas.style.position = 'absolute';
-    canvas.style.top = 0;
-    canvas.style.left = 0;
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.background = BG_COLOR;
+    canvas.width = CANVAS_SIZE;
+    canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.zIndex = 1;
-    container.style.position = 'relative';
-    container.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
+    canvas.style.margin = '0 auto';
+    container.style.display = 'flex';
+    container.style.alignItems = 'center';
+    container.style.justifyContent = 'center';
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(canvas);
 
@@ -155,9 +156,9 @@ const swayingBranchesAnimation = {
     }
 
     function animate() {
-      // Clear canvas with background color
-      ctx.fillStyle = BG_COLOR;
-      ctx.fillRect(0, 0, canvas.width / (window.devicePixelRatio || 1), canvas.height / (window.devicePixelRatio || 1));
+      // Clear canvas with background
+      ctx.fillStyle = animationUtils.colors.background;
+      ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
       
       // Use smoother time increment for animation as in the original
       time += 0.008;

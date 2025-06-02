@@ -5,7 +5,7 @@ import animationUtils from './animation-utils.js';
 
 const chapter33Animation = {
   settings: {
-    backgroundColor: '#F0EEE6',
+    backgroundColor: animationUtils.colors.background,
     fieldColor: 'rgba(80, 80, 80, ALPHA)',
     centerColor: 'rgba(80, 80, 80, 0.5)',
     spiralColor: 'rgba(80, 80, 80, 0.4)',

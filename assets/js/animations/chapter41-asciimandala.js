@@ -1,4 +1,5 @@
 // Animation for Chapter 41: Animated ASCII Mandala (module hóa)
+import animationUtils from './animation-utils.js';
 // Visualization: An ASCII mandala that reveals complex patterns through simple characters
 
 const ASCII_MANDALA_WIDTH = 80;
@@ -28,7 +29,7 @@ const asciiMandalaAnimation = {
     pre.style.width = '100%';
     pre.style.maxWidth = '550px';
     pre.style.height = '550px';
-    pre.style.background = '#F0EEE6';
+    pre.style.background = animationUtils.colors.background;
     pre.style.padding = '10px';
     pre.style.borderRadius = '8px';
     pre.style.boxShadow = 'inset 0 0 10px rgba(0,0,0,0.05)';
@@ -36,7 +37,7 @@ const asciiMandalaAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = '#F0EEE6';
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(pre);
 

@@ -76,7 +76,7 @@ const chapter27BouncingPointCloud = {
       if (!lastFrameTime) lastFrameTime = currentTime;
       const deltaTime = currentTime - lastFrameTime;
       if (deltaTime >= frameInterval) {
-        ctx.fillStyle = '#F0EEE6';
+        ctx.fillStyle = animationUtils.colors.background;
         ctx.fillRect(0, 0, width, height);
         time += 0.0005;
         // Update ball position

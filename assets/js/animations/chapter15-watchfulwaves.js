@@ -79,9 +79,9 @@ const chapter15WatchfulWaves = {
             data[index + 2] = 160;
             data[index + 3] = opacity;
           } else {
-            data[index] = 240;
-            data[index + 1] = 238;
-            data[index + 2] = 230;
+            data[index] = 255;
+            data[index + 1] = 255;
+            data[index + 2] = 255;
             data[index + 3] = 255;
           }
         }

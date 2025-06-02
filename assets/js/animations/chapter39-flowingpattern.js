@@ -5,7 +5,7 @@ import animationUtils from './animation-utils.js';
 
 const chapter39Animation = {
   settings: {
-    backgroundColor: '#F0EEE6',
+    backgroundColor: animationUtils.colors.background,
     width: 550,
     height: 550,
     gridSize: 8
@@ -52,8 +52,11 @@ const chapter39Animation = {
     }
     let animationFrameId;
     function animate() {
-      ctx.fillStyle = 'rgba(240, 238, 230, 0.15)';
-      ctx.fillRect(0, 0, width, height);
+      // Tạo màu overlay với alpha từ background color
+      const bgColor = animationUtils.colors.background;
+      const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+      ctx.fillStyle = `rgba(${rgb}, 0.15)`;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
       time += 0.005;
       flowPoints.forEach(point => {
         const noiseValue = noise(point.x, point.y, time);

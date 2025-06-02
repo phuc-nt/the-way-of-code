@@ -1,4 +1,5 @@
 // chapter74-canyonundulatingwalls.js - Canyon Undulating Walls animation for Chapter 74
+import animationUtils from './animation-utils.js';
 // Themes: embracing change, freedom from fear, natural timing
 // Visualization: Particles flowing along ever-changing walls, showing how freedom comes from accepting impermanence
 
@@ -46,7 +47,10 @@ function createCanyonUndulatingWallsAnimation(container) {
     if (elapsed > frameDelay) {
       time += 0.008;
       lastTime = currentTime;
-      ctx.fillStyle = 'rgba(240, 238, 230, 0.06)';
+      // Tạo màu overlay với alpha từ background color
+      const bgColor = animationUtils.colors.background;
+      const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+      ctx.fillStyle = `rgba(${rgb}, 0.06)`;
       ctx.fillRect(0, 0, width, height);
       const centerX = width / 2;
       particles.forEach(particle => {
@@ -101,7 +105,7 @@ function createCanyonUndulatingWallsAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

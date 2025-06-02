@@ -8,7 +8,7 @@ export default {
   keywords: ['ascii', 'mandala', 'wisdom', 'paradox', 'animation'],
   loader: 'Animated ASCII Mandala',
   aspectRatio: 1,
-  background: '#F0EEE6',
+  background: '#ffffff',
   theme: 'paradox, wisdom, hidden truth',
   visible: true
 };

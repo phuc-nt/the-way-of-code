@@ -31,7 +31,7 @@ const patterns = {
 
 const chapter35Animation = {
   settings: {
-    backgroundColor: '#F0EEE6',
+    backgroundColor: animationUtils.colors.background,
     textColor: '#333',
     width: 60,
     height: 35,

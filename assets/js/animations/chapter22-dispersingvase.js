@@ -152,8 +152,11 @@ const chapter22DispersingVase = {
         canvas.width / 2, centerY, 0,
         canvas.width / 2, centerY, 80
       );
-      voidGradient.addColorStop(0, 'rgba(240, 238, 230, 0.8)');
-      voidGradient.addColorStop(1, 'rgba(240, 238, 230, 0)');
+      // Tạo gradient color từ background color
+      const bgColor = animationUtils.colors.background;
+      const rgb = bgColor === '#ffffff' ? '255, 255, 255' : '240, 238, 230';
+      voidGradient.addColorStop(0, `rgba(${rgb}, 0.8)`);
+      voidGradient.addColorStop(1, `rgba(${rgb}, 0)`);
       ctx.fillStyle = voidGradient;
       ctx.beginPath();
       ctx.ellipse(canvas.width / 2, centerY, 80, 20, 0, 0, Math.PI * 2);

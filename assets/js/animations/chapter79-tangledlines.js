@@ -1,4 +1,5 @@
 // chapter79-tangledlines.js - Tangled Lines animation for Chapter 79
+import animationUtils from './animation-utils.js';
 // Themes: learning from failure, personal responsibility, natural service
 // Visualization: Lines that find their way through entanglement, showing how clarity emerges from confusion
 
@@ -76,7 +77,7 @@ function createTangledLinesAnimation(container) {
   }
 
   function animate() {
-    ctx.fillStyle = '#F0EEE6';
+    ctx.fillStyle = animationUtils.colors.background;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
@@ -120,7 +121,7 @@ function createTangledLinesAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   canvas = document.createElement('canvas');

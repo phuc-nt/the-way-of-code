@@ -6,6 +6,6 @@ export default {
   author: 'Đạo Của Code',
   type: 'canvas',
   aspectRatio: 1,
-  bg: '#F0EEE6',
+  bg: '#ffffff',
   keywords: ['flower of life', 'geometry', 'trust', 'openness', 'canvas', 'unity'],
 };

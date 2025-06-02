@@ -5,7 +5,7 @@ import animationUtils from './animation-utils.js';
 
 const chapter34Animation = {
   settings: {
-    backgroundColor: '#F0EEE6',
+    backgroundColor: animationUtils.colors.background,
     waveColor: 'rgba(51, 51, 51, 0.6)',
     waveColorSoft: 'rgba(51, 51, 51, 0.3)',
     width: 550,

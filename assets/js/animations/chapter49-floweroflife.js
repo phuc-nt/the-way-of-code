@@ -1,8 +1,8 @@
 // Animation for Chapter 49: Flower of Life (Canvas)
+import animationUtils from './animation-utils.js';
 // Visualization: Sacred geometry pattern showing how individual circles merge into a unified whole, representing harmony of trust and openness
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const flowerOfLifeAnimation = {
   init(container) {
@@ -16,7 +16,7 @@ const flowerOfLifeAnimation = {
     canvas.width = CANVAS_SIZE;
     canvas.height = CANVAS_SIZE;
     canvas.style.display = 'block';
-    canvas.style.background = BG_COLOR;
+    canvas.style.background = animationUtils.colors.background;
     canvas.style.margin = '0 auto';
     canvas.style.maxWidth = '100%';
     canvas.style.maxHeight = '100%';
@@ -24,7 +24,7 @@ const flowerOfLifeAnimation = {
     container.style.display = 'flex';
     container.style.alignItems = 'center';
     container.style.justifyContent = 'center';
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.overflow = 'hidden';
     container.appendChild(canvas);
 
@@ -43,7 +43,7 @@ const flowerOfLifeAnimation = {
 
     function animate() {
       if (!running) return;
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = animationUtils.colors.background;
       ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
       time += 0.005;
       const centerX = CANVAS_SIZE / 2;

@@ -1,4 +1,5 @@
 // chapter75-asciiclarityfromstillness.js - ASCII Clarity From Stillness animation for Chapter 75
+import animationUtils from './animation-utils.js';
 // Themes: freedom from control, trust in people, natural prosperity
 // Visualization: ASCII patterns that emerge from stillness, showing how clarity arises when interference falls away
 
@@ -81,7 +82,7 @@ function createAsciiClarityFromStillnessAnimation(container) {
   // --- INIT ---
   if (!container) return { cleanup: () => {} };
   container.innerHTML = '';
-  container.style.background = '#F0EEE6';
+  container.style.background = animationUtils.colors.background;
   container.style.overflow = 'hidden';
   container.style.position = 'relative';
   // Không cần set width và height vì container cha sẽ điều này

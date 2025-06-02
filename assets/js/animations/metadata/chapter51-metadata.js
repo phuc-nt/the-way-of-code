@@ -6,6 +6,6 @@ export default {
   author: "Đạo Của Code",
   type: "canvas",
   aspectRatio: 1,
-  bg: "#F0EEE6",
+  bg: "#ffffff",
   keywords: ["natural nourishment", "intelligent formation", "welcoming return", "strata", "layers", "geology", "formation"],
 };

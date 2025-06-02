@@ -1,8 +1,8 @@
 // Animation for Chapter 64: Hourglass Spiral
+import animationUtils from './animation-utils.js';
 // Visualization: A form that emerges gradually from a central point, showing how patterns develop from simple beginnings
 
 const CANVAS_SIZE = 550;
-const BG_COLOR = '#F0EEE6';
 
 const HourglassSpiralAnimation = {
   init(container) {
@@ -12,7 +12,7 @@ const HourglassSpiralAnimation = {
     if (loader) loader.style.display = 'none';
 
     // Container setup
-    container.style.background = BG_COLOR;
+    container.style.background = animationUtils.colors.background;
     container.style.position = 'relative';
     container.style.overflow = 'hidden';
     container.style.borderRadius = '4px';
@@ -69,7 +69,7 @@ const HourglassSpiralAnimation = {
     // Dynamically import Three.js from CDN for browser compatibility
     import('https://cdn.skypack.dev/three@0.152.2').then(THREE => {
       scene = new THREE.Scene();
-      scene.background = new THREE.Color(BG_COLOR);
+      scene.background = new THREE.Color(animationUtils.colors.background);
       camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
       camera.position.z = 16;
       camera.position.y = 0;
