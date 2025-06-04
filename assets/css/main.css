@@ -33,22 +33,6 @@
     --hover-bg: rgba(52, 152, 219, 0.2);
 }
 
-/* Brown theme */
-[data-theme="brown"] {
-    --primary-color: #5D4037;
-    --secondary-color: #795548;
-    --accent-color: #8D6E63;
-    --accent-color-rgb: 141, 110, 99; /* RGB values for accent color */
-    --text-color: #3E2723;
-    --light-text: #EFEBE9;
-    --background-color: #EFEBE9;
-    --paper-color: #FFF3E0;
-    --border-color: #D7CCC8;
-    --code-bg: #FAFAFA;
-    --shadow-color: rgba(93, 64, 55, 0.05);
-    --hover-bg: rgba(141, 110, 99, 0.1);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -593,11 +577,6 @@ footer {
 .theme-button.dark {
     background: #1a1a1a;
     color: #fff;
-}
-
-.theme-button.brown {
-    background: #5D4037;
-    color: #FFF3E0;
 }
 
 .theme-button.active {
